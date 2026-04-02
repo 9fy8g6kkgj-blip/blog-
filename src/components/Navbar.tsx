@@ -22,7 +22,9 @@ export default function Navbar() {
         <Link href="/" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>Blog</Link>
         <Link href="/about" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>About</Link>
         <Link href="/archive" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>Archive</Link>
+        <Link href="/contact" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>Contact</Link>
       </div>
+
 
     </nav>
   );

@@ -14,12 +14,13 @@ export default function AboutPage() {
       <section style={{ marginBottom: '5rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div style={{ position: 'relative', width: '100%', height: '400px', borderRadius: '15px', overflow: 'hidden', marginBottom: '3rem', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
           <Image 
-            src="/about_profile_diary_1775129186694.png" 
+            src="/about_profile_diary.png" 
             alt="My Daily Life" 
             fill 
             style={{ objectFit: 'cover' }}
           />
         </div>
+
 
         <div className="entry-content" style={{ fontSize: '1.15rem', color: '#555', lineHeight: '2', textAlign: 'left', width: '100%' }}>
           <p style={{ marginBottom: '2rem' }}>

@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # 메인 브랜치에 코드가 올라갈 때 실행
+  workflow_dispatch: # 수동 실행 버튼 추가
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install and Build 🏗️
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: out # Next.js export 모드의 빌드 결과물 폴더
+          branch: gh-pages # 배포될 타겟 브랜치
