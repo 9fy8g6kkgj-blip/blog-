@@ -20,8 +20,10 @@ export default function Navbar() {
       
       <div style={{ display: 'flex', gap: '2rem' }}>
         <Link href="/" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>Blog</Link>
-        <Link href="/" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>About</Link>
+        <Link href="/about" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>About</Link>
+        <Link href="/archive" style={{ color: '#666', fontSize: '0.95rem', fontWeight: '500' }}>Archive</Link>
       </div>
+
     </nav>
   );
 }
