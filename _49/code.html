@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - 오늘의 조각</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#773c2b',
+                        surface: '#fcf9f4',
+                        'on-surface': '#1c1c19',
+                        'on-surface-variant': '#53433f',
+                        'outline-variant': '#d8c2bc',
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'serif'],
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #fcf9f4; color: #1c1c19; font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="selection:bg-primary/10 selection:text-primary">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl border-b border-black/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+            <div class="text-2xl font-serif italic font-bold tracking-tighter"><a href="/">오늘의 조각</a></div>
+            <div class="hidden md:flex items-center gap-12 text-[10px] uppercase tracking-[0.2em] font-sans text-on-surface/60">
+                <a href="#" class="hover:text-primary transition-colors">Archive</a>
+                <a href="#" class="hover:text-primary transition-colors">Manifesto</a>
+                <a href="#" class="hover:text-primary transition-colors">Colophon</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-32 px-8 max-w-4xl mx-auto">
+        <header class="mb-24">
+            <p class="font-sans text-xs uppercase tracking-[0.3em] text-primary mb-4 italic">The Digital Ethos</p>
+            <h1 class="font-serif text-6xl italic tracking-tighter leading-none mb-12">Privacy Policy</h1>
+            <div class="h-px w-full bg-outline-variant/20 mb-12"></div>
+            <p class="text-on-surface-variant text-lg leading-relaxed font-serif italic opacity-80">
+                "이곳에 담긴 조각들은 저의 삶을 기록하는 정적인 아카이브입니다. 저는 당신의 정보를 수집하기보다, 당신과 순간을 공유하는 일에 더 큰 가치를 둡니다."
+            </p>
+        </header>
+
+        <section class="space-y-20">
+            <!-- Section 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4">
+                    <h2 class="font-serif text-2xl italic text-primary">Data Curation</h2>
+                </div>
+                <div class="md:col-span-8 space-y-6 text-on-surface-variant font-body leading-relaxed">
+                    <p>본 블로그는 방문자의 개인정보를 직접적으로 수집하거나 별도의 회원가입 절차를 요구하지 않습니다. 단순한 읽기 중심의 정적 페이지로 구성되어 있습니다.</p>
+                    <p>익명화된 방문 통계(Google Analytics 등)를 사용할 수 있으나, 이는 오직 어떤 조각들이 더 많은 공감을 얻었는지 이해하기 위한 기술적 지표로만 활용됩니다.</p>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4">
+                    <h2 class="font-serif text-2xl italic text-primary">Cookies</h2>
+                </div>
+                <div class="md:col-span-8 space-y-6 text-on-surface-variant font-body leading-relaxed">
+                    <p>현대적인 웹 경험을 위해 브라우저의 로컬 스토리지를 사용하여 다크 모드 설정이나 최근 읽은 글 목록 등 개인화된 편의 기능을 저장할 수 있습니다. 이는 서버로 전송되지 않는 브라우저 전용 데이터입니다.</p>
+                </div>
+            </div>
+
+            <!-- Section 3: Visual Card -->
+            <div class="bg-primary/5 p-12 rounded-3xl border border-primary/10">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="w-24 h-24 rounded-full bg-white flex items-center justify-center text-primary shadow-sm shrink-0">
+                        <span class="material-symbols-outlined text-4xl">security</span>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="font-serif text-2xl italic">Information Security</h3>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">
+                            전자적 기록의 안전성을 위해 SSL 암호화를 통한 보안 접속을 보장합니다. 비인증된 접근 시도는 시스템 로그에 기록되며, 아카이브의 무결성을 보호하기 위해 실시간으로 모니터링됩니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-4">
+                    <h2 class="font-serif text-2xl italic text-primary">Your Rights</h2>
+                </div>
+                <div class="md:col-span-8 space-y-6 text-on-surface-variant font-body leading-relaxed">
+                    <p>당신은 언제든 브라우저 설정을 통해 쿠키 수집을 거부할 수 있으며, 이 블로그에서 생성된 어떠한 비익명 데이터에 대해서도 삭제를 요청할 수 있는 권리가 있습니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-32 pt-12 border-t border-outline-variant/20 flex justify-between items-center italic text-xs font-serif text-on-surface-variant/40">
+            <span>Last Updated: April 17, 2024</span>
+            <span>Version 1.0.1</span>
+        </footer>
+    </main>
+
+    <footer class="w-full py-12 px-8 bg-surface">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-8">
+            <div class="font-serif italic text-lg text-on-surface/40">오늘의 조각 — Fragments of alstjd.</div>
+            <div class="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-sans opacity-30">
+                <a href="#" class="hover:opacity-100 transition-opacity">Contact</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">Colophon</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - 오늘의 조각</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#773c2b',
+                        surface: '#fcf9f4',
+                        'on-surface': '#1c1c19',
+                        'on-surface-variant': '#53433f',
+                        'outline-variant': '#d8c2bc',
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'serif'],
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #fcf9f4; color: #1c1c19; font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="selection:bg-primary/10 selection:text-primary">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl border-b border-black/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+            <div class="text-2xl font-serif italic font-bold tracking-tighter">오늘의 조각</div>
+            <div class="hidden md:flex items-center gap-12 text-[10px] uppercase tracking-[0.2em] font-sans text-on-surface/60">
+                <a href="#" class="hover:text-primary transition-colors">Home</a>
+                <a href="#" class="hover:text-primary transition-colors">About</a>
+                <a href="#" class="hover:text-primary transition-colors">Archive</a>
+                <a href="#" class="text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full">Contact</a>
+            </div>
+            <button class="material-symbols-outlined">menu</button>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-32 px-8 max-w-6xl mx-auto">
+        <header class="mb-24 text-center">
+            <p class="font-sans text-xs uppercase tracking-[0.3em] text-primary mb-4">Get in touch</p>
+            <h1 class="font-serif text-6xl md:text-8xl italic tracking-tighter leading-none mb-8">Reach Out</h1>
+            <p class="text-on-surface-variant text-lg max-w-xl mx-auto leading-relaxed">
+                조각들에 대한 생각이나 제안, 혹은 그저 따뜻한 인사를 나누고 싶다면 언제든 환영합니다. 당신의 이야기가 저에게는 또 다른 조각이 됩니다.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+            <!-- Contact Form -->
+            <section class="bg-white/50 p-10 rounded-3xl border border-black/5 shadow-sm">
+                <form class="space-y-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">Name</label>
+                            <input type="text" placeholder="Your Name" class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">Email</label>
+                            <input type="email" placeholder="hello@example.com" class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors">
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">Message</label>
+                        <textarea rows="5" placeholder="What's on your mind?" class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors resize-none"></textarea>
+                    </div>
+                    <button class="w-full bg-primary text-white py-5 rounded-full font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-stone-900 transition-all active:scale-95 shadow-lg shadow-primary/20">
+                        Send Message
+                    </button>
+                </form>
+            </section>
+
+            <!-- Contact Info -->
+            <section class="space-y-16">
+                <div>
+                    <h2 class="font-serif text-3xl italic mb-8">Connect</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined">mail</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest opacity-40 mb-1">Email</p>
+                                <p class="text-lg font-medium">alstjd@example.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6 group">
+                            <div class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                <span class="material-symbols-outlined">share</span>
+                            </div>
+                            <div>
+                                <p class="text-[10px] uppercase tracking-widest opacity-40 mb-1">Social</p>
+                                <div class="flex gap-4">
+                                    <a href="#" class="hover:text-primary transition-colors">Instagram</a>
+                                    <span class="opacity-20">/</span>
+                                    <a href="#" class="hover:text-primary transition-colors">Threads</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-12 border-t border-black/5">
+                    <h2 class="font-serif text-2xl italic mb-6">Location</h2>
+                    <p class="text-on-surface-variant leading-relaxed mb-8 italic">
+                        "대한민국 서울, 어느 활기찬 캠퍼스 근처의 카페 창가 자리가 저의 주된 작업 공간입니다."
+                    </p>
+                    <div class="aspect-video rounded-3xl overflow-hidden bg-stone-200 relative group">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFXW_6Uj7C9u_v-_9-YtP-_i_X_Y_V-Z-V_-_V_-_-_-_-_-_-_-" 
+                             class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700"
+                             data-alt="a minimalist flat-lay map of seoul city with soft beige and brown tones, focus on university area, artistic and clean"
+                             alt="Seoul Map">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-4 h-4 bg-primary rounded-full animate-ping opacity-40"></div>
+                            <div class="w-4 h-4 bg-primary rounded-full relative border-2 border-white"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="w-full py-12 px-8 bg-surface border-t border-black/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="font-sans text-[11px] uppercase tracking-[0.2em] opacity-30">© 2024 오늘의 조각. Fragments of alstjd.</div>
+            <div class="flex gap-12 text-[11px] uppercase tracking-[0.2em] opacity-30">
+                <a href="#" class="hover:opacity-100 transition-opacity">Privacy</a>
+                <a href="#" class="hover:opacity-100 transition-opacity">Colophon</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

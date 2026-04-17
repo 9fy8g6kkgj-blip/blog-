@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - 오늘의 조각</title>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#773c2b',
+                        surface: '#fcf9f4',
+                        'on-surface': '#1c1c19',
+                    },
+                    fontFamily: {
+                        serif: ['Newsreader', 'serif'],
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        body { background-color: #fcf9f4; color: #1c1c19; font-family: 'Manrope', sans-serif; overflow: hidden; }
+        .grain { animation: grain 8s steps(10) infinite; background-image: url("https://www.transparenttextures.com/patterns/stardust.png"); }
+        @keyframes grain { 0%, 100% { transform:translate(0, 0) } 10% { transform:translate(-5%, -10%) } 20% { transform:translate(-15%, 5%) } 30% { transform:translate(7%, -25%) } 40% { transform:translate(-5%, 25%) } 50% { transform:translate(-15%, 10%) } 60% { transform:translate(15%, 0%) } 70% { transform:translate(0%, 15%) } 80% { transform:translate(3%, 35%) } 90% { transform:translate(-10%, 10%) } }
+    </style>
+</head>
+<body class="h-screen flex items-center justify-center relative">
+    <div class="fixed inset-0 grain opacity-[0.03] pointer-events-none"></div>
+
+    <main class="text-center z-10 px-8">
+        <label class="font-sans text-[10px] uppercase tracking-[0.4em] text-primary mb-12 block opacity-60">Error 404 — Void</label>
+        
+        <div class="relative mb-16">
+            <h1 class="font-serif text-[12rem] md:text-[20rem] italic tracking-tighter leading-none text-primary/5 select-none">404</h1>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="space-y-4">
+                    <h2 class="font-serif text-4xl md:text-5xl italic tracking-tight">이 조각은 아직 발견되지 않았습니다.</h2>
+                    <p class="text-on-surface/40 font-body text-sm md:text-base max-w-md mx-auto leading-relaxed">
+                        찾으시는 페이지가 시간의 흐름 속에 묻혔거나, <br> 아직 기록되지 않은 미래의 한 조각일 수 있습니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+            <a href="/" class="px-12 py-5 bg-primary text-white rounded-full font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-stone-900 transition-all active:scale-95 shadow-xl shadow-primary/20">
+                Return Home
+            </a>
+            <button onclick="window.history.back()" class="px-12 py-5 bg-white/50 text-on-surface rounded-full font-sans text-xs uppercase tracking-[0.2em] font-bold hover:bg-black hover:text-white transition-all active:scale-95 border border-black/5">
+                Go Back
+            </button>
+        </div>
+
+        <!-- Decorative element -->
+        <div class="mt-32 opacity-20">
+            <span class="material-symbols-outlined text-4xl animate-pulse">auto_awesome</span>
+        </div>
+    </main>
+
+    <!-- Footer fixed -->
+    <footer class="fixed bottom-12 w-full text-center px-8">
+        <p class="font-serif italic text-sm text-on-surface/20">"모든 길은 결국 기록으로 이어집니다."</p>
+    </footer>
+</body>
+</html>
