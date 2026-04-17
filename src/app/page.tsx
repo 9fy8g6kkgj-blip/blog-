@@ -15,7 +15,7 @@ export default function Home() {
 
       <section>
         {postsData.map((post) => (
-          <PostCard 
+          <PostCard
             key={post.slug}
             slug={post.slug}
             title={post.title}
@@ -28,4 +28,8 @@ export default function Home() {
     </div>
   );
 }
-
+export function generateStaticParams() {
+  return Array.from({ length: 50 }, (_, i) => ({
+    slug: `post-${i + 1}`,
+  }));
+}
