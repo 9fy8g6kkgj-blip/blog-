@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Piece Not Found | Echoes of Today</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e5e2dd",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-dim": "#dcdad5",
+                    "on-secondary-container": "#5a6651",
+                    "error": "#ba1a1a",
+                    "primary-container": "#945341",
+                    "on-primary-container": "#ffdad1",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary-container": "#f4dfcb",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-tint": "#8d4d3b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0ede8",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary-fixed-dim": "#becbb2",
+                    "secondary": "#56624d",
+                    "secondary-container": "#d7e4ca",
+                    "outline-variant": "#d8c2bc",
+                    "on-secondary-fixed": "#141e0e",
+                    "inverse-surface": "#31302d",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "tertiary-container": "#716252",
+                    "tertiary": "#584a3c",
+                    "surface": "#fcf9f4",
+                    "primary": "#773c2b",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "background": "#fcf9f4",
+                    "on-primary-fixed": "#380c02",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-variant": "#e5e2dd",
+                    "on-surface-variant": "#53433f",
+                    "secondary-fixed": "#dae7cd",
+                    "on-error-container": "#93000a",
+                    "outline": "#86736e",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed": "#ffdbd1",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; color: #1c1c19; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation (Shell Suppressed per logic for Focused Journey, but TopNavBar is provided in JSON for specific destinations) -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-serif italic text-[#1c1c19] tracking-tighter" href="/">Echoes of Today</a>
+<nav class="hidden md:flex gap-8 items-center font-serif font-medium text-[#1c1c19]/60">
+<a class="hover:text-[#773c2b] transition-colors" href="#">Archives</a>
+<a class="hover:text-[#773c2b] transition-colors" href="#">Categories</a>
+<a class="hover:text-[#773c2b] transition-colors" href="#">Reflections</a>
+<a class="hover:text-[#773c2b] transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#1c1c19]">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="min-h-screen pt-32 pb-20 px-6 flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Background Decorative Element (Asymmetric Shadow/Shape) -->
+<div class="absolute top-1/4 -right-20 w-96 h-96 bg-surface-container-low rounded-full blur-3xl opacity-60 pointer-events-none"></div>
+<div class="absolute bottom-1/4 -left-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl opacity-40 pointer-events-none"></div>
+<!-- 404 Canvas -->
+<section class="max-w-4xl w-full flex flex-col md:flex-row items-center md:items-end gap-12 md:gap-24 relative z-10">
+<!-- Asymmetric Image Piece -->
+<div class="w-full md:w-1/2 aspect-[3/4] relative">
+<div class="absolute inset-0 bg-surface-container-high rounded-lg overflow-hidden transform md:-rotate-3 transition-transform duration-700 hover:rotate-0">
+<img alt="close-up of a torn piece of vintage cream-colored paper with subtle fiber texture lying on a warm wooden desk" class="w-full h-full object-cover grayscale opacity-80" data-alt="close-up of a torn piece of vintage cream-colored paper with subtle fiber texture lying on a warm wooden desk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZrqTjugAjLLDLSKgdhOaRX7-5f2oJ6R5b4eT5K3wwjwNiwjS9TTDvG_G8gDkax7hzCZHSi6v5FedsW_rxfc3H19JfN__eQYnOJq_UzqD8oQ5aECbSt8reInz75k8B6DdtIeb3mdQYTCgLG-gmi_9I3D8Vh9c3CMcrB9PjQ9kkii4mBYWweRHO-GEK-zQdpaCvWl0Lb9s0ek7is_1qlIUV2KZ9s7I77JfcbbnzeJ6HhfTDH60JAvJ5xxMgqaBlQR5Eao_q1jbN5VY"/>
+</div>
+<div class="absolute -bottom-4 -right-4 p-6 bg-surface-container-lowest shadow-sm rounded-lg hidden md:block">
+<span class="font-serif italic text-4xl text-primary/30">404</span>
+</div>
+</div>
+<!-- Content Voice -->
+<div class="w-full md:w-1/2 flex flex-col items-start">
+<span class="text-secondary font-label uppercase tracking-widest text-xs mb-4">Piece missing from archive</span>
+<h1 class="text-6xl md:text-8xl font-serif text-on-surface leading-none mb-8 -ml-1 md:-ml-2">
+                    Fragment <br/>not found.
+                </h1>
+<div class="max-w-xs mb-12">
+<p class="text-lg text-on-surface-variant font-body leading-relaxed opacity-80">
+                        Some stories remain unwritten, or perhaps they have simply drifted elsewhere. This page appears to be a gap in our digital collection.
+                    </p>
+</div>
+<!-- Editorial CTAs -->
+<div class="flex flex-col sm:flex-row gap-4 items-start w-full">
+<a class="group relative px-8 py-4 bg-primary rounded-full overflow-hidden transition-all active:scale-95 shadow-sm" href="/">
+<div class="absolute inset-0 bg-gradient-to-r from-primary to-primary-container opacity-100"></div>
+<span class="relative text-on-primary font-label text-sm tracking-wide font-medium flex items-center gap-2">
+                            Return Home <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</a>
+<a class="px-8 py-4 bg-transparent border border-outline-variant/30 rounded-full text-on-surface hover:bg-surface-container-low transition-colors font-label text-sm tracking-wide" href="#">
+                        Random Reflection
+                    </a>
+</div>
+</div>
+</section>
+<!-- Search Suggestion (Subtle) -->
+<div class="mt-24 max-w-lg w-full text-center">
+<p class="text-sm font-label text-on-surface-variant/60 mb-6 italic">Perhaps you were looking for something else?</p>
+<div class="relative w-full">
+<input class="w-full bg-surface-container-low border-none rounded-full px-8 py-4 focus:ring-1 focus:ring-primary/20 font-body text-on-surface" placeholder="Search the archives..." type="text"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 p-2 text-primary">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer Component Mapping from JSON -->
+<footer class="w-full py-12 px-8 mt-20 bg-[#f6f3ee]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="text-lg font-serif italic text-[#1c1c19]">Echoes of Today</span>
+<p class="font-sans text-sm tracking-wide text-[#1c1c19]/50 mt-2">© 2024 Echoes of Today. A digital archive of university ephemera.</p>
+</div>
+<nav class="flex gap-8">
+<a class="font-sans text-sm tracking-wide text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Privacy</a>
+<a class="font-sans text-sm tracking-wide text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Terms</a>
+<a class="font-sans text-sm tracking-wide text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Contact</a>
+<a class="font-sans text-sm tracking-wide text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Instagram</a>
+</nav>
+</div>
+</footer>
+</body></html>

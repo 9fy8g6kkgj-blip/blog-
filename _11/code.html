@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editor — 오늘의 조각</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#d8c2bc",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-fixed": "#141e0e",
+                    "inverse-primary": "#ffb5a1",
+                    "outline": "#86736e",
+                    "on-background": "#1c1c19",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-fixed": "#380c02",
+                    "inverse-on-surface": "#f3f0eb",
+                    "primary": "#773c2b",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-container": "#f0ede8",
+                    "surface-dim": "#dcdad5",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#703626",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#dae7cd",
+                    "surface": "#fcf9f4",
+                    "on-primary-container": "#ffdad1",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "surface-bright": "#fcf9f4",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#d7e4ca",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f4",
+                    "on-surface-variant": "#53433f",
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-tertiary-container": "#f4dfcb",
+                    "secondary": "#56624d",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary": "#584a3c",
+                    "surface-tint": "#8d4d3b",
+                    "surface-container-low": "#f6f3ee",
+                    "on-surface": "#1c1c19",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#945341",
+                    "surface-variant": "#e5e2dd",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Newsreader', serif; }
+        .glass-nav { backdrop-filter: blur(20px); }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-orange-900 dark:text-orange-100 italic tracking-tight">오늘의 조각</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-serif italic tracking-tight" href="#">Archives</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-serif italic tracking-tight" href="#">Categories</a>
+<a class="text-orange-900 dark:text-orange-100 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-900 after:rounded-full font-serif italic tracking-tight" href="#">Reflections</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors font-serif italic tracking-tight" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label text-sm tracking-wide transition-all active:scale-95 shadow-sm bg-gradient-to-br from-primary to-primary-container">
+                    Publish
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-8 max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Main Content Area -->
+<div class="lg:col-span-8 flex flex-col gap-12">
+<!-- Breadcrumbs / Focus Mode -->
+<div class="flex items-center gap-4 text-sm font-label text-on-surface-variant/60 tracking-widest uppercase">
+<span>Reflections</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span>New Piece</span>
+</div>
+<!-- Title Field -->
+<div class="group">
+<textarea class="w-full bg-transparent border-none p-0 text-5xl md:text-6xl font-headline font-medium tracking-tight text-on-surface placeholder:text-outline-variant/30 focus:ring-0 resize-none overflow-hidden" placeholder="Enter a soulful title..." rows="1"></textarea>
+<div class="mt-4 flex items-center gap-6 text-on-surface-variant/40">
+<span class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-lg" data-icon="schedule">schedule</span> Last saved 2m ago</span>
+<span class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-lg" data-icon="notes">notes</span> 1,240 words</span>
+</div>
+</div>
+<!-- Rich Text Toolbar (Contextual & Minimal) -->
+<div class="sticky top-28 z-40 flex items-center gap-2 p-2 bg-surface-container-lowest rounded-full border border-outline-variant/10 shadow-xl shadow-on-surface/5 w-fit mx-auto lg:mx-0">
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="format_h1">format_h1</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="format_bold">format_bold</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="format_italic">format_italic</span></button>
+<div class="w-px h-6 bg-outline-variant/20 mx-1"></div>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="format_quote">format_quote</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="image">image</span></button>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="link">link</span></button>
+<div class="w-px h-6 bg-outline-variant/20 mx-1"></div>
+<button class="p-2 hover:bg-surface-container-high rounded-full transition-colors"><span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span></button>
+</div>
+<!-- Content Area -->
+<article class="relative">
+<textarea class="w-full bg-transparent border-none p-0 text-xl md:text-2xl leading-relaxed font-body text-on-surface-variant placeholder:text-outline-variant/20 focus:ring-0 min-h-[600px] resize-none" placeholder="Begin your reflection here..."></textarea>
+<!-- Floating Decorative Element -->
+<div class="absolute -left-12 top-0 hidden xl:block">
+<span class="text-primary/10 text-9xl font-headline italic select-none">“</span>
+</div>
+</article>
+</div>
+<!-- Sidebar / Publishing Options -->
+<aside class="lg:col-span-4 space-y-12">
+<!-- Visibility & Status -->
+<section class="bg-surface-container-low p-8 rounded-xl flex flex-col gap-6">
+<h3 class="text-xl font-headline tracking-tight text-on-surface flex items-center justify-between">
+                    Publishing
+                    <span class="text-[10px] font-label uppercase tracking-widest bg-secondary-container text-on-secondary-container px-2 py-1 rounded">Draft</span>
+</h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between group cursor-pointer">
+<label class="flex items-center gap-3 text-sm font-label text-on-surface-variant group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="visibility">visibility</span>
+                            Visibility
+                        </label>
+<span class="text-sm font-medium text-on-surface">Public</span>
+</div>
+<div class="flex items-center justify-between group cursor-pointer">
+<label class="flex items-center gap-3 text-sm font-label text-on-surface-variant group-hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="event">event</span>
+                            Publish Date
+                        </label>
+<span class="text-sm font-medium text-on-surface">Immediately</span>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="flex-1 border border-outline-variant/20 py-3 rounded-full text-sm font-label hover:bg-surface-container-highest transition-colors">Save Draft</button>
+<button class="flex-1 bg-on-background text-background py-3 rounded-full text-sm font-label hover:opacity-90 transition-opacity">Preview</button>
+</div>
+</section>
+<!-- Categories & Tags -->
+<section class="space-y-6">
+<h3 class="text-lg font-headline text-on-surface border-b border-outline-variant/10 pb-2">Organization</h3>
+<div class="space-y-6">
+<div class="space-y-3">
+<label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant/60">Category</label>
+<select class="w-full bg-surface-container-lowest border-outline-variant/20 rounded-lg text-sm font-body focus:ring-primary focus:border-primary">
+<option>University Life</option>
+<option>Midnight Thoughts</option>
+<option>Library Archives</option>
+<option>City Walks</option>
+</select>
+</div>
+<div class="space-y-3">
+<label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant/60">Tags</label>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-xs font-label flex items-center gap-1">
+                                #autumn <button class="material-symbols-outlined text-[14px]" data-icon="close">close</button>
+</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-xs font-label flex items-center gap-1">
+                                #semester_3 <button class="material-symbols-outlined text-[14px]" data-icon="close">close</button>
+</span>
+<button class="border border-outline-variant/40 px-3 py-1 rounded-md text-xs font-label text-on-surface-variant hover:border-primary transition-colors">+ Add Tag</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Image -->
+<section class="space-y-6">
+<h3 class="text-lg font-headline text-on-surface border-b border-outline-variant/10 pb-2">Cover Imagery</h3>
+<div class="relative aspect-video bg-surface-container-highest rounded-lg overflow-hidden group cursor-pointer border-2 border-dashed border-outline-variant/20 hover:border-primary/40 transition-colors">
+<img alt="Cover" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="close-up of an open fountain pen and a handwritten journal on a textured wooden desk with soft morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyRP9byICCUKC3mo4tsfDcEmINfhwjDx-bc540AXTXw33yCuP9CzNH68NvpGCRLSJGBUKxTd1Ly6hnBTspJwlVIX0emyejK_AQolrzCCg92ey1_9yOcTs6kHEFTCsxJ-xf9pMopsJh82wR9FEnq-JxyTUR3cTJEve0IqCSyOGhoHHG9-oM0h7aHs3X-o_X9Koo7S2hRlKwRfErcs3oyY1ubd_zFWuoMQssXh_9rR8wpcjhVPMRHaPGOno9AOaP8AIP-0HmrHDy6Uc"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-3xl text-on-surface-variant" data-icon="add_a_photo">add_a_photo</span>
+<span class="text-xs font-label text-on-surface-variant uppercase tracking-tighter">Replace Featured Image</span>
+</div>
+</div>
+<p class="text-[11px] font-label text-on-surface-variant/60 italic leading-relaxed">Choose an image that captures the atmosphere of your words.</p>
+</section>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full max-w-screen-2xl mx-auto border-t border-stone-200/20 full-width py-12 px-8">
+<div class="font-serif text-lg text-stone-900 dark:text-stone-100">오늘의 조각</div>
+<p class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400">© 2024 Echoes of Today. Pieces of a university life.</p>
+<div class="flex gap-8">
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Privacy</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Terms</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

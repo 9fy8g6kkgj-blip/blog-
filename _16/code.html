@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary-fixed-variant": "#524436",
+                "surface-variant": "#e5e2dd",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f6f3ee",
+                "on-primary-fixed-variant": "#703626",
+                "error": "#ba1a1a",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed": "#f4dfcb",
+                "primary-container": "#945341",
+                "surface-container": "#f0ede8",
+                "on-surface-variant": "#53433f",
+                "on-secondary-fixed": "#141e0e",
+                "secondary-fixed-dim": "#becbb2",
+                "primary-fixed": "#ffdbd1",
+                "on-primary-container": "#ffdad1",
+                "on-tertiary-fixed": "#241a0e",
+                "tertiary": "#584a3c",
+                "on-error": "#ffffff",
+                "outline": "#86736e",
+                "surface-tint": "#8d4d3b",
+                "on-primary-fixed": "#380c02",
+                "tertiary-container": "#716252",
+                "secondary-fixed": "#dae7cd",
+                "surface-container-highest": "#e5e2dd",
+                "surface": "#fcf9f4",
+                "primary": "#773c2b",
+                "on-secondary-container": "#5a6651",
+                "surface-bright": "#fcf9f4",
+                "inverse-primary": "#ffb5a1",
+                "surface-container-high": "#ebe8e3",
+                "secondary": "#56624d",
+                "on-primary": "#ffffff",
+                "outline-variant": "#d8c2bc",
+                "on-surface": "#1c1c19",
+                "primary-fixed-dim": "#ffb5a1",
+                "on-secondary-fixed-variant": "#3f4a37",
+                "tertiary-fixed-dim": "#d7c3b0",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#31302d",
+                "on-secondary": "#ffffff",
+                "on-background": "#1c1c19",
+                "secondary-container": "#d7e4ca",
+                "on-tertiary-container": "#f4dfcb",
+                "background": "#fcf9f4",
+                "on-error-container": "#93000a",
+                "inverse-on-surface": "#f3f0eb",
+                "surface-dim": "#dcdad5"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.5rem",
+                "xl": "1rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Newsreader", "serif"],
+                "body": ["Manrope", "sans-serif"],
+                "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body {
+            background-color: #fcf9f4;
+            color: #1c1c19;
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px -15px rgba(28, 28, 25, 0.05);
+        }
+        .glow-cta {
+            background: linear-gradient(135deg, #773c2b 0%, #945341 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Sidebar Navigation Shell -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 border-r-0 z-50 flex flex-col p-8 bg-stone-50 dark:bg-stone-950/80">
+<div class="mb-12">
+<h1 class="text-2xl font-serif italic text-[#773c2b] dark:text-[#945341] tracking-tight">Echoes Admin</h1>
+<p class="font-label text-xs text-stone-400 mt-1 uppercase tracking-widest">Managing Pieces</p>
+</div>
+<nav class="flex-1 space-y-6">
+<div class="space-y-2">
+<a class="flex items-center gap-3 py-2 px-3 rounded-lg text-[#773c2b] font-bold relative after:content-[''] after:absolute after:left-0 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full after:-ml-1" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+<span class="font-label text-sm">Media Library</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 rounded-lg text-stone-500 dark:text-stone-400 hover:text-[#773c2b] hover:bg-stone-100/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">notifications</span>
+<span class="font-label text-sm">Notification Center</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 rounded-lg text-stone-500 dark:text-stone-400 hover:text-[#773c2b] hover:bg-stone-100/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">insights</span>
+<span class="font-label text-sm">Analytics</span>
+</a>
+<a class="flex items-center gap-3 py-2 px-3 rounded-lg text-stone-500 dark:text-stone-400 hover:text-[#773c2b] hover:bg-stone-100/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-label text-sm">System Settings</span>
+</a>
+</div>
+</nav>
+<div class="mt-auto pt-8 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-stone-200">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a young person with a thoughtful expression in soft natural indoor lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHugc-taixcsV8VZi4j2W65Mkesec1aq4ZGg35pAIktZ7OYEC5FT_vRz84eNvXgiikH_LX70dSieGRdzRXRwZSqa3wBM7PxUfwmnFPKTqlNDTP8HezsqhG12NPhRxQHbg8Igh05T6SwriYerv0LdvIDndqezcFdDK7HSihUhJQxYqnmSOMKWpiEcls46S58wDuOTgTAVKJloHEmSjdIZR-_CKb_vBM-p1hhH618RrYChJHYZ-fsvtsrrAQSRGLq8nd_4Xn9Kt8j9w"/>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Alex Chen</p>
+<p class="text-xs text-stone-400">Editor-in-Chief</p>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen bg-surface">
+<!-- Top Navigation / Action Bar -->
+<header class="sticky top-0 z-40 bg-[#fcf9f4]/80 backdrop-blur-xl flex justify-between items-center w-full px-12 py-8 max-w-screen-2xl mx-auto">
+<div>
+<h2 class="text-3xl font-headline tracking-tighter text-[#1c1c19]">Archives</h2>
+<p class="text-on-surface-variant text-sm font-label mt-1">1,248 items catalogued</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative flex items-center group">
+<span class="material-symbols-outlined absolute left-4 text-stone-400 group-hover:text-primary transition-colors">search</span>
+<input class="bg-surface-container-low border-none rounded-full py-3 pl-12 pr-6 text-sm w-64 focus:ring-1 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Search archives..." type="text"/>
+</div>
+<button class="glow-cta text-on-primary px-8 py-3 rounded-full font-label font-bold text-sm flex items-center gap-2 shadow-xl shadow-primary/10 active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                    Upload New
+                </button>
+</div>
+</header>
+<!-- Content Area -->
+<div class="px-12 pb-24 max-w-screen-2xl mx-auto">
+<!-- Filters & Categories -->
+<div class="flex items-center gap-4 mb-12">
+<span class="text-xs font-label uppercase tracking-widest text-stone-400">Filter By:</span>
+<div class="flex gap-2">
+<span class="bg-primary text-on-primary px-4 py-1.5 rounded-full text-xs font-bold">All Pieces</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-md text-xs font-medium hover:bg-secondary-fixed transition-colors cursor-pointer">Photography</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-md text-xs font-medium hover:bg-secondary-fixed transition-colors cursor-pointer">Drafts</span>
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1.5 rounded-md text-xs font-medium hover:bg-secondary-fixed transition-colors cursor-pointer">Personal</span>
+</div>
+</div>
+<!-- Bento Grid Media Layout -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Main Featured Card (Asymmetric) -->
+<div class="col-span-8 group">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow transition-all duration-500 group-hover:-translate-y-1">
+<div class="aspect-[16/9] w-full overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Wide shot of a misty mountain range at sunrise with soft golden and purple hues reflecting on a lake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7oN-_OYpUPBSG9OKf8DDfqt2W3t4QBRnOAgpJcqSRvWDl0KJKqtfYZcO8cFfcFPQdSLPJePq3CkS6RU4O1vopHtWUUxQVP2dnF0bhUIK7ZE84SLaDuu9_Pr5w2TqJmv-T8y7xo-vYHRIfPAdNfl3wAvzK98fWSTfalZkr0-G6GN_LMHEyRclRUMtQiu1oOzH-plZrfg_oaVTjp5IySjwgmWV-JTCylBcJsKZMidGkjFevl94aqeho6EouX-8GA5BsL-NUeTsF4pw"/>
+</div>
+<div class="p-8 flex justify-between items-end">
+<div>
+<h3 class="font-headline text-2xl text-on-surface">Dawn on the Peninsula</h3>
+<p class="text-sm font-label text-stone-400 mt-2">captured_01.jpg • 4.2 MB</p>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-xs font-label text-stone-400 uppercase tracking-widest">Oct 24, 2023</p>
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-primary-fixed hover:border-primary transition-all">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Items -->
+<div class="col-span-4 space-y-8">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group cursor-pointer">
+<div class="aspect-square overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Macro photo of ancient books with weathered paper and leather bindings in a library with warm bokeh lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArS7G5PRh0NFqY76CF5gITl_YRaZFoOI55hHW15EPXrMe6VZ-zeZ4wLT08h3Furh-UxxAKBj2tshpIq_xYLx07tGid0BhC_h7uipSO_NmPmGqJUzEEENJkqg7Nc4ZZwBWrea_JGb2Nb8gqN3keANl2sdCMhV55-uNa2u8SEwnOet0Efnh2SA_rXE7o3MA99rV6h5c9TDHbY3mQqXhocOUTdCdihkspn_UycJwN3lxiEkx3JjsdYNpm8Dnmw19N9U-7yX84Kl6yh5g"/>
+</div>
+<div class="p-4">
+<p class="font-headline text-lg text-on-surface">Reference Stack</p>
+<div class="flex justify-between items-center mt-2">
+<span class="text-[10px] font-label text-stone-400 uppercase tracking-widest">Sept 12, 2023</span>
+<span class="text-[10px] font-label text-stone-400 italic">1.8 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="col-span-4">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Handcrafted pottery on a simple wooden shelf against a clean textured wall with morning shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6qWo8prYrE3OAty6g3tn5Skrux0VgUbK2YnBmxazaJGrNX-El6HQqRHLcNTgY9M1ZMywMajKznb5sAwCyGaVu6QYCDV83KIaStjjMzSYppcc1CC0P99nuNQtVXF2KMYNlE7n5dxARj9pGNnDvKDSnCd4eyP_xb49llNYvqwJFTn_az0NRaRY2-kLodJe04FS7mF_1rOXM2XV2ii1HZ74rl8ob6FIYKQg7H82ouZxveTdCRZJkKlf8LG9uf5FteMbNmmQg-WyS3l4"/>
+</div>
+<div class="p-4">
+<p class="font-headline text-lg text-on-surface">Object Study 04</p>
+<div class="flex justify-between items-center mt-2">
+<span class="text-[10px] font-label text-stone-400 uppercase tracking-widest">Aug 30, 2023</span>
+<span class="text-[10px] font-label text-stone-400 italic">2.1 MB</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-4">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group cursor-pointer translate-y-6">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Top view of students studying around a wooden table with notebooks, coffee, and sunlight streaming through windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQwst1M-Ty4mS9CZegSXb-PsHjjEGB8XvVrsULduaiQkLFr5_L0LsshZo2SizYqXY5TEl3LQjFXFID3Vqf6oli1BWtwH3X69QS_vdukqTJSflXFl8OpbENeZLTDBITEzWuTsYPLRb13U6QQ7Rgdy37PikRuE3WDxFq1wOEFP8PgC8msT6GtukE0wL6JpcKt7Ox1e-sDNsD0SyOMdJHU7TFN3_zuH4GlFvoG3hjR2cJCn5cEfj5v9QYOOx59Sq9RJnlYJgR59wOQ9E"/>
+</div>
+<div class="p-4">
+<p class="font-headline text-lg text-on-surface">Campus Afternoon</p>
+<div class="flex justify-between items-center mt-2">
+<span class="text-[10px] font-label text-stone-400 uppercase tracking-widest">Aug 24, 2023</span>
+<span class="text-[10px] font-label text-stone-400 italic">3.5 MB</span>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-4">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden editorial-shadow group cursor-pointer">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Minimalist desk setup with a mechanical pencil, a clean notebook, and a single cup of black coffee on ivory surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFQm8_tOC8J-HNNr3jYw4VeMBVsL6RmtaBd3mFIWzkPyU5FrcTEALgGHxwT5RqRWBBJNaGfGaXJz_HhtWzXjmBhnqOzKplIF99jygAvc_L3WOH0rPC1RiEPO7XU3Jz24Q0bXGWsq4EXWM37GZX5r81pyBdbxcWyZoXCkJj-dtQ6nmccSjbeDQliZMNreoYtrnI91QxFrET2WlAW-kgQic7BOjYqZEpvDWL9GlOIsx1oKY5UKRo4AN2rBud2nzX6hr99P3QhQYn_2s"/>
+</div>
+<div class="p-4">
+<p class="font-headline text-lg text-on-surface">Writing Session</p>
+<div class="flex justify-between items-center mt-2">
+<span class="text-[10px] font-label text-stone-400 uppercase tracking-widest">Aug 15, 2023</span>
+<span class="text-[10px] font-label text-stone-400 italic">1.2 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 3 - Large Content Card -->
+<div class="col-span-12 mt-12">
+<div class="bg-surface-container-low rounded-xl p-12 flex items-center justify-between border-none">
+<div class="max-w-md">
+<h4 class="font-headline text-3xl italic mb-4">"The screen is a series of fine-paper sheets."</h4>
+<p class="text-sm font-label text-on-surface-variant leading-relaxed">Your media archive serves as the visual narrative of your journal. Curate carefully, for each image is a piece of the story you are telling.</p>
+</div>
+<div class="flex gap-4">
+<div class="w-32 h-32 rounded-lg bg-surface transform rotate-3 editorial-shadow p-2">
+<img class="w-full h-full object-cover rounded-md" data-alt="Open journal page with hand-drawn sketches of leaves and delicate handwriting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDghQ6g8y9mgQVRBbWuXvUoDpncatiH8FoPiQQSTUu4EA44StQ7gj8a8UCjzNDxIpL9NOIFwoi8MkArTo2GL1SXiT02xoIvait-TM9iaXYTZ_Y4Ekd7iDEjhKG73ZuT1jxms0zmjx-NRhhFKifJT_XnkBhhvKbw4Gk5nTiEX3nRJKZ6gLkrpaXu9PEN4igyqZKCiof7HmeBneWb6ooMGORizbRXH1QDUxba6tA08ISUa5yKCPNIZe245Uo0lBb7BQMvCXso-YNITpY"/>
+</div>
+<div class="w-32 h-32 rounded-lg bg-surface transform -rotate-6 editorial-shadow p-2">
+<img class="w-full h-full object-cover rounded-md" data-alt="Minimalist workplace with laptop and a small vase of dried flowers in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKFaA8drzo-wNPZSRCaKyDd_75XGtOZc0VVxksLW8rEx9Dhte0sA1uA2hSYF2pMeNoJSaedYJHnpt8bfvqEJZgfSjIFRnNocnghh-3aai-p97k305TLyppUmOC47fkZ_Cu3Xnh4Vuh8tkN86CiOTdHjKUt5R0ERIDAUFe2LvJmIxf6WrJ2Z52XlTylbzpxf4X-9ObemSkU6zssnEN_XrE4evC2piSQluwSq6bfzByvwrOIzN4Y-MOKXkL9AbYARC2GgbCAHMa87Zk"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Indicator -->
+<div class="mt-24 flex flex-col items-center justify-center">
+<div class="w-px h-16 bg-gradient-to-b from-primary to-transparent mb-6"></div>
+<button class="text-xs font-label uppercase tracking-[0.2em] text-stone-400 hover:text-primary transition-colors">
+                    Explore deeper archives
+                </button>
+</div>
+</div>
+</main>
+<!-- Contextual FAB (Hidden on this specific task focus but available for interaction) -->
+<div class="fixed bottom-8 right-8 z-50">
+<button class="w-14 h-14 rounded-full glow-cta text-on-primary shadow-2xl flex items-center justify-center group active:scale-95 transition-all">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">cloud_upload</span>
+</button>
+</div>
+</body></html>

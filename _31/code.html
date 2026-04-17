@@ -1,0 +1,259 @@
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#86736e",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-secondary-fixed": "#141e0e",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-error": "#ffffff",
+                    "tertiary": "#584a3c",
+                    "surface-container": "#f0ede8",
+                    "surface-variant": "#e5e2dd",
+                    "surface-container-high": "#ebe8e3",
+                    "secondary": "#56624d",
+                    "inverse-surface": "#31302d",
+                    "surface-container-low": "#f6f3ee",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface": "#fcf9f4",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-primary-fixed": "#380c02",
+                    "secondary-container": "#d7e4ca",
+                    "primary-container": "#945341",
+                    "primary": "#773c2b",
+                    "on-tertiary-fixed": "#241a0e",
+                    "on-primary-fixed-variant": "#703626",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-bright": "#fcf9f4",
+                    "background": "#fcf9f4",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-surface": "#1c1c19",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-container": "#5a6651",
+                    "secondary-fixed-dim": "#becbb2",
+                    "secondary-fixed": "#dae7cd",
+                    "outline-variant": "#d8c2bc",
+                    "primary-fixed": "#ffdbd1",
+                    "on-primary-container": "#ffdad1",
+                    "on-tertiary-container": "#f4dfcb",
+                    "surface-dim": "#dcdad5",
+                    "surface-tint": "#8d4d3b",
+                    "tertiary-container": "#716252",
+                    "on-surface-variant": "#53433f",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-2xl font-serif text-[#1c1c19] tracking-tighter">오늘의 조각</div>
+<div class="hidden md:flex items-center gap-10 font-serif font-normal tracking-tight">
+<a class="text-[#5a6651] hover:text-[#773c2b] transition-colors duration-300" href="#">Archive</a>
+<a class="text-[#5a6651] hover:text-[#773c2b] transition-colors duration-300" href="#">Reflections</a>
+<a class="text-[#5a6651] hover:text-[#773c2b] transition-colors duration-300" href="#">Series</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#773c2b] cursor-pointer hover:scale-95 transition-transform" data-icon="settings">settings</span>
+<span class="material-symbols-outlined text-[#773c2b] cursor-pointer hover:scale-95 transition-transform" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+<div class="flex min-h-screen pt-24">
+<!-- Sidebar Navigation -->
+<aside class="h-screen w-64 fixed left-0 top-24 bg-[#f6f3ee] flex flex-col p-6 gap-4 font-sans text-sm tracking-wide hidden lg:flex">
+<div class="mb-8">
+<div class="text-lg font-serif italic text-[#773c2b]">System Archive</div>
+<div class="text-[10px] uppercase tracking-widest text-[#5a6651] mt-1">Administrative Controls</div>
+</div>
+<a class="flex items-center gap-3 p-3 text-[#5a6651] hover:bg-[#ffffff]/30 transition-all duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="security">security</span>
+<span>Security</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-[#1c1c19] font-bold bg-[#ffffff]/50 rounded-lg transition-all duration-300" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="database">database</span>
+<span>Data Management</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-[#5a6651] hover:bg-[#ffffff]/30 transition-all duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="history">history</span>
+<span>Activity Logs</span>
+</a>
+<a class="flex items-center gap-3 p-3 text-[#5a6651] hover:bg-[#ffffff]/30 transition-all duration-300 rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="person">person</span>
+<span>Account</span>
+</a>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 lg:ml-64 px-8 md:px-16 py-12">
+<!-- Header Section -->
+<header class="max-w-4xl mb-16">
+<h1 class="text-5xl font-serif font-normal text-on-surface tracking-tight mb-6">Preserving Your Digital Ephemera</h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed opacity-80 max-w-2xl">
+                    Your reflections are the fragments of time captured in ink and light. Ensure their longevity by maintaining a local archive. We treat your data not as entries in a database, but as a curated collection of your personal history.
+                </p>
+</header>
+<!-- Export Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 max-w-6xl">
+<!-- Instant Export Card -->
+<section class="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-xs uppercase tracking-widest text-primary font-bold">Manual Archive</span>
+</div>
+<h2 class="text-3xl font-serif mb-6">Create Instant Backup</h2>
+<p class="text-on-surface-variant mb-10 leading-relaxed">
+                            Download your entire archive including reflections, attached media, and metadata. Choose your preferred format for long-term storage or migration.
+                        </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full flex items-center gap-3 hover:opacity-90 transition-opacity bg-gradient-to-r from-primary to-primary-container shadow-sm">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+<span class="font-medium">Export as JSON</span>
+</button>
+<button class="border border-outline-variant/30 text-primary px-8 py-4 rounded-full flex items-center gap-3 hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="table_view">table_view</span>
+<span class="font-medium">Export as CSV</span>
+</button>
+</div>
+</section>
+<!-- Status Card -->
+<section class="md:col-span-5 bg-secondary-container/30 p-10 rounded-xl flex flex-col items-center justify-center text-center">
+<div class="w-20 h-20 bg-surface-container-lowest rounded-full flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="cloud_done" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+</div>
+<h3 class="text-xl font-serif text-on-secondary-container mb-2">System Healthy</h3>
+<p class="text-sm text-on-secondary-container/70 mb-6">Last synced to cloud 4 hours ago.</p>
+<div class="text-[10px] uppercase tracking-widest text-on-secondary-container border border-on-secondary-container/20 px-4 py-1 rounded-full">Encrypted (AES-256)</div>
+</section>
+<!-- Automatic Schedule Card -->
+<section class="md:col-span-12 lg:col-span-5 bg-surface-container-low p-10 rounded-xl">
+<h3 class="text-2xl font-serif mb-6">Scheduled Backups</h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between py-4 border-b border-outline-variant/10">
+<div>
+<div class="font-medium text-on-surface">Weekly Cloud Sync</div>
+<div class="text-xs text-on-surface-variant">Every Sunday at 02:00 AM</div>
+</div>
+<div class="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center justify-between py-4 border-b border-outline-variant/10">
+<div>
+<div class="font-medium text-on-surface">Media High-Res Push</div>
+<div class="text-xs text-on-surface-variant">Instant on upload</div>
+</div>
+<div class="w-12 h-6 bg-surface-container-highest rounded-full relative cursor-pointer">
+<div class="absolute left-1 top-1 w-4 h-4 bg-white rounded-full shadow-sm"></div>
+</div>
+</div>
+</div>
+<button class="mt-8 text-primary text-sm font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                        Configure storage provider <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</section>
+<!-- Export History -->
+<section class="md:col-span-12 lg:col-span-7 bg-surface-container-lowest p-10 rounded-xl">
+<div class="flex justify-between items-end mb-8">
+<h3 class="text-2xl font-serif">Export History</h3>
+<span class="text-xs uppercase tracking-tighter text-on-surface-variant opacity-60">Showing last 4 logs</span>
+</div>
+<div class="overflow-hidden">
+<table class="w-full text-left">
+<thead class="text-[10px] uppercase tracking-widest text-on-surface-variant/50">
+<tr>
+<th class="pb-4 font-normal">Date &amp; Time</th>
+<th class="pb-4 font-normal">Format</th>
+<th class="pb-4 font-normal">Size</th>
+<th class="pb-4 font-normal text-right">Action</th>
+</tr>
+</thead>
+<tbody class="text-sm divide-y divide-outline-variant/5">
+<tr>
+<td class="py-4 text-on-surface">Oct 24, 2023 · 14:20</td>
+<td class="py-4"><span class="bg-secondary-container px-2 py-0.5 rounded text-[10px] font-bold text-on-secondary-container">JSON</span></td>
+<td class="py-4 text-on-surface-variant">1.2 MB</td>
+<td class="py-4 text-right"><span class="material-symbols-outlined text-primary cursor-pointer" data-icon="rebase_edit">rebase_edit</span></td>
+</tr>
+<tr>
+<td class="py-4 text-on-surface">Sep 12, 2023 · 09:15</td>
+<td class="py-4"><span class="bg-surface-container-highest px-2 py-0.5 rounded text-[10px] font-bold text-on-surface-variant">CSV</span></td>
+<td class="py-4 text-on-surface-variant">840 KB</td>
+<td class="py-4 text-right"><span class="material-symbols-outlined text-primary cursor-pointer" data-icon="rebase_edit">rebase_edit</span></td>
+</tr>
+<tr>
+<td class="py-4 text-on-surface">Aug 01, 2023 · 18:44</td>
+<td class="py-4"><span class="bg-secondary-container px-2 py-0.5 rounded text-[10px] font-bold text-on-secondary-container">JSON</span></td>
+<td class="py-4 text-on-surface-variant">1.1 MB</td>
+<td class="py-4 text-right"><span class="material-symbols-outlined text-primary cursor-pointer" data-icon="rebase_edit">rebase_edit</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Visual Anchor Section -->
+<div class="md:col-span-12 mt-12 relative overflow-hidden rounded-xl aspect-[21/9] flex items-center px-12 group">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale group-hover:scale-105 transition-transform duration-1000" data-alt="atmospheric photo of an antique typewriter on a wooden desk with soft morning sunlight and dust motes in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwio1M_3-Lx150CgWVTg1iU499lP3YAo0m56TiCd_vx5_bzIRyXp5_7Sq2j8C0EPElxDVwJxN7UZ3LgRIhylHcCXb60nnSfp3DopC1k9d_a9fiHFWLggfn0V655kMylWI3VnpmB8f_ALSfEOnMxxqsoPzvTnFFbLSi23ZLUjebG98QlHSl0IOYmD_h8a58x4Syu5Nq1S_CBS2LNf_UiCCMCk3kgarC_2JsytolU7cfiKW1xC9ssnRl9FhtPWz723cpxn-OQ7_Vmqk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-md">
+<h4 class="text-3xl font-serif mb-4 leading-tight italic">"The memory is the scribe of the soul."</h4>
+<p class="text-xs uppercase tracking-[0.2em] font-bold text-primary">Aristotle</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 mt-24 bg-[#fcf9f4] border-t-[1px] border-[#1c1c19]/10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 w-full max-w-7xl mx-auto">
+<div class="text-[#773c2b] font-sans text-xs uppercase tracking-widest">
+                © 2024 오늘의 조각. Analog Archive System.
+            </div>
+<div class="flex gap-8">
+<a class="text-[#5a6651] font-sans text-xs uppercase tracking-widest hover:text-[#773c2b] transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#5a6651] font-sans text-xs uppercase tracking-widest hover:text-[#773c2b] transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#5a6651] font-sans text-xs uppercase tracking-widest hover:text-[#773c2b] transition-opacity opacity-80 hover:opacity-100" href="#">Security Whitepaper</a>
+</div>
+</div>
+</footer>
+</body></html>

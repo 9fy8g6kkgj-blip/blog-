@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface": "#fcf9f4",
+                    "on-tertiary-container": "#f4dfcb",
+                    "on-background": "#1c1c19",
+                    "surface-tint": "#8d4d3b",
+                    "outline": "#86736e",
+                    "on-primary-fixed": "#380c02",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0ede8",
+                    "on-primary-fixed-variant": "#703626",
+                    "tertiary-container": "#716252",
+                    "on-surface-variant": "#53433f",
+                    "on-primary-container": "#ffdad1",
+                    "primary": "#773c2b",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-fixed": "#dae7cd",
+                    "background": "#fcf9f4",
+                    "error": "#ba1a1a",
+                    "tertiary": "#584a3c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-secondary-container": "#5a6651",
+                    "secondary-container": "#d7e4ca",
+                    "primary-fixed": "#ffdbd1",
+                    "on-secondary-fixed": "#141e0e",
+                    "tertiary-fixed": "#f4dfcb",
+                    "inverse-on-surface": "#f3f0eb",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#becbb2",
+                    "surface-bright": "#fcf9f4",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-variant": "#e5e2dd",
+                    "inverse-surface": "#31302d",
+                    "secondary": "#56624d",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-tertiary-fixed": "#241a0e",
+                    "outline-variant": "#d8c2bc",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "primary-container": "#945341",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-high": "#ebe8e3",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            font-size: 20px;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(119, 60, 43, 0.15);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-2xl font-headline font-bold text-[#1c1c19] tracking-tighter">Echoes of Today</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[#1c1c19]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Archive</a>
+<a class="text-[#1c1c19]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Fragments</a>
+<a class="text-[#1c1c19]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Journal</a>
+<a class="text-[#773c2b] relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full font-serif italic tracking-tight" href="#">Colophon</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">settings</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">account_circle</button>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-8 max-w-6xl mx-auto">
+<!-- Hero Section: Colophon Title -->
+<header class="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+<div class="max-w-2xl">
+<p class="font-label text-xs uppercase tracking-[0.3em] text-primary mb-4">Final Credits</p>
+<h1 class="font-headline text-6xl md:text-8xl italic tracking-tighter text-on-background leading-none">Colophon</h1>
+<p class="mt-8 font-body text-lg text-on-surface-variant leading-relaxed max-w-lg">
+                    A record of the digital elements, typographic choices, and architectural philosophy that construct this living archive of university fragments.
+                </p>
+</div>
+<div class="w-32 h-32 rounded-full overflow-hidden bg-surface-container-low flex items-center justify-center p-4">
+<img class="w-full h-full object-contain opacity-40" data-alt="a vintage minimalist wax seal icon with a delicate feather quill engraving in dark brown on ivory paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbC30CBG_FcXY0wOSWeTALnxVF5pYhojC14sJAW19-4FEyQRN0i2dY9oTJvkOBXahl7glId4bO1Kn69nszKv0OG4BTGPyLQiRpgu74LJ6Ho3kUelvaGEypgagSiYRJPaTmrYB3rhR3mK7-QjM6d6_ZZs4gfsaJ0-AyCGdHP7pccza5paY4W7O4aGq7EJATgp4VKA5Rz-phWliXjXe8reZ8tdPp8rKojXWiCRvM8Cz8W2RXVZ7onl47EC_yYV7sDhmIPRtxghwWBIY"/>
+</div>
+</header>
+<!-- Bento Grid for Tech & Design Details -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+<!-- Type Section (Large) -->
+<section class="md:col-span-8 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between min-h-[400px]">
+<div>
+<h2 class="font-headline text-3xl italic mb-10">Typography</h2>
+<div class="space-y-12">
+<div class="flex flex-col md:flex-row gap-6 md:items-baseline">
+<span class="font-headline text-5xl md:text-7xl text-on-background">Newsreader</span>
+<span class="font-body text-sm text-on-surface-variant uppercase tracking-widest">Main Display &amp; Headlines</span>
+</div>
+<div class="flex flex-col md:flex-row gap-6 md:items-baseline border-t border-outline-variant/20 pt-8">
+<span class="font-body text-4xl md:text-5xl text-on-background font-light">Manrope</span>
+<span class="font-body text-sm text-on-surface-variant uppercase tracking-widest">Body Copy &amp; UI Labels</span>
+</div>
+</div>
+</div>
+<div class="mt-12 text-on-surface-variant/60 font-body text-sm italic max-w-md">
+                    Selected for their synthesis of academic tradition and digital clarity, mirroring the student experience.
+                </div>
+</section>
+<!-- Color Palette (Tall) -->
+<section class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col">
+<h2 class="font-headline text-2xl italic mb-8">Chromatic Soul</h2>
+<div class="flex-1 flex flex-col gap-3">
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-surface border border-outline-variant/10 shadow-sm"></div>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-tighter">Surface</span>
+<span class="text-xs text-on-surface-variant font-mono">#fcf9f4</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-primary"></div>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-tighter text-primary">Primary</span>
+<span class="text-xs text-on-surface-variant font-mono">#773c2b</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-secondary-container"></div>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-tighter">Accents</span>
+<span class="text-xs text-on-surface-variant font-mono">#d7e4ca</span>
+</div>
+</div>
+<div class="flex items-center gap-4 group">
+<div class="w-12 h-12 rounded-lg bg-on-background"></div>
+<div class="flex flex-col">
+<span class="text-xs font-label uppercase tracking-tighter">Typography</span>
+<span class="text-xs text-on-surface-variant font-mono">#1c1c19</span>
+</div>
+</div>
+</div>
+<p class="mt-8 text-xs font-body leading-relaxed text-on-surface-variant">
+                    An organic palette inspired by sun-bleached library papers and aged ink.
+                </p>
+</section>
+<!-- Technology (Bottom Left) -->
+<section class="md:col-span-5 bg-on-background text-surface rounded-xl p-10 flex flex-col justify-between">
+<div>
+<h2 class="font-headline text-2xl italic mb-8 text-surface/80">Infrastructure</h2>
+<ul class="space-y-4 font-body text-sm tracking-wide text-surface-container-highest">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">bolt</span>
+                            Tailwind CSS Framework
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">cloud</span>
+                            Semantic HTML5 Engine
+                        </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary-fixed">font_download</span>
+                            Google Fonts API Integration
+                        </li>
+</ul>
+</div>
+<div class="mt-12 flex justify-between items-center">
+<span class="text-[10px] uppercase tracking-[.2em] opacity-40">Build Version 2.0.4</span>
+<button class="bg-primary hover:bg-primary-container text-white px-6 py-3 rounded-full text-xs font-label transition-all active:scale-95 shadow-lg shadow-black/20">
+                        View Source
+                    </button>
+</div>
+</section>
+<!-- Philosophy Image (Bottom Right) -->
+<section class="md:col-span-7 rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="a sun-drenched minimalist university studio with a wooden desk, an open notebook, and a small plant, soft morning light creating long shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChAHgQBV6anJfBIHagV7fby_Yhf_84MHWRV8oXaf93dxH5maxwdPMic1u9UZpVGuaDbrrnTsYf8tN8qRtTFyR-pimUtUDS6ysUc8V41SinzVdwNpNchEiorFizgCiCJePTF9o41qa8cG6fCui5tXIUjuyEFVon6-KpI0lqafAugdlAa3ly9heUznJLz1iA37NyzAIjuFTCEnuW-sSBgwM_e7xfMGW3Kq0M1Xh3Nhh1BvSW6DUSHxVAbRG1DmO23Wlf-aJDM2HgB2w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent flex flex-col justify-end p-10">
+<h3 class="font-headline text-3xl text-on-background italic">The Breathing Layout</h3>
+<p class="font-body text-sm text-on-surface-variant mt-4 max-w-sm">
+                        Embracing intentional asymmetry and white space to evoke the feeling of a curated digital scrapbook.
+                    </p>
+</div>
+</section>
+</div>
+<!-- Manifest Section -->
+<section class="mt-32 max-w-3xl mx-auto text-center">
+<span class="material-symbols-outlined text-4xl text-primary/30 mb-8">auto_awesome</span>
+<blockquote class="font-headline text-3xl md:text-4xl italic text-on-background leading-relaxed">
+                "We don't build databases of memories; we weave the atmosphere of what it felt like to be there."
+            </blockquote>
+<p class="mt-8 font-label text-xs uppercase tracking-[0.4em] text-on-surface-variant">
+                — Echoes of Today Manifesto
+            </p>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-surface mt-20 border-t border-[#1c1c19]/5 pt-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30">
+                © 2024 Echoes of Today. A Digital Ephemera Project.
+            </div>
+<div class="flex gap-12">
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 hover:text-[#1c1c19] transition-colors" href="#">Colophon</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 hover:text-[#1c1c19] transition-colors" href="#">Manifesto</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 hover:text-[#1c1c19] transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

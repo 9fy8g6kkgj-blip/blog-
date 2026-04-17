@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#8d4d3b",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#141e0e",
+                    "secondary-container": "#d7e4ca",
+                    "inverse-surface": "#31302d",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2dd",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-background": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-primary-fixed": "#380c02",
+                    "secondary-fixed": "#dae7cd",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-tertiary-container": "#f4dfcb",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf9f4",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-container": "#ffdad1",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-container-low": "#f6f3ee",
+                    "primary-container": "#945341",
+                    "tertiary": "#584a3c",
+                    "primary-fixed": "#ffdbd1",
+                    "secondary-fixed-dim": "#becbb2",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface-container": "#f0ede8",
+                    "on-surface": "#1c1c19",
+                    "outline-variant": "#d8c2bc",
+                    "surface": "#fcf9f4",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dcdad5",
+                    "on-surface-variant": "#53433f",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-container-high": "#ebe8e3",
+                    "primary": "#773c2b",
+                    "secondary": "#56624d",
+                    "outline": "#86736e",
+                    "inverse-primary": "#ffb5a1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; color: #1c1c19; }
+        .serif-text { font-family: 'Newsreader', serif; }
+        .glass-nav { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full top-0 sticky z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md transition-all duration-300">
+<nav class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-2xl font-serif italic text-stone-900 dark:text-stone-50 tracking-tight">오늘의 조각</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-sm font-medium tracking-wide text-stone-900 dark:text-stone-50 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-800 after:rounded-full transition-colors duration-300" href="#">Home</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">About</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">Archive</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+</header>
+<main class="max-w-4xl mx-auto px-8 pt-24 pb-32">
+<!-- Article Header -->
+<header class="mb-20">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-md text-xs font-semibold uppercase tracking-widest">일 상</span>
+<span class="text-on-surface-variant text-sm font-label opacity-60">2024.03.26</span>
+</div>
+<h1 class="serif-text text-5xl md:text-6xl font-normal leading-tight text-on-surface mb-12 -ml-0.5">
+                대학교 친구들과 함께한 <br/>
+<span class="italic text-primary">왁자지껄</span> 점심시간
+            </h1>
+<div class="w-full aspect-[21/9] rounded-xl overflow-hidden relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="candid shot of a sunlit university canteen with steam rising from warm food and friends laughing in soft focus background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6ETh094AoVUOtCPBVcUGDLVLlHyenL7ptcvy29eedZjBm4ivPAzrI2wgf1SV21orLHdFJ3W5-G_-Ucot6jKeZ42gwpFsA9_Og_1uH7IxuqtRxEpAjxpQzc5l1JHZV0qpRRpt3icVIVRLPmlD21Z29m-uDQFKDQC99J0jEEoCr32lfowo-EFGns_Ax0c8Ey-ggPf5pOmBUkW8hzoWSbs2WVZ1ULlm4i_-eKNOuU30TUfE1aHQOOJIr6dXEIZQOyEtioM0jPsSBEiU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+</header>
+<!-- Article Content -->
+<article class="prose prose-stone max-w-none">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<!-- Side metadata or pull quote -->
+<aside class="md:w-1/4 hidden lg:block sticky top-32">
+<div class="flex flex-col gap-8">
+<div class="h-px w-12 bg-primary"></div>
+<p class="serif-text italic text-xl text-on-surface-variant leading-relaxed">
+                            "평범한 화요일의 오후가 이토록이나 찬란했던 이유는 오직 그들의 웃음소리 덕분이었다."
+                        </p>
+</div>
+</aside>
+<!-- Body text -->
+<div class="md:w-full lg:w-3/4 flex flex-col gap-12">
+<p class="font-body text-lg leading-[1.8] text-on-surface font-light">
+                        강의실의 무거운 공기를 뒤로하고 쏟아져 나온 캠퍼스의 공기는 이미 봄의 기운을 잔뜩 머금고 있었다. 전공 서적을 가슴에 안고 우리가 향한 곳은 학교 정문 너머 작고 소박한 밥집. 늘 먹던 메뉴, 늘 앉던 그 자리지만 친구들과 함께하는 이 시간만큼은 매번 새로운 조각으로 남는다.
+                    </p>
+<div class="grid grid-cols-12 gap-6 items-center">
+<div class="col-span-12 md:col-span-7">
+<img class="w-full h-[400px] object-cover rounded-xl" data-alt="aesthetic close-up of traditional korean meal on a wooden table with soft warm indoor lighting and steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVCF4pxxafhtt-eeZsoe3xUmC8LLN9lsJLG-5OzoqPo6R6lVtdOw01RlR64urYY4DOAOrR5t4fB4X1KsAS_hZO53LVyAkTK5OaTIFqjH7_4vR6hkg042uVjCTETyx-sFVxXxw5B7aU-6nLO4RhvpcGYUAhFffoJO9YWre1hHUinM2AeEMhe95-lhN_0y3whdU0o4agr0Q1tUVg6Lgpek25rlBUZaJfw_L0cYrJ7uNIfBvurUa-f4-MoOJ7dOTt8-WNhaF0eNv3BPE"/>
+</div>
+<div class="col-span-12 md:col-span-5 bg-surface-container-low p-8 rounded-xl">
+<p class="font-body text-base leading-relaxed text-on-surface-variant italic">
+                                테이블 위로 오가는 젓가락의 분주함만큼이나 대화의 온도는 뜨거웠다. 과제에 대한 푸념부터 시작해 어제 보았던 영화, 그리고 아주 사소한 누군가의 농담까지.
+                            </p>
+</div>
+</div>
+<p class="font-body text-lg leading-[1.8] text-on-surface font-light">
+                        우리는 서로의 말을 가로채기도 하고, 입안 가득 밥을 문 채 깔깔대며 웃기도 했다. 누군가 흘린 국물 한 방울조차 이야기의 소재가 되는 이 순간. 취업 준비며 미래에 대한 불안함이 잠시나마 잊히는, 마법 같은 1시간이었다. 
+                    </p>
+<div class="flex justify-end my-8">
+<div class="w-2/3">
+<img class="w-full h-[300px] object-cover rounded-xl shadow-sm" data-alt="low angle shot of three students walking away on a tree-lined campus path with dappled sunlight on the ground" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMPlA0oR7YZPWHPsAm-FN8QiZCUQS_beO83lN8BJVO8-IFpJ-GF9BXcasMQ8gvp3FVjsMpnihdLyL5s6OrZVCL2JY67zcx8MrfRHrVzjNWifTz6eouGjxRSPkwSVQSvYogeH2tv3x1wxhzpcabMLDb6zo6hNR7A17Klg6DHGj8_WFVevniltus1rWKcIY8G2ioO6XXc40eR86iw6J1p95TSAVZDa9qqI3XitfzB9m05A_2CI7Uog2s2YOrF4GsF2l5ixLAbbRW_Bw"/>
+<p class="text-right text-xs font-label text-on-surface-variant/40 mt-4 tracking-tighter">Campus Walk, Mar 2024</p>
+</div>
+</div>
+<p class="font-body text-lg leading-[1.8] text-on-surface font-light">
+                        식당을 나와 다시 강의실로 향하는 길, 친구의 가방에 매달린 작은 인형이 달랑거리는 것을 보며 생각했다. 이 왁자지껄한 소음들이 훗날 내 기억의 서랍 속에서 가장 따뜻한 조각으로 빛나고 있을 것이라고. 오늘 하루도, 우리는 서로의 인생에 기분 좋은 얼룩을 남겼다.
+                    </p>
+</div>
+</div>
+</article>
+<!-- Interaction Area -->
+<section class="mt-24 pt-12 border-t border-outline-variant/15">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-6">
+<button class="flex items-center gap-2 group transition-all duration-300">
+<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform" data-icon="favorite">favorite</span>
+<span class="text-sm font-medium text-on-surface-variant">124</span>
+</button>
+<button class="flex items-center gap-2 group transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:scale-110 transition-transform" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-sm font-medium text-on-surface-variant">12</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Pagination -->
+<nav class="mt-32 flex flex-col md:flex-row gap-6">
+<a class="flex-1 bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-3 group transition-all hover:bg-surface-container-low" href="#">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant/50 flex items-center gap-2">
+<span class="material-symbols-outlined text-xs" data-icon="arrow_back">arrow_back</span> Previous Piece
+                </span>
+<span class="serif-text text-xl font-medium text-on-surface group-hover:text-primary transition-colors">어느 늦은 밤 도서관의 백색소음</span>
+</a>
+<a class="flex-1 bg-surface-container-lowest p-8 rounded-xl flex flex-col gap-3 group items-end text-right transition-all hover:bg-surface-container-low" href="#">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant/50 flex items-center gap-2">
+                    Next Piece <span class="material-symbols-outlined text-xs" data-icon="arrow_forward">arrow_forward</span>
+</span>
+<span class="serif-text text-xl font-medium text-on-surface group-hover:text-primary transition-colors">주말 아침, 정물화 같은 내 방 풍경</span>
+</a>
+</nav>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 mt-24 bg-stone-100 dark:bg-stone-900 flex flex-col items-center justify-center px-8">
+<div class="font-serif italic text-lg text-center mb-8 text-stone-700 dark:text-stone-300">
+            © 오늘의 조각 by alstjd. All pieces archived.
+        </div>
+<div class="flex gap-12">
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4 transition-colors" href="#">Instagram</a>
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4 transition-colors" href="#">Email</a>
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4 transition-colors" href="#">Feed</a>
+</div>
+</footer>
+</body></html>

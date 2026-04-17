@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdbd1",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-secondary-fixed": "#141e0e",
+                    "on-secondary-container": "#5a6651",
+                    "tertiary": "#584a3c",
+                    "tertiary-fixed": "#f4dfcb",
+                    "secondary-fixed": "#dae7cd",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#d8c2bc",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad5",
+                    "inverse-surface": "#31302d",
+                    "on-surface": "#1c1c19",
+                    "on-primary-container": "#ffdad1",
+                    "primary-container": "#945341",
+                    "surface-bright": "#fcf9f4",
+                    "on-surface-variant": "#53433f",
+                    "on-primary-fixed": "#380c02",
+                    "surface-container-high": "#ebe8e3",
+                    "secondary": "#56624d",
+                    "on-tertiary-container": "#f4dfcb",
+                    "surface-container-low": "#f6f3ee",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-highest": "#e5e2dd",
+                    "background": "#fcf9f4",
+                    "surface-tint": "#8d4d3b",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#d7e4ca",
+                    "primary": "#773c2b",
+                    "outline": "#86736e",
+                    "surface-variant": "#e5e2dd",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-tertiary-fixed": "#241a0e",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-container": "#f0ede8",
+                    "surface": "#fcf9f4",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif-font { font-family: 'Newsreader', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-[#fcf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl tonal-shift">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]">오늘의 조각</div>
+<div class="hidden md:flex items-center space-x-8 font-serif font-medium tracking-tight">
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1c1c19] dark:hover:text-white transition-colors" href="#">Analytics</a>
+<a class="text-[#773c2b] dark:text-[#945341] border-b-0 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full" href="#">Logs</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1c1c19] dark:hover:text-white transition-colors" href="#">Categories</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1c1c19] dark:hover:text-white transition-colors" href="#">Settings</a>
+</div>
+<div class="flex items-center space-x-4">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 font-body" placeholder="Search logs..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:bg-[#f6f3ee]/50 p-2 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<div class="flex max-w-[1440px] mx-auto min-h-[calc(100vh-88px)]">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col h-[calc(100vh-88px)] w-64 bg-[#f6f3ee] dark:bg-stone-900 sticky top-[88px] py-8 space-y-6 tonal-transition via surface-container-low border-r border-transparent">
+<div class="px-8 mb-4">
+<h2 class="text-lg font-serif text-[#1c1c19] dark:text-[#fcf9f4]">Admin Archive</h2>
+<p class="font-sans uppercase tracking-widest text-[10px] text-stone-400">System Controller</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center px-8 py-3 text-stone-400 dark:text-stone-500 hover:bg-white/20 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="dashboard">dashboard</span>
+<span class="font-sans uppercase tracking-widest text-xs">Dashboard</span>
+</a>
+<a class="flex items-center px-8 py-3 text-stone-400 dark:text-stone-500 hover:bg-white/20 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="edit_note">edit_note</span>
+<span class="font-sans uppercase tracking-widest text-xs">Editorial</span>
+</a>
+<a class="flex items-center px-8 py-3 text-[#773c2b] dark:text-[#945341] font-bold bg-[#ffffff] dark:bg-stone-800 rounded-r-full transition-all duration-200" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="terminal">terminal</span>
+<span class="font-sans uppercase tracking-widest text-xs">System</span>
+</a>
+<a class="flex items-center px-8 py-3 text-stone-400 dark:text-stone-500 hover:bg-white/20 hover:translate-x-1 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mr-3" data-icon="shield_person">shield_person</span>
+<span class="font-sans uppercase tracking-widest text-xs">Security</span>
+</a>
+</nav>
+<div class="px-8 mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary rounded-full font-sans uppercase tracking-widest text-[10px] flex items-center justify-center space-x-2 transition-transform duration-200 active:scale-95 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>New Piece</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 px-8 lg:px-12 py-12 bg-surface">
+<!-- Header Section -->
+<div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-headline tracking-tight text-on-surface mb-4">System Archive Logs</h1>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed max-w-lg">
+                        A granular historical record of system events, user interactions, and technical pulsations within the <span class="italic font-headline">오늘의 조각</span> ecosystem.
+                    </p>
+</div>
+<!-- Filters Asymmetric Layout -->
+<div class="flex flex-wrap gap-3">
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex items-center text-sm font-label text-on-surface-variant">
+<span class="material-symbols-outlined text-sm mr-2">calendar_today</span>
+                        Last 24 Hours
+                    </div>
+<div class="bg-surface-container-low px-4 py-2 rounded-lg flex items-center text-sm font-label text-on-surface-variant">
+<span class="material-symbols-outlined text-sm mr-2">filter_list</span>
+                        All Severities
+                    </div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full text-sm font-label transition-transform hover:scale-105 active:scale-95">
+                        Export CSV
+                    </button>
+</div>
+</div>
+<!-- Bento-style Stats Overview -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-primary">
+<p class="font-label uppercase tracking-widest text-[10px] text-on-surface-variant mb-2">Total Events</p>
+<h3 class="text-3xl font-headline italic">12,842</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-error">
+<p class="font-label uppercase tracking-widest text-[10px] text-on-surface-variant mb-2">System Errors</p>
+<h3 class="text-3xl font-headline italic text-error">14</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-secondary">
+<p class="font-label uppercase tracking-widest text-[10px] text-on-surface-variant mb-2">Warnings</p>
+<h3 class="text-3xl font-headline italic text-secondary">28</h3>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-l-4 border-tertiary">
+<p class="font-label uppercase tracking-widest text-[10px] text-on-surface-variant mb-2">Health Index</p>
+<h3 class="text-3xl font-headline italic text-tertiary">99.8%</h3>
+</div>
+</div>
+<!-- Editorial Log Table -->
+<div class="bg-surface-container-low rounded-2xl overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high/50">
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">Event ID</th>
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">Severity</th>
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">Timestamp</th>
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">Action / Path</th>
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">User</th>
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">Status</th>
+<th class="px-6 py-5 font-label uppercase tracking-widest text-[10px] text-on-surface-variant">Details</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">#LOG-88219</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-secondary-container text-on-secondary-container uppercase">Info</span>
+</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface">Oct 24, 14:02:11</td>
+<td class="px-6 py-4 font-body text-sm font-medium">POST /api/archive/new-piece</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface-variant">admin_jeong</td>
+<td class="px-6 py-4 text-xs font-mono font-bold text-secondary">201</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:underline underline-offset-4 text-xs font-label">View Trace</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">#LOG-88218</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-error-container text-on-error-container uppercase">Error</span>
+</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface">Oct 24, 13:58:45</td>
+<td class="px-6 py-4 font-body text-sm font-medium">GET /assets/media/v9-raw</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface-variant">system_worker</td>
+<td class="px-6 py-4 text-xs font-mono font-bold text-error">404</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:underline underline-offset-4 text-xs font-label">View Trace</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">#LOG-88217</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-tertiary-container/20 text-tertiary-container uppercase">Warning</span>
+</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface">Oct 24, 13:45:10</td>
+<td class="px-6 py-4 font-body text-sm font-medium">PUT /settings/privacy</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface-variant">admin_jeong</td>
+<td class="px-6 py-4 text-xs font-mono font-bold text-tertiary">200</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:underline underline-offset-4 text-xs font-label">View Trace</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">#LOG-88216</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-secondary-container text-on-secondary-container uppercase">Info</span>
+</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface">Oct 24, 13:30:22</td>
+<td class="px-6 py-4 font-body text-sm font-medium">LOGIN /admin/auth/gate</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface-variant">guest_reader_4</td>
+<td class="px-6 py-4 text-xs font-mono font-bold text-secondary">200</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:underline underline-offset-4 text-xs font-label">View Trace</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="bg-surface-container-lowest hover:bg-surface-container-high transition-colors">
+<td class="px-6 py-4 font-mono text-[11px] text-on-surface-variant">#LOG-88215</td>
+<td class="px-6 py-4">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-md text-[10px] font-medium bg-secondary-container text-on-secondary-container uppercase">Info</span>
+</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface">Oct 24, 12:15:00</td>
+<td class="px-6 py-4 font-body text-sm font-medium">DB_OPTIMIZE automatic_task</td>
+<td class="px-6 py-4 text-xs font-body text-on-surface-variant">cron_service</td>
+<td class="px-6 py-4 text-xs font-mono font-bold text-secondary">OK</td>
+<td class="px-6 py-4">
+<button class="text-primary hover:underline underline-offset-4 text-xs font-label">View Trace</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-8 py-6 flex items-center justify-between border-t border-outline-variant/10 bg-surface-container-lowest">
+<p class="text-xs font-body text-on-surface-variant italic">Showing 5 of 12,842 historical snapshots</p>
+<div class="flex space-x-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary-fixed text-on-primary-fixed font-label text-xs font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:bg-surface-container-high transition-colors text-xs font-label">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:bg-surface-container-high transition-colors text-xs font-label">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant/30 text-on-surface-variant hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Contextual Insight Card (Editorial Touch) -->
+<div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-tertiary-container/10 p-8 rounded-3xl flex items-start gap-6">
+<div class="flex-shrink-0 bg-white/50 p-4 rounded-2xl">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-weight="fill">analytics</span>
+</div>
+<div>
+<h4 class="text-xl font-headline mb-2">Automated Insight</h4>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed mb-4">
+                            Log density increased by 12% in the last 4 hours, primarily driven by <span class="font-bold text-on-surface">archive traversal</span> actions. System latency remains optimal at 42ms.
+                        </p>
+<a class="text-xs font-label uppercase tracking-widest text-primary border-b border-primary/20 pb-1 hover:border-primary transition-all" href="#">Review Traffic Patterns</a>
+</div>
+</div>
+<div class="relative rounded-3xl overflow-hidden group">
+<img class="w-full h-48 object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Monochrome close-up of vintage typewriter keys with soft shadows and fine metallic texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzCtOv5TmIKWM0AN_aPWrRwG1iWjzZDAS6uSQQ8DNt82v-R4LdikwQIsdTrSnIP9XdGWRUkRjvVgv6qO6-HRUgDmJ_7x4PuycGLzydr3C1T0MOCnmP6j-kQ3kFAk9wQTMlhRZ0YVF9Ce4tDKPl2805smIFlw-KIMoOfFrpFkp_CBiWN9mDN4B-sIVtW09PmFISnwktxWubOphVNWeoAvj5VMhYjVsVYvHaZFxoF-dlAKVMxCchQsEJcB-RYWRzxv2wz16v_bXJXxM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent flex flex-col justify-end p-8">
+<h4 class="text-xl font-headline italic">Maintenance Window</h4>
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Scheduled for Sunday 02:00 AM</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 mt-auto bg-[#fcf9f4] dark:bg-stone-950 border-t border-surface-container-high">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-stone-400 dark:text-stone-600 font-sans text-[10px] tracking-widest uppercase text-center md:text-left">
+                © 2024 오늘의 조각 Administrative Suite. Analog Archive System.
+            </div>
+<div class="flex items-center space-x-12">
+<a class="text-stone-400 hover:text-stone-600 transition-opacity font-sans text-[10px] tracking-widest uppercase underline underline-offset-4 decoration-stone-200" href="#">Documentation</a>
+<a class="text-stone-400 hover:text-stone-600 transition-opacity font-sans text-[10px] tracking-widest uppercase underline underline-offset-4 decoration-stone-200" href="#">Support</a>
+<a class="text-stone-400 hover:text-stone-600 transition-opacity font-sans text-[10px] tracking-widest uppercase underline underline-offset-4 decoration-stone-200" href="#">Terms</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Echoes of Today | Server Status</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300..800;1,300..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "surface": "#fcf9f4",
+                        "on-tertiary-container": "#f4dfcb",
+                        "on-background": "#1c1c19",
+                        "surface-tint": "#8d4d3b",
+                        "outline": "#86736e",
+                        "on-primary-fixed": "#380c02",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#f0ede8",
+                        "on-primary-fixed-variant": "#703626",
+                        "tertiary-container": "#716252",
+                        "on-surface-variant": "#53433f",
+                        "on-primary-container": "#ffdad1",
+                        "primary": "#773c2b",
+                        "surface-container-highest": "#e5e2dd",
+                        "secondary-fixed": "#dae7cd",
+                        "background": "#fcf9f4",
+                        "error": "#ba1a1a",
+                        "tertiary": "#584a3c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1c1c19",
+                        "primary-fixed-dim": "#ffb5a1",
+                        "on-secondary-container": "#5a6651",
+                        "secondary-container": "#d7e4ca",
+                        "primary-fixed": "#ffdbd1",
+                        "on-secondary-fixed": "#141e0e",
+                        "tertiary-fixed": "#f4dfcb",
+                        "inverse-on-surface": "#f3f0eb",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "secondary-fixed-dim": "#becbb2",
+                        "surface-bright": "#fcf9f4",
+                        "inverse-primary": "#ffb5a1",
+                        "surface-variant": "#e5e2dd",
+                        "inverse-surface": "#31302d",
+                        "secondary": "#56624d",
+                        "on-secondary-fixed-variant": "#3f4a37",
+                        "on-tertiary-fixed": "#241a0e",
+                        "outline-variant": "#d8c2bc",
+                        "on-tertiary-fixed-variant": "#524436",
+                        "tertiary-fixed-dim": "#d7c3b0",
+                        "primary-container": "#945341",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dcdad5",
+                        "surface-container-high": "#ebe8e3",
+                        "surface-container-low": "#f6f3ee",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6 max-w-full mx-auto tonal-transition-surface-container-low">
+<div class="text-2xl font-serif font-bold text-[#1c1c19] dark:text-[#fcf9f4] tracking-tighter">Echoes of Today</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Archive</a>
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Fragments</a>
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#773c2b] cursor-pointer" data-icon="settings">settings</span>
+<span class="material-symbols-outlined text-[#773c2b] cursor-pointer" data-icon="account_circle">account_circle</span>
+</div>
+</nav>
+<div class="flex pt-24 min-h-screen">
+<!-- SideNavBar - Suppressed for this transactional monitoring view to focus on the canvas -->
+<!-- Main Content Canvas -->
+<main class="flex-1 px-8 pb-20 max-w-7xl mx-auto w-full">
+<!-- Dashboard Header -->
+<header class="mb-16 mt-8">
+<h1 class="text-5xl font-serif italic text-primary tracking-tight mb-2">Systems Pulse</h1>
+<p class="text-on-surface-variant font-body tracking-wide opacity-70">A real-time chronicle of our digital infrastructure's health.</p>
+</header>
+<!-- Status Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Overall Health Card -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between min-h-[320px] relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-3 h-3 rounded-full bg-secondary shadow-[0_0_12px_rgba(86,98,77,0.5)]"></span>
+<span class="font-sans uppercase tracking-[0.2em] text-[11px] text-secondary">All Systems Operational</span>
+</div>
+<h2 class="text-64px font-serif text-on-surface leading-none mb-4">99.98<span class="text-2xl opacity-40">%</span></h2>
+<p class="text-sm text-on-surface-variant max-w-xs leading-relaxed">Infrastructure stability across the Archive, Media, and Journal clusters for the current semester.</p>
+</div>
+<div class="absolute right-0 bottom-0 w-2/3 h-full opacity-10 pointer-events-none">
+<img alt="" class="w-full h-full object-cover" data-alt="minimalist topographic data visualization lines with fine art editorial aesthetic on ivory paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv6P7Yn9BZdXu9Whdgu07TarIkE3YzfVEYtlfhZLW9AUjtnbF-MR-4wFUctrEUgCxdgMBGXUWEE0IE-8SuoBhaKb7RCv6RT1YXHH7iB_7nliiZPyTHEbBEdE-PZh2P7H3qOEz3Li66_t38Uaw9zbUv5ROYC6St5DrZwYu5EBe_xeF9pEYO4Fwv8HEiFGud9mRdNqPEUwl9wTIeQerAJz_xLkCR39zhXEh_YeHJyHyEtqIz7GWRmVcl8GNj_hhKL6OAIDBQjga4K5I"/>
+</div>
+<div class="flex gap-2 mt-8 overflow-hidden">
+<!-- Uptime Bar Mockup -->
+<div class="flex-1 h-12 bg-secondary-container/30 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/50 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/40 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/60 rounded-sm"></div>
+<div class="flex-1 h-12 bg-primary-container/20 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/80 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/50 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/70 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/40 rounded-sm"></div>
+<div class="flex-1 h-12 bg-secondary-container/60 rounded-sm"></div>
+</div>
+</div>
+<!-- Latency Card -->
+<div class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between border border-outline-variant/10">
+<div>
+<span class="font-sans uppercase tracking-[0.2em] text-[11px] text-on-surface-variant/50 block mb-6">Global Latency</span>
+<h3 class="text-4xl font-serif italic text-primary">124<span class="text-lg italic opacity-60">ms</span></h3>
+</div>
+<div class="mt-auto">
+<div class="space-y-4">
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-2">
+<span class="text-xs font-sans text-on-surface-variant">Seoul Cluster</span>
+<span class="text-xs font-sans font-bold">42ms</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-2">
+<span class="text-xs font-sans text-on-surface-variant">London Node</span>
+<span class="text-xs font-sans font-bold">186ms</span>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/10 pb-2">
+<span class="text-xs font-sans text-on-surface-variant">NYC Gateway</span>
+<span class="text-xs font-sans font-bold">95ms</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Detailed Services -->
+<div class="md:col-span-12 mt-4 space-y-4">
+<div class="bg-surface-container-low rounded-xl overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-4 p-8 border-b border-outline-variant/5">
+<div class="font-serif text-lg italic text-on-surface">Digital Archive v2</div>
+<div class="flex items-center gap-2 text-xs font-sans text-secondary">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                                99.9% Uptime
+                            </div>
+<div class="text-xs font-sans text-on-surface-variant/60">Updated 2m ago</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-primary/40 cursor-pointer" data-icon="more_horiz">more_horiz</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 p-8 border-b border-outline-variant/5">
+<div class="font-serif text-lg italic text-on-surface">Media Storage Node</div>
+<div class="flex items-center gap-2 text-xs font-sans text-secondary">
+<span class="material-symbols-outlined text-[14px]" data-icon="check_circle">check_circle</span>
+                                100.0% Uptime
+                            </div>
+<div class="text-xs font-sans text-on-surface-variant/60">Updated 5m ago</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-primary/40 cursor-pointer" data-icon="more_horiz">more_horiz</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 p-8">
+<div class="font-serif text-lg italic text-on-surface">Auth Gateway</div>
+<div class="flex items-center gap-2 text-xs font-sans text-primary">
+<span class="material-symbols-outlined text-[14px]" data-icon="error">error</span>
+                                Latency Warning
+                            </div>
+<div class="text-xs font-sans text-on-surface-variant/60">Active investigation</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-primary/40 cursor-pointer" data-icon="more_horiz">more_horiz</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Stats -->
+<div class="md:col-span-6 bg-surface-container-lowest rounded-xl p-8 flex items-center justify-between">
+<div>
+<p class="font-sans uppercase tracking-[0.2em] text-[10px] text-on-surface-variant/50 mb-1">Active Requests</p>
+<h4 class="text-2xl font-serif text-on-surface">12.4k<span class="text-sm opacity-40 ml-2">per min</span></h4>
+</div>
+<div class="w-32 h-12">
+<img alt="" class="w-full h-full object-contain opacity-40" data-alt="minimalist organic line graph showing trend data with clean high-end aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKoDJ2wocZAcaBizArKxK0ZgGosVUUPT3xNtXE7vaXyvBFcOm0l2Kh3wBUDGSW2X3qhyGYWQAIj_hn0VNKl18MMrHU80r3YChurWK0lK_hY48mRUXjKpdNbKp6SuYPgb2UIFcxVxDP6UogX4Ewhoa-7_-hcpPMgzgTfrDPKtQ9Flv_uHYSJr8JiLn5IYNa7t_mR9hbEawEoowQVFCRhPI2LO_3eDjUyFf5sLAE9GMWEwx2OyZqFYLpf43Ar0QHal86_QALaa9Z8F8"/>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container-lowest rounded-xl p-8 flex items-center justify-between">
+<div>
+<p class="font-sans uppercase tracking-[0.2em] text-[10px] text-on-surface-variant/50 mb-1">Database Load</p>
+<h4 class="text-2xl font-serif text-on-surface">24<span class="text-sm opacity-40 ml-2">% capacity</span></h4>
+</div>
+<div class="w-32 h-12">
+<img alt="" class="w-full h-full object-contain opacity-30" data-alt="minimalist brown pulse wave illustration depicting data flow on a soft ivory background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNuwhYO8mpi7nyMfl1wguXZ264bQkuggl3cE53vmFk7tMLYCTndpmIyctxFJpWdBiMAy5dDCiMx2uFXMzCycgwnajK_YM8vAFD_q_2_CyVWm6pQ5qt5pAv0P90XbJuz9OtFPMdrLnH3ig96JjWdvS1_TMZC5depIZyO8dV4RH3Xe5segqsms3dEgjzFSwVtNx56PZ1QKCcKpNZNt5slI_wGMyHQdgTfXgPA-go0I_ZOUDM0NmpFudQT_GshOjg56VwHeRO621JH8A"/>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#fcf9f4] dark:bg-[#1c1c19] mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center border-t border-[#1c1c19]/5 dark:border-[#fcf9f4]/5 pt-8 max-w-7xl mx-auto">
+<p class="text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 font-sans text-[11px] uppercase tracking-[0.2em]">© 2024 Echoes of Today. A Digital Ephemera Project.</p>
+<div class="flex gap-8 mt-6 md:mt-0">
+<a class="text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 font-sans text-[11px] uppercase tracking-[0.2em] hover:text-[#1c1c19] dark:hover:text-[#fcf9f4] transition-colors" href="#">Colophon</a>
+<a class="text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 font-sans text-[11px] uppercase tracking-[0.2em] hover:text-[#1c1c19] dark:hover:text-[#fcf9f4] transition-colors" href="#">Manifesto</a>
+<a class="text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 font-sans text-[11px] uppercase tracking-[0.2em] hover:text-[#1c1c19] dark:hover:text-[#fcf9f4] transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

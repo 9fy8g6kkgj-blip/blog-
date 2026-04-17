@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#f3f0eb",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-surface-variant": "#53433f",
+                    "outline": "#86736e",
+                    "on-primary-fixed-variant": "#703626",
+                    "primary-container": "#945341",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary": "#584a3c",
+                    "on-background": "#1c1c19",
+                    "primary-fixed": "#ffdbd1",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "surface-container-high": "#ebe8e3",
+                    "surface": "#fcf9f4",
+                    "surface-container-low": "#f6f3ee",
+                    "on-primary-fixed": "#380c02",
+                    "secondary-fixed": "#dae7cd",
+                    "on-error-container": "#93000a",
+                    "secondary": "#56624d",
+                    "on-tertiary-fixed": "#241a0e",
+                    "on-primary": "#ffffff",
+                    "inverse-primary": "#ffb5a1",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "background": "#fcf9f4",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-container": "#716252",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "surface-container-highest": "#e5e2dd",
+                    "outline-variant": "#d8c2bc",
+                    "primary": "#773c2b",
+                    "on-secondary-fixed": "#141e0e",
+                    "surface-tint": "#8d4d3b",
+                    "secondary-container": "#d7e4ca",
+                    "on-surface": "#1c1c19",
+                    "on-tertiary-container": "#f4dfcb",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-secondary-container": "#5a6651",
+                    "surface-dim": "#dcdad5",
+                    "on-primary-container": "#ffdad1",
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#e5e2dd",
+                    "surface-container": "#f0ede8",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.5rem",
+                    "xl": "1rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (The Anchor) -->
+<aside class="h-screen w-72 fixed left-0 top-0 hidden lg:flex flex-col bg-stone-100 dark:bg-stone-800 py-12 gap-1 z-40">
+<div class="px-10 mb-12">
+<h1 class="font-serif italic text-xl text-stone-900 dark:text-stone-50">Studio Archive</h1>
+<p class="font-sans text-[10px] uppercase tracking-widest text-stone-500 mt-1">Editorial Dashboard</p>
+</div>
+<nav class="flex-grow">
+<!-- Analytics is ACTIVE -->
+<div class="bg-white dark:bg-stone-900 text-orange-900 dark:text-orange-100 font-medium rounded-l-full ml-4 pl-6 py-4 flex items-center gap-4 transition-all duration-500 ease-in-out">
+<span class="material-symbols-outlined text-lg">bar_chart</span>
+<span class="font-sans text-sm tracking-wide">Analytics</span>
+</div>
+<div class="text-stone-500 dark:text-stone-400 px-10 py-4 hover:pl-12 transition-all cursor-pointer flex items-center gap-4 group">
+<span class="material-symbols-outlined text-lg group-hover:text-orange-900">auto_stories</span>
+<span class="font-sans text-sm tracking-wide group-hover:text-orange-900">Library</span>
+</div>
+<div class="text-stone-500 dark:text-stone-400 px-10 py-4 hover:pl-12 transition-all cursor-pointer flex items-center gap-4 group">
+<span class="material-symbols-outlined text-lg group-hover:text-orange-900">gavel</span>
+<span class="font-sans text-sm tracking-wide group-hover:text-orange-900">Guidelines</span>
+</div>
+<div class="text-stone-500 dark:text-stone-400 px-10 py-4 hover:pl-12 transition-all cursor-pointer flex items-center gap-4 group">
+<span class="material-symbols-outlined text-lg group-hover:text-orange-900">settings_heart</span>
+<span class="font-sans text-sm tracking-wide group-hover:text-orange-900">Settings</span>
+</div>
+</nav>
+<div class="px-10 pt-8 mt-auto">
+<button class="w-full py-4 bg-primary text-on-primary rounded-full font-sans text-sm tracking-tight shadow-sm hover:opacity-90 transition-all scale-100 active:scale-95">
+                Write Piece
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="lg:ml-72 min-h-screen">
+<!-- TopNavBar (The Shell) -->
+<header class="w-full sticky top-0 z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-8 md:px-16 py-8 max-w-[1600px] mx-auto">
+<div class="text-3xl font-serif tracking-tight text-stone-900 dark:text-stone-50">오늘의 조각</div>
+<div class="flex items-center gap-12">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.2em] text-[10px] hover:text-orange-800 transition-colors" href="#">Archive</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.2em] text-[10px] hover:text-orange-800 transition-colors" href="#">Pieces</a>
+<a class="text-stone-500 dark:text-stone-400 font-sans uppercase tracking-[0.2em] text-[10px] hover:text-orange-800 transition-colors" href="#">About</a>
+</nav>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-stone-900 dark:text-stone-50 cursor-pointer">account_circle</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Analytics Canvas -->
+<section class="max-w-7xl mx-auto px-8 md:px-16 py-12">
+<!-- Page Header -->
+<div class="mb-16">
+<h2 class="font-serif text-5xl text-on-surface tracking-tight mb-4">Traffic Intelligence</h2>
+<p class="text-on-surface-variant max-w-xl leading-relaxed">A measured reflection of your archive's digital resonance over the past 30 days. These echoes represent the lingering thoughts of your readers.</p>
+</div>
+<!-- Metric Cards (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+<!-- Total Visits -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col gap-6 group hover:bg-white transition-colors duration-500">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-3xl">analytics</span>
+<span class="text-[10px] font-sans uppercase tracking-widest text-secondary">+12.4%</span>
+</div>
+<div>
+<p class="font-sans text-[11px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Total Visits</p>
+<h3 class="font-serif text-4xl text-on-surface">12,842</h3>
+</div>
+<div class="h-1 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+</div>
+<!-- Unique Visitors -->
+<div class="bg-surface-container-low p-10 rounded-xl flex flex-col gap-6">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-3xl">fingerprint</span>
+<span class="text-[10px] font-sans uppercase tracking-widest text-secondary">+8.1%</span>
+</div>
+<div>
+<p class="font-sans text-[11px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Unique Souls</p>
+<h3 class="font-serif text-4xl text-on-surface">4,910</h3>
+</div>
+<div class="h-1 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/2 rounded-full"></div>
+</div>
+</div>
+<!-- Session Duration -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col gap-6 group hover:bg-white transition-colors duration-500">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-3xl">hourglass_empty</span>
+<span class="text-[10px] font-sans uppercase tracking-widest text-error">-2.4%</span>
+</div>
+<div>
+<p class="font-sans text-[11px] uppercase tracking-[0.2em] text-on-surface-variant mb-1">Avg. Session</p>
+<h3 class="font-serif text-4xl text-on-surface">04:22</h3>
+</div>
+<div class="h-1 w-full bg-surface-container-low rounded-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Trends Visualization (Asymmetric Canvas) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+<div class="lg:col-span-8 bg-surface-container-low p-12 rounded-xl relative overflow-hidden">
+<div class="mb-12 flex justify-between items-end">
+<div>
+<h4 class="font-serif text-2xl text-on-surface mb-2">Visitor Trends</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-widest">Last 30 Calendar Days</p>
+</div>
+<div class="flex gap-4">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="w-3 h-3 rounded-full bg-outline-variant"></span>
+</div>
+</div>
+<!-- Simplified Data Visualization Aesthetic -->
+<div class="h-64 flex items-end justify-between gap-2 relative">
+<!-- Simulated Line Chart with SVG -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 800 200">
+<path d="M0,150 Q100,140 200,80 T400,100 T600,40 T800,60" fill="none" stroke="#773c2b" stroke-linecap="round" stroke-width="3"></path>
+<path d="M0,150 Q100,140 200,80 T400,100 T600,40 T800,60 V200 H0 Z" fill="url(#gradient-flow)" opacity="0.1"></path>
+<defs>
+<lineargradient id="gradient-flow" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#773c2b"></stop>
+<stop offset="100%" stop-color="#fcf9f4"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Grid Lines -->
+<div class="absolute inset-0 flex flex-col justify-between opacity-10 pointer-events-none">
+<div class="border-b border-on-surface w-full"></div>
+<div class="border-b border-on-surface w-full"></div>
+<div class="border-b border-on-surface w-full"></div>
+<div class="border-b border-on-surface w-full"></div>
+</div>
+</div>
+<div class="mt-8 flex justify-between text-[10px] font-sans uppercase tracking-widest text-on-surface-variant">
+<span>Day 01</span>
+<span>Day 15</span>
+<span>Day 30</span>
+</div>
+</div>
+<!-- Referral Table (The Semantic Shell) -->
+<div class="lg:col-span-4 bg-white p-10 rounded-xl">
+<h4 class="font-serif text-2xl text-on-surface mb-8">Referral Sources</h4>
+<ul class="space-y-8">
+<li class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div>
+<p class="font-sans text-sm font-medium">Google</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Organic Search</p>
+</div>
+</div>
+<span class="font-serif text-xl">42%</span>
+</li>
+<li class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</div>
+<div>
+<p class="font-sans text-sm font-medium">Instagram</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Social Media</p>
+</div>
+</div>
+<span class="font-serif text-xl">28%</span>
+</li>
+<li class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-sm">link</span>
+</div>
+<div>
+<p class="font-sans text-sm font-medium">Direct</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">URL Entry</p>
+</div>
+</div>
+<span class="font-serif text-xl">18%</span>
+</li>
+<li class="flex items-center justify-between group">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-sm">mail</span>
+</div>
+<div>
+<p class="font-sans text-sm font-medium">Newsletter</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">Email Echoes</p>
+</div>
+</div>
+<span class="font-serif text-xl">12%</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Bottom Section: Image Highlight -->
+<div class="relative w-full h-[400px] rounded-xl overflow-hidden mb-16">
+<img class="w-full h-full object-cover" data-alt="high-end desk setup with film camera, notebook, and warm evening light hitting a minimalist wooden desk surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGPNNbhpdJqK_ehQtSvhqDxhpVN2LmyY8c4CQ4_15WP7vmUxCD5HdlSWzHpL-a2MYOMCKO7dWRikuZH7_Vof4LjvqJgw6uEiQbskQZgTI20gmbMA4Q57BFpvZAjDRyYx3K1Efm21XcB26lFNmYhDwhzbdE9M8pD9FW0n8_VBoR8Y78eijiWDohqy1IXSlbDkV2bPEki2a9FR41gdqKDPEy97Oq6F0B-KiGhvITO4tMimH-KVjwpckCN-JB_9_CXeDcA0GH0GNvfOI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 to-transparent flex flex-col justify-end p-16">
+<h5 class="text-white font-serif text-4xl mb-4 max-w-lg">Capturing the pulse of your creative journey.</h5>
+<p class="text-white/60 font-sans text-sm tracking-widest uppercase">Editorial Performance Update</p>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-24 bg-stone-50 dark:bg-stone-950 mt-32 border-none">
+<div class="max-w-7xl mx-auto px-8 md:px-16 flex flex-col md:flex-row justify-between items-center gap-8">
+<div>
+<h6 class="font-serif text-stone-900 dark:text-stone-50 text-lg">오늘의 조각</h6>
+<p class="font-sans text-[11px] uppercase tracking-widest text-stone-400 dark:text-stone-500 mt-2">© 2024 오늘의 조각. Curated by the Analog Archive.</p>
+</div>
+<div class="flex gap-12">
+<a class="font-sans text-[11px] uppercase tracking-widest text-stone-400 hover:text-orange-800 transition-colors underline-offset-8 hover:underline" href="#">Archives</a>
+<a class="font-sans text-[11px] uppercase tracking-widest text-stone-400 hover:text-orange-800 transition-colors underline-offset-8 hover:underline" href="#">Community</a>
+<a class="font-sans text-[11px] uppercase tracking-widest text-stone-400 hover:text-orange-800 transition-colors underline-offset-8 hover:underline" href="#">Ethics</a>
+<a class="font-sans text-[11px] uppercase tracking-widest text-stone-400 hover:text-orange-800 transition-colors underline-offset-8 hover:underline" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface": "#fcf9f4",
+                    "on-tertiary-container": "#f4dfcb",
+                    "on-background": "#1c1c19",
+                    "surface-tint": "#8d4d3b",
+                    "outline": "#86736e",
+                    "on-primary-fixed": "#380c02",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0ede8",
+                    "on-primary-fixed-variant": "#703626",
+                    "tertiary-container": "#716252",
+                    "on-surface-variant": "#53433f",
+                    "on-primary-container": "#ffdad1",
+                    "primary": "#773c2b",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-fixed": "#dae7cd",
+                    "background": "#fcf9f4",
+                    "error": "#ba1a1a",
+                    "tertiary": "#584a3c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-secondary-container": "#5a6651",
+                    "secondary-container": "#d7e4ca",
+                    "primary-fixed": "#ffdbd1",
+                    "on-secondary-fixed": "#141e0e",
+                    "tertiary-fixed": "#f4dfcb",
+                    "inverse-on-surface": "#f3f0eb",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#becbb2",
+                    "surface-bright": "#fcf9f4",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-variant": "#e5e2dd",
+                    "inverse-surface": "#31302d",
+                    "secondary": "#56624d",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-tertiary-fixed": "#241a0e",
+                    "outline-variant": "#d8c2bc",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "primary-container": "#945341",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-high": "#ebe8e3",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #773c2b;
+        }
+        .toggle-checkbox:checked + .toggle-label .toggle-dot {
+            transform: translateX(100%);
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-2xl font-serif font-bold text-[#1c1c19] dark:text-[#fcf9f4] tracking-tighter">Echoes of Today</div>
+<div class="hidden md:flex items-center gap-12">
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Archive</a>
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Fragments</a>
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Journal</a>
+</div>
+<div class="flex items-center gap-6 text-[#773c2b] dark:text-[#d7e4ca]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">settings</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">account_circle</span>
+</div>
+</nav>
+<div class="flex pt-24 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden lg:flex flex-col h-screen w-72 bg-[#f6f3ee] dark:bg-[#141412] p-6 space-y-8 sticky top-24">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="minimalist close-up portrait of a thoughtful university student in soft natural window lighting with warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRx3UHkl93myPx8MAeyvSwgZ4sC560pPFJpWJpJ5XFs07xHFndEENUmKfllAx7NBPNym7xVg7VbOobzvli2FNnLqIA_Bi1lgN615rx7D9Ka00oakUIlFzyNOas0D_ruksLfOlpYCkPY8Or-LxzHYGM-hZgfXiAelXWj8ni_4tHEGUEDK3jpwEoRaCMvAQ5zZvFCXL_a1fDU_PWs73nT4bQBhw0r46kUGuCKdG1cbR2te-5mgJW5IDWUGY94rohdL1_hKTOvc27y84"/>
+</div>
+<div>
+<h3 class="text-lg font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]">The Archive</h3>
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-60">University Years</p>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-200 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">auto_awesome</span>
+                    Curation
+                </a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-200 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">perm_media</span>
+                    Media
+                </a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-200 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">auto_stories</span>
+                    Reflections
+                </a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-200 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">local_library</span>
+                    Library
+                </a>
+<a class="text-[#773c2b] dark:text-[#d7e4ca] font-medium flex items-center gap-4 bg-[#ffffff]/50 dark:bg-[#ffffff]/5 rounded-lg px-4 py-3 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">tune</span>
+                    Settings
+                </a>
+</nav>
+<div class="mt-auto pt-8 border-t border-outline-variant/10">
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-200 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">terminal</span>
+                    System
+                </a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-200 font-sans text-sm tracking-wide" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+                    Feedback
+                </a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 px-8 lg:px-24 py-12 max-w-5xl mx-auto">
+<header class="mb-20">
+<h1 class="font-headline text-5xl md:text-6xl text-on-surface tracking-tight mb-4">Notification Preferences</h1>
+<p class="font-body text-lg text-on-surface-variant max-w-xl leading-relaxed opacity-80">
+                    Fine-tune how you receive the echoes of your past. Manage the rhythm and medium of your digital ephemera updates.
+                </p>
+</header>
+<!-- Settings Grid -->
+<div class="space-y-24">
+<!-- Email Digest Section -->
+<section>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="w-full md:w-1/3">
+<h2 class="font-headline text-2xl italic mb-2">The Weekly Digest</h2>
+<p class="text-sm text-on-surface-variant opacity-70 leading-relaxed">A curated summary of your fragments, delivered to your inbox every Sunday morning.</p>
+</div>
+<div class="flex-1 space-y-8">
+<div class="bg-surface-container-low p-8 rounded-xl flex items-center justify-between group">
+<div class="space-y-1">
+<span class="font-sans text-[10px] uppercase tracking-[0.2em] text-primary mb-2 block">Electronic Mail</span>
+<h3 class="text-lg font-medium">Sunday Reflections</h3>
+<p class="text-sm text-on-surface-variant opacity-60">A gentle review of your week's curation.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-transparent outline-none" id="toggle1" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300" for="toggle1">
+<span class="toggle-dot absolute left-0 inline-block w-6 h-6 rounded-full transform transition-transform duration-300"></span>
+</label>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl flex items-center justify-between group">
+<div class="space-y-1">
+<span class="font-sans text-[10px] uppercase tracking-[0.2em] text-primary mb-2 block">Electronic Mail</span>
+<h3 class="text-lg font-medium">Monthly Archive Report</h3>
+<p class="text-sm text-on-surface-variant opacity-60">Deep insights into your digital legacy once a month.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-transparent outline-none" id="toggle2" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300" for="toggle2">
+<span class="toggle-dot absolute left-0 inline-block w-6 h-6 rounded-full transform transition-transform duration-300"></span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Push Notifications Bento -->
+<section>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-12 mb-4">
+<h2 class="font-headline text-3xl mb-1">Immediate Echoes</h2>
+<p class="text-on-surface-variant opacity-60 italic">Real-time pulses from your archive.</p>
+</div>
+<!-- Card 1 -->
+<div class="md:col-span-7 bg-surface-container-lowest p-10 rounded-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="flex justify-between items-start">
+<div class="space-y-2">
+<h3 class="text-2xl font-headline italic">New Fragment Alert</h3>
+<p class="max-w-md text-on-surface-variant leading-relaxed">Receive a push notification whenever a new automated curation is added to your University Archive.</p>
+</div>
+<div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-transparent outline-none" id="toggle3" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300" for="toggle3">
+<span class="toggle-dot absolute left-0 inline-block w-6 h-6 rounded-full transform transition-transform duration-300"></span>
+</label>
+</div>
+</div>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] uppercase tracking-wider font-sans">University Years</span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-md text-[10px] uppercase tracking-wider font-sans">Automated</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="md:col-span-5 bg-[#d7e4ca]/30 p-10 rounded-xl flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="material-symbols-outlined text-primary">local_library</span>
+<div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-transparent outline-none" id="toggle4" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300" for="toggle4">
+<span class="toggle-dot absolute left-0 inline-block w-6 h-6 rounded-full transform transition-transform duration-300"></span>
+</label>
+</div>
+</div>
+<h3 class="text-xl font-headline italic">Library Mentions</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">Notifications for annotations and peer reflections on your public collections.</p>
+</div>
+<div class="mt-8 border-t border-primary/10 pt-4">
+<p class="text-[11px] uppercase tracking-widest text-primary/60">Currently: Silent</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="md:col-span-12 bg-surface-container-low p-10 rounded-xl flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex-1 space-y-2">
+<h3 class="text-xl font-headline">Quiet Hours</h3>
+<p class="text-on-surface-variant opacity-70">Mute all echoes from 11:00 PM to 07:00 AM. Let the archive sleep while you do.</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="text-right">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant opacity-50">Active State</p>
+<p class="font-medium text-primary">Scheduled</p>
+</div>
+<div class="relative inline-block w-12 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-transparent outline-none" id="toggle5" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-300" for="toggle5">
+<span class="toggle-dot absolute left-0 inline-block w-6 h-6 rounded-full transform transition-transform duration-300"></span>
+</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Action Buttons -->
+<div class="mt-24 flex items-center justify-end gap-8 pb-32">
+<button class="font-sans text-[11px] uppercase tracking-[0.2em] text-on-surface/40 hover:text-on-surface transition-colors">Discard Changes</button>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-sans text-sm tracking-widest hover:opacity-90 transition-all flex items-center gap-3 shadow-lg shadow-primary/10">
+                    Save Preferences
+                    <span class="material-symbols-outlined text-lg">check_circle</span>
+</button>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#fcf9f4] dark:bg-[#1c1c19] mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center border-t border-[#1c1c19]/5 dark:border-[#fcf9f4]/5 pt-8 max-w-7xl mx-auto">
+<p class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 dark:text-[#fcf9f4]/30">© 2024 Echoes of Today. A Digital Ephemera Project.</p>
+<div class="flex gap-12 mt-6 md:mt-0">
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 hover:text-[#1c1c19] dark:hover:text-[#fcf9f4] transition-colors" href="#">Colophon</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 hover:text-[#1c1c19] dark:hover:text-[#fcf9f4] transition-colors" href="#">Manifesto</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 dark:text-[#fcf9f4]/30 hover:text-[#1c1c19] dark:hover:text-[#fcf9f4] transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</body></html>

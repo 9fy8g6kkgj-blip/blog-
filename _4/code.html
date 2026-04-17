@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#8d4d3b",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#141e0e",
+                    "secondary-container": "#d7e4ca",
+                    "inverse-surface": "#31302d",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2dd",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-background": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-primary-fixed": "#380c02",
+                    "secondary-fixed": "#dae7cd",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-tertiary-container": "#f4dfcb",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf9f4",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-container": "#ffdad1",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-container-low": "#f6f3ee",
+                    "primary-container": "#945341",
+                    "tertiary": "#584a3c",
+                    "primary-fixed": "#ffdbd1",
+                    "secondary-fixed-dim": "#becbb2",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface-container": "#f0ede8",
+                    "on-surface": "#1c1c19",
+                    "outline-variant": "#d8c2bc",
+                    "surface": "#fcf9f4",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dcdad5",
+                    "on-surface-variant": "#53433f",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-container-high": "#ebe8e3",
+                    "primary": "#773c2b",
+                    "secondary": "#56624d",
+                    "outline": "#86736e",
+                    "inverse-primary": "#ffb5a1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md tonal-transition">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+<a class="text-2xl font-serif italic text-stone-900 dark:text-stone-50 tracking-tight" href="#">오늘의 조각</a>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">Home</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">About</a>
+<a class="text-sm font-medium tracking-wide text-stone-900 dark:text-stone-50 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-800 after:rounded-full" href="#">Archive</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="max-w-4xl mx-auto px-8 pt-24 pb-12">
+<!-- Archive Header -->
+<header class="mb-20">
+<h1 class="text-6xl font-serif italic mb-4 tracking-tighter text-on-surface">Archive</h1>
+<p class="text-lg font-body text-on-surface-variant max-w-lg leading-relaxed">
+                A chronological collection of daily pieces—fleeting thoughts, academic reflections, and fragments of city life.
+            </p>
+</header>
+<!-- Archive List by Month -->
+<section class="space-y-24">
+<!-- March 2024 -->
+<div class="group">
+<div class="flex items-baseline mb-12">
+<h2 class="text-3xl font-serif italic text-primary mr-4">March 2024</h2>
+<div class="h-px flex-grow bg-outline-variant opacity-20"></div>
+<span class="ml-4 font-label text-xs uppercase tracking-widest text-on-surface-variant/60">08 Pieces</span>
+</div>
+<div class="space-y-1">
+<!-- Post Item -->
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.28</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">The Weight of Unspoken Words</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.24</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">Campus Mornings and Cold Coffee</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.19</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">Analysis of Modernist Architecture in Seoul</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.15</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">Spring's Slow Arrival</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.11</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">Dusk over the Han River</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.07</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">Notes on Quietude</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.04</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">The First Monday of the Semester</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+<a class="group/item flex items-center justify-between py-6 transition-all duration-300 hover:px-4 hover:bg-surface-container-low rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">03.01</span>
+<h3 class="text-xl font-body font-medium text-on-surface group-hover/item:text-primary transition-colors">March Fragment</h3>
+</div>
+<span class="material-symbols-outlined text-outline opacity-0 group-hover/item:opacity-100 transition-opacity transform translate-x-[-10px] group-hover/item:translate-x-0">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- February 2024 (Brief glimpse of previous month) -->
+<div class="opacity-50 hover:opacity-100 transition-opacity duration-500">
+<div class="flex items-baseline mb-12">
+<h2 class="text-3xl font-serif italic text-on-surface mr-4">February 2024</h2>
+<div class="h-px flex-grow bg-outline-variant opacity-20"></div>
+</div>
+<div class="space-y-1">
+<a class="group/item flex items-center justify-between py-4 rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">02.28</span>
+<h3 class="text-lg font-body text-on-surface-variant">Winter's Final Breath</h3>
+</div>
+</a>
+<a class="group/item flex items-center justify-between py-4 rounded-xl" href="#">
+<div class="flex items-baseline space-x-6">
+<span class="font-label text-sm text-on-surface-variant/40 tabular-nums">02.14</span>
+<h3 class="text-lg font-body text-on-surface-variant">Solitude is not Loneliness</h3>
+</div>
+</a>
+</div>
+<button class="mt-8 text-sm font-label text-primary font-bold tracking-widest uppercase hover:underline underline-offset-8 transition-all">
+                    View full month archive
+                </button>
+</div>
+</section>
+<!-- Asymmetric Featured Image/Quote in Archive -->
+<aside class="mt-32 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+<div class="md:col-span-7">
+<div class="aspect-[4/5] bg-surface-container-low rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="stack of vintage books and journals" class="w-full h-full object-cover" data-alt="stack of old weathered books and leather journals on a wooden desk with soft cinematic morning light through a window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8gU8eRZ8Kge3Yo7aV3Cn8hNSURRFV6wCXH4WSZgydzAX0ygBTzfxOqtki-FjVWKmqbHyBxq3WMBJrVFcCQRf0Zs8yGfMrxcYRXeZihrlWX6kv7FApzXedl1B98lX-z8Cu_BWWTa7NawxE3CJHiSkn2SL0nHtZGbl1xRCwPUS1xC-QvWNrA0jivSfrQWzcTASVmL9UNOTLlUvORP-D6zIYJBcjqVtQlr4x5eBsmYICyy5mtZ1qmt2MAbaZ-5R4TE8CCAr7nPJaNgo"/>
+</div>
+</div>
+<div class="md:col-span-5 md:-ml-12 bg-surface-container-lowest p-12 rounded-xl shadow-sm">
+<p class="font-serif italic text-2xl text-on-surface leading-relaxed mb-6">
+                    "We collect these pieces not to remember what we did, but to remember who we were becoming."
+                </p>
+<cite class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant not-italic block">Archive Reflections — Vol 01</cite>
+</div>
+</aside>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 mt-24 bg-stone-100 dark:bg-stone-900 tonal-shift-bg">
+<div class="flex flex-col items-center justify-center px-8">
+<p class="font-serif italic text-lg text-center mb-8 text-stone-700 dark:text-stone-300">
+                © 오늘의 조각 by alstjd. All pieces archived.
+            </p>
+<div class="flex space-x-8">
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4" href="#">Instagram</a>
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4" href="#">Email</a>
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4" href="#">Feed</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>오늘의 조각 - Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#d8c2bc",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-fixed": "#141e0e",
+                    "inverse-primary": "#ffb5a1",
+                    "outline": "#86736e",
+                    "on-background": "#1c1c19",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-fixed": "#380c02",
+                    "inverse-on-surface": "#f3f0eb",
+                    "primary": "#773c2b",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-container": "#f0ede8",
+                    "surface-dim": "#dcdad5",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#703626",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#dae7cd",
+                    "surface": "#fcf9f4",
+                    "on-primary-container": "#ffdad1",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "surface-bright": "#fcf9f4",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#d7e4ca",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f4",
+                    "on-surface-variant": "#53433f",
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-tertiary-container": "#f4dfcb",
+                    "secondary": "#56624d",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary": "#584a3c",
+                    "surface-tint": "#8d4d3b",
+                    "surface-container-low": "#f6f3ee",
+                    "on-surface": "#1c1c19",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#945341",
+                    "surface-variant": "#e5e2dd",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-serif font-bold text-orange-900 dark:text-orange-100 italic tracking-tight" href="#">오늘의 조각</a>
+<div class="hidden md:flex items-center gap-10 font-sans text-sm tracking-wide uppercase">
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Archives</a>
+<a class="text-orange-900 dark:text-orange-100 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-900 after:rounded-full" href="#">Categories</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Reflections</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-orange-900 dark:text-orange-200 hover:opacity-80 transition-opacity duration-300">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-screen-xl mx-auto">
+<!-- Header Section -->
+<header class="mb-20 text-center md:text-left">
+<h1 class="text-6xl md:text-7xl lg:text-8xl font-headline italic tracking-tighter text-on-surface mb-6">Explore by <br class="hidden md:block"/>Fragments</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-2xl font-body leading-relaxed">A curated taxonomy of moments. Each tag represents a thread in the tapestry of university life, from the quiet hum of study halls to the kinetic energy of the field.</p>
+</header>
+<!-- Featured Categories Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-24">
+<div class="md:col-span-8 group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low aspect-[16/9] relative flex items-end p-10">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-multiply" data-alt="University campus architecture at sunset with students walking through shadows and golden light reflecting off stone walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHwEHjJ7dZXGVwioYWc-r_dnZfn-Rj3cNBkv-kY2D5nwNjs2rK0QBCkUNssgQXoO276N0cqIOfF8-BmXP9YOzDRpPWjmrQZ4qX2yB2OfcpqxGwFIwPOf_ZznWg8pMrn1wdY7IvYFhKc9i4V_nwoLMnhqNRobjjRb1pu3OlcjXRR8e_1JO2MI_Qeoej91fTrd1t2FTMkE_eEXic5rXR90V4NMhqsu6-R2E00B-WpixTV1VqKZhOOkPWAflwcpJMS8pbT3EBM3luVAg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="relative z-10">
+<span class="inline-block px-3 py-1 mb-4 rounded-md bg-secondary-container text-on-secondary-container text-xs font-label uppercase tracking-widest">Featured</span>
+<h2 class="text-4xl md:text-5xl font-headline italic text-on-surface leading-none">#CampusLife</h2>
+<p class="mt-4 text-on-surface-variant font-body max-w-sm">The heartbeat of daily existence within the limestone walls.</p>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low aspect-square md:aspect-auto relative flex items-end p-8">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70 mix-blend-multiply" data-alt="Overhead shot of a rustic wooden desk with a ceramic coffee mug and steam rising in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBreKXQXWcoNI-Ov2NTKxkq3Dn-1EbqfShMOzaWnFlsKielT73kCchcRBCDTbJy2iPwxNRxFashuZAuXWJTEQqehn5DXW9R48yCpmVO-22VulsHnJLu5HiAqaauUy1YjQqUDC3LUO8F71yyvfqH44zWZATmyxccd_Jn5I_N11-afJN8ulRC15Cq_iS8o6M7Qnrmx-RJhn3_TXHS8mIyEmtazHWZnwYh27GyWMnqrP2augU_SBM-sOyuEAUYX5RtlREcYuD1wt3jGyk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-headline italic text-on-surface">#MorningCoffee</h2>
+<p class="mt-2 text-on-surface-variant font-body text-sm italic">Rituals before the first lecture.</p>
+</div>
+</div>
+<div class="md:col-span-4 group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low aspect-square md:aspect-auto relative flex items-end p-8">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-70 mix-blend-multiply" data-alt="Late night interior of a cozy library with warm yellow lamps and stacks of books creating deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS7peEbX8csI_iRdF5b90MJ5sVRckGTXhMGh69HD11sv1Cz-IuNLSkvNdiCF69IeVbX_uv9hrgK6F6JfdNCSDp3VFcqJMryFmSkGBQwaDf-PULhE_xO7z_qDkZLQsYiH_SgH3CYuC8X_XMepOh7G78Q87bdffpSezYpiZ0F4nrjOSvfwWHeu6ODncThvFZBAiFnHUa4ptc9_qWr_QL_WY4cdstYVQJ5rTisL62XXTtSrlu-hgShsm7SkAc7GCZzR3NqtXEAucvAvU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="relative z-10">
+<h2 class="text-3xl font-headline italic text-on-surface">#LateNightReflections</h2>
+<p class="mt-2 text-on-surface-variant font-body text-sm italic">When the campus falls silent.</p>
+</div>
+</div>
+<div class="md:col-span-8 group cursor-pointer overflow-hidden rounded-xl bg-surface-container-low aspect-[16/9] md:aspect-auto relative flex items-end p-10">
+<img alt="" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80 mix-blend-multiply" data-alt="Abstract action shot of a soccer ball on grass under bright stadium lights with soft motion blur" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHQaR3JYm2V2XbG5qNscB_LDlJRlmskk9IyFGHfjkGHNSzySmg9tlEsB5gc-cB5l_z6GmpHhmlbCqghOYNvEdQRclyoWuRgXP10QS2RIX-U7EWn1NQAgyouFK0onZ4ieOW8hH5rXoiu3KpjfdtHdinDs0pPiFmAYI7mnJHlhEqjiZNXiYearofl38PAng-X-rHA0xq9oePaVZ4ni3jPQd1aydOBxQ7F5ytOOm_wPv3yuMdXCJNzGWW7KEaprLZ6rrGkfr2dn78JM0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="relative z-10">
+<h2 class="text-4xl font-headline italic text-on-surface leading-none">#Soccer</h2>
+<p class="mt-4 text-on-surface-variant font-body max-w-sm">Adrenaline and community on the pitch.</p>
+</div>
+</div>
+</section>
+<!-- Tag Cloud Section -->
+<section class="max-w-4xl mx-auto py-12">
+<div class="flex items-center gap-4 mb-12">
+<div class="h-px flex-1 bg-outline-variant opacity-20"></div>
+<span class="font-label text-xs uppercase tracking-[0.3em] text-outline">All Fragments</span>
+<div class="h-px flex-1 bg-outline-variant opacity-20"></div>
+</div>
+<div class="flex flex-wrap justify-center gap-x-8 gap-y-12">
+<!-- Tag Item -->
+<a class="group flex flex-col items-center" href="#">
+<span class="text-5xl font-headline italic text-on-surface group-hover:text-primary transition-colors">#StudyGram</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">24 Pieces</span>
+</a>
+<a class="group flex flex-col items-center translate-y-4" href="#">
+<span class="text-3xl font-headline italic text-on-surface-variant group-hover:text-primary transition-colors">#RainyDays</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">12 Pieces</span>
+</a>
+<a class="group flex flex-col items-center" href="#">
+<span class="text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors">#LibraryLogs</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">38 Pieces</span>
+</a>
+<a class="group flex flex-col items-center -translate-y-4" href="#">
+<span class="text-2xl font-headline italic text-on-surface-variant group-hover:text-primary transition-colors">#GraduationBlues</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">5 Pieces</span>
+</a>
+<a class="group flex flex-col items-center" href="#">
+<span class="text-6xl font-headline italic text-on-surface group-hover:text-primary transition-colors">#DormLife</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">56 Pieces</span>
+</a>
+<a class="group flex flex-col items-center translate-y-6" href="#">
+<span class="text-3xl font-headline italic text-on-surface-variant group-hover:text-primary transition-colors">#WeekendTrip</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">19 Pieces</span>
+</a>
+<a class="group flex flex-col items-center" href="#">
+<span class="text-4xl font-headline italic text-on-surface group-hover:text-primary transition-colors">#FreshmanYear</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">31 Pieces</span>
+</a>
+<a class="group flex flex-col items-center -translate-y-2" href="#">
+<span class="text-5xl font-headline italic text-on-surface-variant group-hover:text-primary transition-colors">#SeoulVibes</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">42 Pieces</span>
+</a>
+<a class="group flex flex-col items-center translate-y-2" href="#">
+<span class="text-2xl font-headline italic text-on-surface group-hover:text-primary transition-colors">#StreetFood</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline mt-2">15 Pieces</span>
+</a>
+</div>
+</section>
+<!-- Narrative CTA Section -->
+<section class="mt-32 p-16 bg-surface-container-low rounded-xl text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="relative z-10 max-w-xl mx-auto">
+<h3 class="text-3xl md:text-4xl font-headline italic text-on-surface mb-6">Lost in the collection?</h3>
+<p class="text-on-surface-variant font-body mb-10 leading-relaxed">Sometimes the best way to discover is to let the archive choose for you. Start a random journey through the pieces of my life.</p>
+<button class="px-8 py-4 rounded-full bg-primary text-on-primary font-label text-sm uppercase tracking-widest hover:opacity-90 transition-all flex items-center gap-3 mx-auto shadow-lg shadow-primary/20">
+                    Surprise Me
+                    <span class="material-symbols-outlined text-sm" data-icon="auto_awesome">auto_awesome</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 full-width py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full max-w-screen-2xl mx-auto border-t border-stone-200/20 pt-12">
+<div class="flex flex-col gap-2 items-center md:items-start">
+<span class="font-serif text-lg text-stone-900 dark:text-stone-100 italic">오늘의 조각</span>
+<p class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400">© 2024 Echoes of Today. Pieces of a university life.</p>
+</div>
+<div class="flex gap-8 font-sans text-sm tracking-wide uppercase">
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Privacy</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Terms</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

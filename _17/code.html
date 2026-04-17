@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-variant": "#e5e2dd",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f6f3ee",
+                    "on-primary-fixed-variant": "#703626",
+                    "error": "#ba1a1a",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#f4dfcb",
+                    "primary-container": "#945341",
+                    "surface-container": "#f0ede8",
+                    "on-surface-variant": "#53433f",
+                    "on-secondary-fixed": "#141e0e",
+                    "secondary-fixed-dim": "#becbb2",
+                    "primary-fixed": "#ffdbd1",
+                    "on-primary-container": "#ffdad1",
+                    "on-tertiary-fixed": "#241a0e",
+                    "tertiary": "#584a3c",
+                    "on-error": "#ffffff",
+                    "outline": "#86736e",
+                    "surface-tint": "#8d4d3b",
+                    "on-primary-fixed": "#380c02",
+                    "tertiary-container": "#716252",
+                    "secondary-fixed": "#dae7cd",
+                    "surface-container-highest": "#e5e2dd",
+                    "surface": "#fcf9f4",
+                    "primary": "#773c2b",
+                    "on-secondary-container": "#5a6651",
+                    "surface-bright": "#fcf9f4",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-container-high": "#ebe8e3",
+                    "secondary": "#56624d",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#d8c2bc",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "error-container": "#ffdad6",
+                    "inverse-surface": "#31302d",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "secondary-container": "#d7e4ca",
+                    "on-tertiary-container": "#f4dfcb",
+                    "background": "#fcf9f4",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface-dim": "#dcdad5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-glow-cta {
+            background: linear-gradient(135deg, #773c2b 0%, #945341 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<aside class="h-screen w-64 fixed left-0 top-0 bg-stone-50 dark:bg-stone-950/80 flex flex-col h-full p-8 z-50">
+<div class="mb-12">
+<h1 class="text-2xl font-serif italic text-[#773c2b] dark:text-[#945341]">Echoes Admin</h1>
+<p class="font-serif text-[#1c1c19] dark:text-stone-100 text-sm opacity-60">Managing Pieces</p>
+</div>
+<nav class="flex-1 space-y-6">
+<a class="flex items-center gap-3 text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+<span class="font-label text-sm tracking-wide">Media Library</span>
+</a>
+<a class="flex items-center gap-3 text-[#773c2b] font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full group" href="#">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="font-label text-sm tracking-wide">Notification Center</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-label text-sm tracking-wide">Analytics</span>
+</a>
+<a class="flex items-center gap-3 text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors group" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label text-sm tracking-wide">System Settings</span>
+</a>
+</nav>
+<div class="mt-auto pt-8 flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-stone-200">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a thoughtful man in a linen shirt, soft natural window light, editorial photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZMkGWxqi9qPZce3HN4xQWW38n2eOgqOJMHQapEqCM9IONwpYsYAC-CoeyR9Ce6tYbv_smHYaTuUfqLyLsrIDxi1sb_Zaz0FCxv0hWZMLDiTYb5uUQH08H06ogOGIzXpWTNR0bGc1f85dYLBRyvAPGw_abIB4Kc7b8Y2ip3J9ViDKrYLUugi7lL6TKY4ksruLK0L1-tu33TaMfuPpraSyqS8ailWL98mSb1j1v9gwIofGqSISF26zdnUfLsSWRSza6O_abtD93baI"/>
+</div>
+<div>
+<p class="font-serif text-sm font-bold">Admin Profile</p>
+<button class="text-xs text-primary font-bold hover:opacity-70 transition-opacity">New Entry</button>
+</div>
+</div>
+</aside>
+<main class="ml-64 min-h-screen">
+<header class="sticky top-0 z-40 bg-[#fcf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-xl shadow-stone-900/5">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<h2 class="text-3xl font-serif tracking-tighter text-[#1c1c19] dark:text-stone-50">Notification Center</h2>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex gap-6">
+<a class="text-stone-400 dark:text-stone-500 hover:text-[#773c2b] dark:hover:text-[#945341] transition-all font-label text-sm" href="#">Sign Up</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-[#773c2b] dark:hover:text-[#945341] transition-all font-label text-sm" href="#">Terms</a>
+<a class="text-stone-400 dark:text-stone-500 hover:text-[#773c2b] dark:hover:text-[#945341] transition-all font-label text-sm" href="#">Privacy</a>
+</nav>
+<button class="bg-glow-cta text-on-primary px-6 py-3 rounded-full font-label text-sm font-bold tracking-wide shadow-lg shadow-primary/20 hover:opacity-90 active:opacity-70 transition-all">
+                        Return to Blog
+                    </button>
+</div>
+</div>
+</header>
+<section class="max-w-5xl mx-auto px-12 py-20">
+<div class="flex justify-between items-end mb-16">
+<div class="space-y-2">
+<span class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant/60">Archive / Notifications</span>
+<h3 class="text-5xl font-headline font-light tracking-tight italic">The Daily Pulse</h3>
+</div>
+<button class="font-label text-sm text-primary flex items-center gap-2 px-4 py-2 hover:bg-primary/5 rounded-lg transition-colors border border-outline-variant/15">
+<span class="material-symbols-outlined text-sm" data-icon="done_all">done_all</span>
+                    Mark all as read
+                </button>
+</div>
+<div class="space-y-px">
+<div class="group relative flex gap-8 py-10 transition-all duration-500 hover:bg-surface-container-low px-8 -mx-8 rounded-xl">
+<div class="flex-shrink-0 pt-1">
+<div class="w-12 h-12 bg-secondary-container flex items-center justify-center rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-2xl">New Comment on "Seoul Reflections"</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed max-w-2xl">"The way you described the morning fog over the Han River resonates so deeply with my own memories of 2018..."</p>
+</div>
+<span class="text-xs font-label text-on-surface-variant/60">2m ago</span>
+</div>
+<div class="flex items-center gap-4 pt-2">
+<span class="font-label text-xs bg-primary-fixed text-on-primary-fixed-variant px-3 py-1 rounded-md">New Piece</span>
+<button class="text-xs font-bold font-label text-primary hover:underline underline-offset-4">Reply to comment</button>
+</div>
+</div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full opacity-100"></div>
+</div>
+<div class="group relative flex gap-8 py-10 transition-all duration-500 hover:bg-surface-container-low px-8 -mx-8 rounded-xl">
+<div class="flex-shrink-0 pt-1">
+<div class="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-full text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-2xl">Mentioned in "Academic Journals"</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed max-w-2xl">Alex Kim mentioned your archive in their latest collection: "A beautiful exploration of student life..."</p>
+</div>
+<span class="text-xs font-label text-on-surface-variant/60">4h ago</span>
+</div>
+<div class="flex items-center gap-4 pt-2">
+<span class="font-label text-xs bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-md">Community</span>
+</div>
+</div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 bg-primary rounded-full opacity-100"></div>
+</div>
+<div class="group relative flex gap-8 py-10 transition-all duration-500 hover:bg-surface-container-low px-8 -mx-8 rounded-xl opacity-60 hover:opacity-100">
+<div class="flex-shrink-0 pt-1">
+<div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="system_update">system_update</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-2xl">System Update: Version 2.4.0</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed max-w-2xl">New editorial themes and typography scales are now available in your management dashboard.</p>
+</div>
+<span class="text-xs font-label text-on-surface-variant/60">Yesterday</span>
+</div>
+</div>
+</div>
+<div class="group relative flex gap-8 py-10 transition-all duration-500 hover:bg-surface-container-low px-8 -mx-8 rounded-xl opacity-60 hover:opacity-100">
+<div class="flex-shrink-0 pt-1">
+<div class="w-12 h-12 bg-surface-variant flex items-center justify-center rounded-full text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+<div class="flex-1 space-y-3">
+<div class="flex justify-between items-start">
+<div>
+<h4 class="font-headline text-2xl">Security Alert: New Login</h4>
+<p class="text-on-surface-variant mt-1 leading-relaxed max-w-2xl">A new login was detected from a Chrome browser on MacOS at 10:42 PM.</p>
+</div>
+<span class="text-xs font-label text-on-surface-variant/60">Oct 24</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 p-12 bg-surface-container-low rounded-xl relative overflow-hidden">
+<div class="relative z-10 max-w-lg">
+<h5 class="font-headline text-3xl mb-4 italic">The Breathing Archive</h5>
+<p class="text-on-surface-variant font-body leading-relaxed text-lg">Every notification is a bridge between your digital world and your physical memories. Manage these pieces with intention.</p>
+<div class="mt-8">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-full font-label text-sm transition-transform active:scale-95 shadow-md shadow-primary/10">Configure Digest</button>
+</div>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 pointer-events-none">
+<img alt="Old books background" class="w-full h-full object-cover" data-alt="A stack of vintage academic books with weathered paper and leather bindings, soft warm depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwZB1r4xOLolWOa0K9OWQXpxiMrg7azNXnvlo0mfUqk1-m_M1Yw2n9QNti8EwE4K-iDjkvuaFKFIqO9l61-ckaeOiWSTv03VHyy15rpm3dyIxpcIE0GUC5YnPdL62W0fWaS9cL0WlcBWQSmJcOpASUfaE7XMo3U1V28voCW7ScV6PALmJ6AK_e1aZO0-d_CW5sFI3gYg1Qv_3CInN0VGT-Fzli2wG5qELDmXGrWaM5uGqC_-Rnb6BysFVqbIKaJb7pHZ7xUF-T5Js"/>
+</div>
+</div>
+</section>
+<footer class="mt-32 px-12 py-12 bg-surface-container-high/30">
+<div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 border-t border-outline-variant/15 pt-12">
+<div class="space-y-1">
+<p class="font-headline text-xl tracking-tight">오늘의 조각</p>
+<p class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant/50">Echoes of Today © 2024</p>
+</div>
+<div class="flex gap-12 font-label text-xs uppercase tracking-widest text-on-surface-variant/70">
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+<a class="hover:text-primary transition-colors" href="#">Integrity</a>
+</div>
+</div>
+</footer>
+</main>
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-surface/90 backdrop-blur-xl px-6 py-4 rounded-full flex gap-10 shadow-2xl shadow-stone-900/10 z-[100] border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="photo_library">photo_library</span>
+<span class="material-symbols-outlined text-primary font-bold" data-icon="notifications">notifications</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="insights">insights</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="settings">settings</span>
+</div>
+</body></html>

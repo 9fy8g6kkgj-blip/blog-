@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#524436",
+                        "surface-variant": "#e5e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3ee",
+                        "on-primary-fixed-variant": "#703626",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#f4dfcb",
+                        "primary-container": "#945341",
+                        "surface-container": "#f0ede8",
+                        "on-surface-variant": "#53433f",
+                        "on-secondary-fixed": "#141e0e",
+                        "secondary-fixed-dim": "#becbb2",
+                        "primary-fixed": "#ffdbd1",
+                        "on-primary-container": "#ffdad1",
+                        "on-tertiary-fixed": "#241a0e",
+                        "tertiary": "#584a3c",
+                        "on-error": "#ffffff",
+                        "outline": "#86736e",
+                        "surface-tint": "#8d4d3b",
+                        "on-primary-fixed": "#380c02",
+                        "tertiary-container": "#716252",
+                        "secondary-fixed": "#dae7cd",
+                        "surface-container-highest": "#e5e2dd",
+                        "surface": "#fcf9f4",
+                        "primary": "#773c2b",
+                        "on-secondary-container": "#5a6651",
+                        "surface-bright": "#fcf9f4",
+                        "inverse-primary": "#ffb5a1",
+                        "surface-container-high": "#ebe8e3",
+                        "secondary": "#56624d",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#d8c2bc",
+                        "on-surface": "#1c1c19",
+                        "primary-fixed-dim": "#ffb5a1",
+                        "on-secondary-fixed-variant": "#3f4a37",
+                        "tertiary-fixed-dim": "#d7c3b0",
+                        "error-container": "#ffdad6",
+                        "inverse-surface": "#31302d",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "secondary-container": "#d7e4ca",
+                        "on-tertiary-container": "#f4dfcb",
+                        "background": "#fcf9f4",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f3f0eb",
+                        "surface-dim": "#dcdad5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; color: #1c1c19; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="bg-[#fcf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-xl shadow-stone-900/5 tonal-transition">
+<div class="flex justify-between items-center w-full px-12 py-6 max-w-screen-2xl mx-auto">
+<a class="text-3xl font-serif tracking-tighter text-[#1c1c19] dark:text-stone-50" href="/">
+                Echoes of Today
+            </a>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-serif text-stone-400 dark:text-stone-500 hover:text-[#773c2b] dark:hover:text-[#945341] transition-all" href="#">Sign Up</a>
+<a class="font-serif text-[#773c2b] dark:text-[#945341] font-bold" href="#">Terms</a>
+<a class="font-serif text-stone-400 dark:text-stone-500 hover:text-[#773c2b] dark:hover:text-[#945341] transition-all" href="#">Privacy</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="bg-primary text-on-primary rounded-full px-6 py-3 font-label text-sm uppercase tracking-widest hover:opacity-70 transition-all active:opacity-70">
+                    Return to Blog
+                </button>
+</div>
+</div>
+</header>
+<main class="relative min-h-screen pt-24 pb-32">
+<!-- Background Accents (The Breathing Layout) -->
+<div class="absolute top-0 right-0 w-1/3 h-screen bg-surface-container-low -z-10 opacity-50"></div>
+<article class="max-w-3xl mx-auto px-6">
+<!-- Header Section -->
+<header class="mb-20 text-center md:text-left">
+<span class="font-label text-sm uppercase tracking-[0.2em] text-outline mb-4 block">Last Updated: October 24, 2023</span>
+<h1 class="font-serif text-6xl md:text-7xl italic leading-tight text-on-surface mb-8">
+                    Legal &amp; <br/>Privacy Ethics
+                </h1>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    Transparency is the foundation of our archive. These terms define how we handle the digital fragments you leave behind and our commitment to preserving the integrity of this personal space.
+                </p>
+</header>
+<!-- Content Body -->
+<div class="space-y-16">
+<!-- Section 1 -->
+<section class="group">
+<h2 class="font-serif text-3xl mb-6 text-primary flex items-center gap-4">
+<span class="text-xs font-label text-outline border-b border-outline-variant w-8">01</span>
+                        Terms of Reflection
+                    </h2>
+<div class="font-serif text-lg text-on-surface leading-[1.8] space-y-6">
+<p>
+                            By engaging with <em class="italic">Echoes of Today</em>, you are participating in a curated digital narrative. We ask that you respect the emotional labor and intellectual property contained within these pages. All content—unless explicitly stated otherwise—is the sole property of the author.
+                        </p>
+<p>
+                            We encourage the sharing of "pieces" of this blog, provided they are accompanied by direct attribution. Commercial use of the prose, photography, or archival layouts is strictly prohibited without written consent.
+                        </p>
+</div>
+</section>
+<!-- Section 2 -->
+<section class="group">
+<h2 class="font-serif text-3xl mb-6 text-primary flex items-center gap-4">
+<span class="text-xs font-label text-outline border-b border-outline-variant w-8">02</span>
+                        Digital Fragments (Data Usage)
+                    </h2>
+<div class="font-serif text-lg text-on-surface leading-[1.8] space-y-6">
+<p>
+                            We collect only what is necessary to maintain the "Analog Archive" feel. This includes:
+                        </p>
+<ul class="list-none space-y-4 pl-6 border-l border-outline-variant italic text-on-surface-variant">
+<li>Voluntary identifiers provided during newsletter subscription.</li>
+<li>Anonymous session fragments to understand which "pieces" resonate most.</li>
+<li>Technical metadata to ensure the glassmorphic surfaces render correctly on your device.</li>
+</ul>
+<p>
+                            Your data is never sold to third-party marketplaces. We treat your digital footprint with the same reverence we treat a physical journal.
+                        </p>
+</div>
+</section>
+<!-- Visual Break (Asymmetric Image Placement) -->
+<div class="py-12 -mx-4 md:-mx-24 relative">
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm">
+<img alt="Interior design detail" class="w-full h-[400px] object-cover rounded-md grayscale opacity-80" data-alt="A minimalist library setting with soft shadows falling across an open vintage book on a light wooden desk, warm afternoon sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw1n0C6mi74b9_cPdWOK32s_n4Qh7HerNnK9w-V0t2t8k_LjHytp69KPqJprMXITKCUGC6GIqbBOp5hjVY084lolwdoN0sgVk-xW8bbVTIOh3KUVQl5qBigpZPA57qDbqXVyQbYm6Rbo_UtZ3UildVA7TW8Z-Hg59XlwRw4Iy6AOcuNwJpKN-ojZbrGwteY9YvZvBp2uUB3sgpbkDD1sRKcFX-1r61qAIqPcI8thcol9g-F_0ZSM5gWAaFYFG1m_AJw9fX06HpFUk"/>
+<div class="mt-4 font-label text-xs text-outline text-right italic uppercase tracking-widest">
+                            The Archive Perspective • Volume I
+                        </div>
+</div>
+</div>
+<!-- Section 3 -->
+<section class="group">
+<h2 class="font-serif text-3xl mb-6 text-primary flex items-center gap-4">
+<span class="text-xs font-label text-outline border-b border-outline-variant w-8">03</span>
+                        The Right to be Forgotten
+                    </h2>
+<div class="font-serif text-lg text-on-surface leading-[1.8] space-y-6">
+<p>
+                            In alignment with the ephemeral nature of life, any user may request the complete removal of their digital interactions. Should you wish to withdraw your subscription or delete your commentary fragments, please reach out via our contact channels.
+                        </p>
+<div class="bg-surface-container-low p-8 rounded-xl">
+<p class="font-label text-sm text-secondary italic">
+                                "The archive is not a permanent prison, but a temporary home for thoughts. You may leave at any time."
+                            </p>
+</div>
+</div>
+</section>
+<!-- Section 4 -->
+<section class="group">
+<h2 class="font-serif text-3xl mb-6 text-primary flex items-center gap-4">
+<span class="text-xs font-label text-outline border-b border-outline-variant w-8">04</span>
+                        External Connections
+                    </h2>
+<div class="font-serif text-lg text-on-surface leading-[1.8] space-y-6">
+<p>
+                            Occasionally, we may point you toward external artifacts—books, galleries, or other archives. We do not control these spaces and are not responsible for their individual privacy practices. We recommend reviewing their terms before engaging.
+                        </p>
+</div>
+</section>
+</div>
+<!-- Footer-style CTA -->
+<footer class="mt-32 pt-16 border-t border-outline-variant/20 text-center">
+<p class="font-label text-xs uppercase tracking-widest text-outline mb-6">Questions regarding our ethics?</p>
+<div class="flex flex-col md:flex-row justify-center items-center gap-6">
+<a class="text-primary font-serif italic text-2xl hover:opacity-60 transition-opacity" href="mailto:hello@echoesoftoday.com">
+                        legal@echoesoftoday.com
+                    </a>
+<span class="hidden md:block w-2 h-2 bg-primary rounded-full"></span>
+<a class="font-body text-sm text-on-surface-variant hover:text-primary transition-colors" href="/">
+                        Return to the Homepage
+                    </a>
+</div>
+</footer>
+</article>
+</main>
+<!-- Bottom Navigation Bar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-md z-50 flex justify-around items-center p-4 border-none shadow-[0_-4px_24px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center gap-1 text-stone-400" href="#">
+<span class="material-symbols-outlined" data-icon="photo_library">photo_library</span>
+<span class="text-[10px] font-label uppercase tracking-tighter">Library</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" data-icon="gavel" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<span class="text-[10px] font-label uppercase tracking-tighter">Terms</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-400" href="#">
+<span class="material-symbols-outlined" data-icon="privacy_tip">privacy_tip</span>
+<span class="text-[10px] font-label uppercase tracking-tighter">Privacy</span>
+</a>
+</nav>
+</body></html>

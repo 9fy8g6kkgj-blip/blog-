@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e5e2dd",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-dim": "#dcdad5",
+                    "on-secondary-container": "#5a6651",
+                    "error": "#ba1a1a",
+                    "primary-container": "#945341",
+                    "on-primary-container": "#ffdad1",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary-container": "#f4dfcb",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-tint": "#8d4d3b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0ede8",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary-fixed-dim": "#becbb2",
+                    "secondary": "#56624d",
+                    "secondary-container": "#d7e4ca",
+                    "outline-variant": "#d8c2bc",
+                    "on-secondary-fixed": "#141e0e",
+                    "inverse-surface": "#31302d",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "tertiary-container": "#716252",
+                    "tertiary": "#584a3c",
+                    "surface": "#fcf9f4",
+                    "primary": "#773c2b",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "background": "#fcf9f4",
+                    "on-primary-fixed": "#380c02",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-variant": "#e5e2dd",
+                    "on-surface-variant": "#53433f",
+                    "secondary-fixed": "#dae7cd",
+                    "on-error-container": "#93000a",
+                    "outline": "#86736e",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed": "#ffdbd1",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif-brand { font-family: 'Newsreader', serif; }
+        .tonal-transition { transition: background-color 0.3s ease; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif italic text-[#1c1c19] dark:text-[#fcf9f4] tracking-tighter">Echoes of Today</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-8 items-center font-serif font-medium Newsreader">
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#773c2b] transition-colors" href="#">Archives</a>
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#773c2b] transition-colors" href="#">Categories</a>
+<a class="text-[#1c1c19]/60 dark:text-[#fcf9f4]/60 hover:text-[#773c2b] transition-colors" href="#">Reflections</a>
+<a class="text-[#773c2b] dark:text-[#d7e4ca] relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#773c2b] dark:text-[#d7e4ca] hover:opacity-80 transition-opacity duration-300">menu</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Asymmetric Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-24">
+<div class="lg:col-span-7">
+<span class="font-label text-sm uppercase tracking-[0.2em] text-on-surface-variant opacity-70 mb-4 block">Connections</span>
+<h1 class="text-6xl md:text-8xl leading-[0.9] -tracking-[0.03em] mb-8">
+                    Leave a <span class="italic text-primary">Trace</span> in the Archive.
+                </h1>
+<p class="text-body text-lg md:text-xl leading-relaxed text-on-surface-variant max-w-xl">
+                    Every letter, every greeting, and every brief reflection becomes a part of this digital ephemera. Share a thought, a memory, or simply say hello.
+                </p>
+</div>
+<div class="lg:col-span-5 lg:pt-12">
+<div class="aspect-[4/5] bg-surface-container-low rounded-xl overflow-hidden relative group">
+<img alt="Guestbook" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700" data-alt="Close-up of a vintage fountain pen resting on a cream-colored textured paper journal with soft warm morning sunlight and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB_ahRPh4nrZA0uXAa6ULF1u3j6U-3zmsUgMdJbbhJbovwRxr9JhdEpiI90mZTCRZe06YQ_ZJftg410X6f6X0RtGbMCCb4-yx7QGcq6reB518n6NBVCd3WZ_6rG2DQIx32TmpWk6VWxbhLQBpSzZRG9I-yXKu9p6ku45bpmLApF8dsA-c9U11zuRoF2Cw5gFsRHCab_T9kWVNRFt5vn5HLyQrIUpdY4m7GW3MDMjKlIm_2qEH_OYMuuvRC8ZcR_0PDyEI_S3-hpMo"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+</div>
+<!-- Form Section: Tonal Layering -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Guestbook Form -->
+<section class="bg-surface-container-low p-8 md:p-12 rounded-xl">
+<h2 class="text-3xl mb-8 opacity-90 italic">The Guestbook</h2>
+<form class="space-y-8">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-lg placeholder:text-on-surface-variant/40" id="name" placeholder="Name or Moniker" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-lg placeholder:text-on-surface-variant/40" id="email" placeholder="Email (Private)" type="email"/>
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-primary transition-colors text-lg placeholder:text-on-surface-variant/40 resize-none" id="message" placeholder="Your message..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-2 mb-4">
+<input class="rounded-sm border-outline text-primary focus:ring-primary/20" id="public" type="checkbox"/>
+<label class="text-sm font-label text-on-surface-variant" for="public">Keep this reflection private?</label>
+</div>
+<button class="w-full md:w-auto px-12 py-4 bg-primary text-on-primary rounded-full font-label text-sm tracking-widest uppercase bg-gradient-to-r from-primary to-primary-container shadow-lg shadow-primary/10 hover:opacity-90 active:scale-95 transition-all" type="submit">
+                        Seal &amp; Post
+                    </button>
+</form>
+</section>
+<!-- Previous Entries: Bento-ish Grid -->
+<section class="space-y-12">
+<div class="flex justify-between items-end mb-4">
+<h2 class="text-3xl italic">Recent Echoes</h2>
+<span class="font-label text-xs text-on-surface-variant opacity-60">Archive Index 012-014</span>
+</div>
+<div class="space-y-6">
+<!-- Message Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15">
+<div class="flex justify-between items-start mb-4">
+<span class="font-headline text-xl italic">Clara M.</span>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant opacity-50">24 Oct 2024</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            This space feels like a quiet library at midnight. Thank you for documenting the small things; they are often the most important.
+                        </p>
+</div>
+<!-- Message Card 2 -->
+<div class="bg-surface-container-low/50 p-8 rounded-xl border border-outline-variant/10 ml-8 lg:ml-12">
+<div class="flex justify-between items-start mb-4">
+<span class="font-headline text-xl italic">J. Henderson</span>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant opacity-50">19 Oct 2024</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed italic">
+                            "The analog soul in a digital vessel." Your writing on university ephemera resonate deeply with my own graduate school days.
+                        </p>
+</div>
+<!-- Message Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/15">
+<div class="flex justify-between items-start mb-4">
+<span class="font-headline text-xl italic">Minh Tran</span>
+<span class="font-label text-[10px] uppercase tracking-tighter text-on-surface-variant opacity-50">15 Oct 2024</span>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Just passing through. I love the grain and the warmth here.
+                        </p>
+</div>
+</div>
+<div class="pt-8 text-center lg:text-left">
+<a class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="#">View Full Archive</a>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f6f3ee] dark:bg-[#121210] w-full py-12 px-8 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]">Echoes of Today</div>
+<div class="flex gap-8 font-sans text-sm tracking-wide Manrope">
+<a class="text-[#1c1c19]/50 dark:text-[#fcf9f4]/50 hover:text-[#773c2b] dark:hover:text-[#d7e4ca] transition-all" href="#">Privacy</a>
+<a class="text-[#1c1c19]/50 dark:text-[#fcf9f4]/50 hover:text-[#773c2b] dark:hover:text-[#d7e4ca] transition-all" href="#">Terms</a>
+<a class="text-[#1c1c19]/50 dark:text-[#fcf9f4]/50 hover:text-[#773c2b] dark:hover:text-[#d7e4ca] transition-all" href="#">Contact</a>
+<a class="text-[#1c1c19]/50 dark:text-[#fcf9f4]/50 hover:text-[#773c2b] dark:hover:text-[#d7e4ca] transition-all" href="#">Instagram</a>
+</div>
+<p class="text-[#1c1c19]/50 dark:text-[#fcf9f4]/50 font-sans text-sm tracking-wide Manrope">© 2024 Echoes of Today. A digital archive of university ephemera.</p>
+</div>
+</footer>
+</body></html>

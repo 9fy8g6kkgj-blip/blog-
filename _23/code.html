@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>오늘의 조각 - Categories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#ffdbd1",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-secondary-fixed": "#141e0e",
+                    "on-secondary-container": "#5a6651",
+                    "tertiary": "#584a3c",
+                    "tertiary-fixed": "#f4dfcb",
+                    "secondary-fixed": "#dae7cd",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#d8c2bc",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad5",
+                    "inverse-surface": "#31302d",
+                    "on-surface": "#1c1c19",
+                    "on-primary-container": "#ffdad1",
+                    "primary-container": "#945341",
+                    "surface-bright": "#fcf9f4",
+                    "on-surface-variant": "#53433f",
+                    "on-primary-fixed": "#380c02",
+                    "surface-container-high": "#ebe8e3",
+                    "secondary": "#56624d",
+                    "on-tertiary-container": "#f4dfcb",
+                    "surface-container-low": "#f6f3ee",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-highest": "#e5e2dd",
+                    "background": "#fcf9f4",
+                    "surface-tint": "#8d4d3b",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#d7e4ca",
+                    "primary": "#773c2b",
+                    "outline": "#86736e",
+                    "surface-variant": "#e5e2dd",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-tertiary-fixed": "#241a0e",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-container": "#f0ede8",
+                    "surface": "#fcf9f4",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-[#fcf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl w-full sticky top-0 z-50 no-border tonal-shift bg-[#f6f3ee] dark:bg-stone-900 flat no shadows">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]">오늘의 조각</div>
+<nav class="hidden md:flex items-center space-x-8 font-serif font-medium tracking-tight">
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1c1c19] dark:hover:text-white transition-colors" href="#">Analytics</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1c1c19] dark:hover:text-white transition-colors" href="#">Logs</a>
+<a class="text-[#773c2b] dark:text-[#945341] border-b-0 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full" href="#">Categories</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#1c1c19] dark:hover:text-white transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex items-center space-x-4">
+<div class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 hover:bg-[#f6f3ee]/50 transition-all duration-300">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-32 font-body text-on-surface-variant" placeholder="Search archive..." type="text"/>
+</div>
+<button class="text-[#773c2b] dark:text-[#945341] scale-98 transition-transform duration-200">
+<span class="material-symbols-outlined text-3xl" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow max-w-7xl w-full mx-auto px-8 py-12 md:flex gap-12">
+<!-- Sidebar Navigation (Desktop) -->
+<aside class="hidden md:flex flex-col w-64 space-y-8 shrink-0">
+<div class="space-y-1">
+<h2 class="text-lg font-serif text-[#1c1c19] dark:text-[#fcf9f4]">Admin Archive</h2>
+<p class="font-sans uppercase tracking-widest text-[10px] text-stone-400">System Controller</p>
+</div>
+<nav class="flex flex-col space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-400 dark:text-stone-500 hover:bg-white/20 hover:translate-x-1 transition-transform duration-300 rounded-r-full font-sans uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-400 dark:text-stone-500 hover:bg-white/20 hover:translate-x-1 transition-transform duration-300 rounded-r-full font-sans uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="edit_note">edit_note</span>
+<span>Editorial</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#773c2b] dark:text-[#945341] font-bold bg-[#ffffff] dark:bg-stone-800 rounded-r-full font-sans uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="terminal">terminal</span>
+<span>System</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-stone-400 dark:text-stone-500 hover:bg-white/20 hover:translate-x-1 transition-transform duration-300 rounded-r-full font-sans uppercase tracking-widest text-xs" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="shield_person">shield_person</span>
+<span>Security</span>
+</a>
+</nav>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full py-3 px-6 font-sans uppercase tracking-widest text-xs shadow-sm hover:opacity-90 transition-opacity">
+                New Piece
+            </button>
+</aside>
+<!-- Main Content Area -->
+<div class="flex-grow space-y-12">
+<!-- Hero Header -->
+<section class="space-y-4">
+<h1 class="text-5xl font-serif font-extrabold tracking-tight text-on-surface">Category Management</h1>
+<p class="text-lg text-on-surface-variant font-body max-w-2xl leading-relaxed">
+                    Organize your digital ephemera into meaningful clusters. Define the taxonomy of your thoughts and monitor how your narrative evolves across different themes.
+                </p>
+</section>
+<!-- Quick Stats Bento -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl space-y-2">
+<p class="font-sans uppercase tracking-widest text-[10px] text-on-surface-variant">Total Categories</p>
+<p class="text-4xl font-serif text-primary">12</p>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl space-y-2">
+<p class="font-sans uppercase tracking-widest text-[10px] text-on-surface-variant">Top Category</p>
+<p class="text-xl font-serif text-on-surface">Daily Musings</p>
+<p class="text-xs text-stone-400">42 pieces archived</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl border-2 border-primary/10 flex flex-col justify-center items-center text-center space-y-3 cursor-pointer hover:bg-primary/5 transition-colors">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="add_circle">add_circle</span>
+<p class="font-serif text-lg">Create New Category</p>
+</div>
+</section>
+<!-- Category List -->
+<section class="space-y-6">
+<div class="flex justify-between items-end">
+<h3 class="font-sans uppercase tracking-widest text-xs font-bold text-stone-500">Existing Categories</h3>
+<div class="flex gap-4">
+<button class="text-xs font-sans uppercase tracking-widest text-stone-400 hover:text-primary transition-colors flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="sort">sort</span> Sort by Date
+                        </button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Category Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 hover:translate-y-[-2px]">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-secondary-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Close up of vintage typewritten text on aged paper with a warm coffee stained atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVu3PzhBU80YvPFagRh5lrIyQCBCfQ6fhXMQ-2xxknds13YSHur3caPr4DYdlqSwC9Mwa4HMan85J8Mk7r5PQ_JSJrxMhic-0le0KfevGC33qzEHfMpDlLpS4AZSyuJJyE5QsVluzaRPx06KKzYNxbNaMOyuYdeoCEZhK69hqHI3CuJz55onXx6yRDeLNMac8aCHmxa7_UaQ9Zh9mQBSWKSghtSwzckaih9bidgqg2YAmV6_bt2pqqUNC8BdKP-R0tHJlpEASNRII"/>
+</div>
+<div class="space-y-1">
+<h4 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors">Literature &amp; Notes</h4>
+<div class="flex items-center gap-4 text-xs font-sans text-stone-400 uppercase tracking-widest">
+<span>24 Posts</span>
+<span class="w-1 h-1 bg-stone-300 rounded-full"></span>
+<span>Updated 2 days ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-3 text-stone-400 hover:text-primary hover:bg-primary-fixed rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-3 text-stone-400 hover:text-error hover:bg-error-container rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+<button class="p-3 text-stone-400 hover:text-on-surface transition-all">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Category Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 hover:translate-y-[-2px]">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-secondary-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Minimalist architectural abstract showing clean lines of a concrete building against a soft blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2fLQxQi5y5J6F8UxkzUeYciMr6j2XI8SziN5qGYWac70t3wjkKI0XY7cTbtaDtUmiO1EAqCw0lsGWJw9-8bmj42SXI2YYQqWZtNIzEwFHuGlVOzIv1pMDgXgIwg5x3NDXPk-msvg01KVdZsbhCtScDaQVVEAw-B8dlYk4aW-E-fGtyAOFrJtXgZbZSGjBtE02k7PbglyvZFTD4-klOlHk1Kf8W8IMlgKcTXtLC8SKC6YhVObKhOQgTQJvRyBaIY6C4jtI0fZ9Dec"/>
+</div>
+<div class="space-y-1">
+<h4 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors">Urban Sketches</h4>
+<div class="flex items-center gap-4 text-xs font-sans text-stone-400 uppercase tracking-widest">
+<span>15 Posts</span>
+<span class="w-1 h-1 bg-stone-300 rounded-full"></span>
+<span>Updated 1 week ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-3 text-stone-400 hover:text-primary hover:bg-primary-fixed rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-3 text-stone-400 hover:text-error hover:bg-error-container rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+<button class="p-3 text-stone-400 hover:text-on-surface transition-all">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Category Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-6 transition-all duration-300 hover:translate-y-[-2px]">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 bg-secondary-container rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Soft hazy sunset over a quiet lake with ripples in the water and a sense of calm solitude" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ-eFt_lLo5Na4tzbzZjOTGxt1dGkTUDQNnY2dg7kEHzg2lNqhc0Ge4cN2AnTrnBjD5Ws41yZIQm8QhjPDhdGkd26rLAGZDV8HmFPfVYe7-ymVQjDAQGW78CHQJghmBH1sGnTCsfn9CpyqcUn3Fmf71lJi5TIbtoqBnzs0llWyMywn0JxWjiHaK06eOdE_HjuB28KrCq6EtAmtNk53VeS6C_OyIHH3b2OFNT4uovksTwWixdt7ow5ZhoS0PPAkfwwSme8xvEtlE-g"/>
+</div>
+<div class="space-y-1">
+<h4 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors">Daily Musings</h4>
+<div class="flex items-center gap-4 text-xs font-sans text-stone-400 uppercase tracking-widest">
+<span>42 Posts</span>
+<span class="w-1 h-1 bg-stone-300 rounded-full"></span>
+<span>Updated 4 hours ago</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-3 text-stone-400 hover:text-primary hover:bg-primary-fixed rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-3 text-stone-400 hover:text-error hover:bg-error-container rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+<button class="p-3 text-stone-400 hover:text-on-surface transition-all">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pagination Concept -->
+<div class="flex justify-center pt-8">
+<nav class="flex items-center space-x-2">
+<button class="w-10 h-10 flex items-center justify-center text-stone-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span></button>
+<button class="w-10 h-10 flex items-center justify-center font-serif text-primary bg-primary-fixed rounded-full">1</button>
+<button class="w-10 h-10 flex items-center justify-center font-serif text-stone-500 hover:text-primary">2</button>
+<button class="w-10 h-10 flex items-center justify-center font-serif text-stone-500 hover:text-primary">3</button>
+<button class="w-10 h-10 flex items-center justify-center text-stone-400 hover:text-primary"><span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span></button>
+</nav>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-[#fcf9f4] dark:bg-stone-950 w-full py-12 mt-auto tonal-gap 80px flat">
+<div class="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<p class="font-sans text-[10px] tracking-widest uppercase text-stone-400 dark:text-stone-600">
+                © 2024 오늘의 조각 Administrative Suite. Analog Archive System.
+            </p>
+<div class="flex gap-8">
+<a class="font-sans text-[10px] tracking-widest uppercase text-stone-400 hover:text-stone-600 underline underline-offset-4 decoration-stone-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Documentation</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-stone-400 hover:text-stone-600 underline underline-offset-4 decoration-stone-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Support</a>
+<a class="font-sans text-[10px] tracking-widest uppercase text-stone-400 hover:text-stone-600 underline underline-offset-4 decoration-stone-200 opacity-80 hover:opacity-100 transition-opacity" href="#">Terms</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-[#fcf9f4]/90 backdrop-blur-xl border-t border-stone-200/20 py-3 flex justify-around items-center z-50">
+<button class="flex flex-col items-center text-stone-400">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-sans uppercase mt-1">Dash</span>
+</button>
+<button class="flex flex-col items-center text-primary">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+<span class="text-[10px] font-sans uppercase mt-1">Cats</span>
+</button>
+<button class="flex flex-col items-center text-stone-400">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-[10px] font-sans uppercase mt-1">Config</span>
+</button>
+</div>
+</body></html>

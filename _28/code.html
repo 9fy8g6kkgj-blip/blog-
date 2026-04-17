@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>오늘의 조각 - System Archive</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,300;0,400;0,600;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#86736e",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#d7c3b0",
+                        "on-secondary-fixed": "#141e0e",
+                        "primary-fixed-dim": "#ffb5a1",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e5e2dd",
+                        "on-error": "#ffffff",
+                        "tertiary": "#584a3c",
+                        "surface-container": "#f0ede8",
+                        "surface-variant": "#e5e2dd",
+                        "surface-container-high": "#ebe8e3",
+                        "secondary": "#56624d",
+                        "inverse-surface": "#31302d",
+                        "surface-container-low": "#f6f3ee",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1c19",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#f3f0eb",
+                        "surface": "#fcf9f4",
+                        "on-tertiary-fixed-variant": "#524436",
+                        "on-primary-fixed": "#380c02",
+                        "secondary-container": "#d7e4ca",
+                        "primary-container": "#945341",
+                        "primary": "#773c2b",
+                        "on-tertiary-fixed": "#241a0e",
+                        "on-primary-fixed-variant": "#703626",
+                        "inverse-primary": "#ffb5a1",
+                        "surface-bright": "#fcf9f4",
+                        "background": "#fcf9f4",
+                        "on-secondary-fixed-variant": "#3f4a37",
+                        "on-surface": "#1c1c19",
+                        "tertiary-fixed": "#f4dfcb",
+                        "on-secondary-container": "#5a6651",
+                        "secondary-fixed-dim": "#becbb2",
+                        "secondary-fixed": "#dae7cd",
+                        "outline-variant": "#d8c2bc",
+                        "primary-fixed": "#ffdbd1",
+                        "on-primary-container": "#ffdad1",
+                        "on-tertiary-container": "#f4dfcb",
+                        "surface-dim": "#dcdad5",
+                        "surface-tint": "#8d4d3b",
+                        "tertiary-container": "#716252",
+                        "on-surface-variant": "#53433f",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-[#1c1c19]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-2xl font-serif text-[#1c1c19] dark:text-[#fcf9f4] tracking-tighter">오늘의 조각</div>
+<div class="hidden md:flex gap-8 items-center font-serif font-normal tracking-tight">
+<a class="text-[#5a6651] dark:text-[#a1a19a] hover:text-[#773c2b] transition-colors duration-300" href="#">Archive</a>
+<a class="text-[#5a6651] dark:text-[#a1a19a] hover:text-[#773c2b] transition-colors duration-300" href="#">Reflections</a>
+<a class="text-[#5a6651] dark:text-[#a1a19a] hover:text-[#773c2b] transition-colors duration-300" href="#">Series</a>
+</div>
+<div class="flex gap-4 items-center">
+<button class="material-symbols-outlined text-[#773c2b] dark:text-[#d7e4ca] scale-95 duration-200 ease-out">settings</button>
+<button class="material-symbols-outlined text-[#773c2b] dark:text-[#d7e4ca] scale-95 duration-200 ease-out">account_circle</button>
+</div>
+</nav>
+<div class="flex min-h-screen pt-24">
+<!-- SideNavBar Shell -->
+<aside class="hidden md:flex h-screen w-64 fixed left-0 top-0 pt-24 bg-[#f6f3ee] dark:bg-[#252522] flex-col p-6 gap-4 font-sans text-sm tracking-wide">
+<div class="mb-6">
+<h2 class="text-lg font-serif italic text-[#773c2b]">System Archive</h2>
+<p class="text-[#5a6651] opacity-70">Administrative Controls</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-[#1c1c19] dark:text-[#fcf9f4] font-bold bg-[#ffffff]/50 dark:bg-[#ffffff]/5 rounded-lg transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+                    Security
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5a6651] dark:text-[#a1a19a] hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-300 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">database</span>
+                    Data Management
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5a6651] dark:text-[#a1a19a] hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-300 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">history</span>
+                    Activity Logs
+                </a>
+<a class="flex items-center gap-3 px-4 py-3 text-[#5a6651] dark:text-[#a1a19a] hover:bg-[#ffffff]/30 dark:hover:bg-[#ffffff]/10 transition-all duration-300 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">person</span>
+                    Account
+                </a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 px-8 md:px-16 py-12">
+<div class="max-w-4xl mx-auto">
+<header class="mb-16">
+<h1 class="text-5xl font-serif text-on-surface mb-4 tracking-tighter">Security Protocols</h1>
+<p class="text-on-surface-variant font-body max-w-xl leading-relaxed">
+                        Manage your administrative access, active sessions, and review recent activity within the archive system.
+                    </p>
+</header>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- 2FA Section - Asymmetric Bento Piece -->
+<section class="md:col-span-12 lg:col-span-5 bg-surface-container-lowest p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<h3 class="text-xl font-serif">Two-Factor Authentication</h3>
+</div>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">
+                                Add an extra layer of protection to your account by requiring a code from your mobile device.
+                            </p>
+</div>
+<div class="flex items-center justify-between bg-surface-container-low p-4 rounded-lg">
+<span class="font-medium text-primary">Status: Secured</span>
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-primary">
+<span class="inline-block h-4 w-4 translate-x-6 transform rounded-full bg-white transition"></span>
+</button>
+</div>
+</section>
+<!-- Active Sessions - The Detailed Log -->
+<section class="md:col-span-12 lg:col-span-7 bg-surface-container-low p-8 rounded-xl">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-serif">Active Sessions</h3>
+<button class="text-xs uppercase tracking-widest text-primary font-bold hover:opacity-70 transition-opacity">Logout All Others</button>
+</div>
+<div class="space-y-6">
+<div class="flex items-start justify-between pb-6 border-b border-outline-variant/15">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant mt-1">laptop_mac</span>
+<div>
+<p class="font-bold text-on-surface">MacBook Pro 14"</p>
+<p class="text-xs text-on-surface-variant">Seoul, KR • Current Session</p>
+</div>
+</div>
+<span class="text-[10px] bg-secondary-container text-on-secondary-container px-2 py-1 rounded-md font-bold uppercase tracking-tighter">Active</span>
+</div>
+<div class="flex items-start justify-between pb-6 border-b border-outline-variant/15">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant mt-1">smartphone</span>
+<div>
+<p class="font-bold text-on-surface">iPhone 15 Pro</p>
+<p class="text-xs text-on-surface-variant">Incheon, KR • 2 hours ago</p>
+</div>
+</div>
+<button class="text-xs text-error hover:underline underline-offset-4">Logout</button>
+</div>
+</div>
+</section>
+<!-- Login History - Minimalist List -->
+<section class="md:col-span-12 mt-8">
+<div class="mb-8">
+<h3 class="text-2xl font-serif tracking-tight">Recent Login History</h3>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body">
+<thead>
+<tr class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant opacity-60 border-b border-outline-variant/15">
+<th class="pb-4 font-semibold">Date &amp; Time</th>
+<th class="pb-4 font-semibold">Device</th>
+<th class="pb-4 font-semibold">IP Address</th>
+<th class="pb-4 font-semibold">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr class="text-sm">
+<td class="py-6 text-on-surface">Oct 24, 2024 • 09:42</td>
+<td class="py-6">Chrome / Windows 11</td>
+<td class="py-6 text-on-surface-variant font-mono">192.168.1.42</td>
+<td class="py-6"><span class="text-secondary font-bold">Successful</span></td>
+</tr>
+<tr class="text-sm">
+<td class="py-6 text-on-surface">Oct 23, 2024 • 18:15</td>
+<td class="py-6">Safari / iOS 17</td>
+<td class="py-6 text-on-surface-variant font-mono">110.45.210.3</td>
+<td class="py-6"><span class="text-secondary font-bold">Successful</span></td>
+</tr>
+<tr class="text-sm">
+<td class="py-6 text-on-surface">Oct 22, 2024 • 11:04</td>
+<td class="py-6">Unknown / Linux</td>
+<td class="py-6 text-on-surface-variant font-mono">45.122.31.8</td>
+<td class="py-6"><span class="text-error font-bold">Failed Attempt</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Visual Accent Card -->
+<section class="md:col-span-12 mt-12 bg-primary rounded-xl p-12 relative overflow-hidden text-on-primary">
+<div class="relative z-10 max-w-md">
+<h2 class="text-3xl font-serif mb-4 leading-tight italic">Security is the foundation of digital legacy.</h2>
+<p class="text-on-primary/80 text-sm leading-relaxed mb-6">
+                                Your entries and personal reflections are protected by state-of-the-art encryption protocols, ensuring your analog archive remains private forever.
+                            </p>
+<button class="bg-surface-container-lowest text-primary px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-95 transition-transform">Download Security Whitepaper</button>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 bg-cover bg-center opacity-30 mix-blend-overlay" data-alt="close-up of ancient heavy iron lock on an old wooden library door with cinematic warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdVTNqU1BDM0tcSJrdGZzOZXZ4xs-vBvvJJCGwyBHwwXFOiLhQYEL5gjJr2O4wyAdp23FWb_HG_dH_CmbftnFwC59bm-tTJky1NM7a2JSYd9JK_4LM06LbQ28m7gjUfS7rjSG5U-4G5Qh7qkD5AMvcvMSB4w6JkTtLsKpBSGfvTg4AE7bZmXllccVZEMDvbQTTsB8x9HJMSupM-ZttLmm3cg6ykZcEEU9u2W-P9GzFbF7pHgDY1zppb7obsrVQlT7zT7-JW14EP0g');"></div>
+</section>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer Shell -->
+<footer class="w-full py-12 px-8 mt-24 bg-[#fcf9f4] dark:bg-[#1c1c19] flex flex-col md:flex-row justify-between items-center gap-8 border-t-[1px] border-[#1c1c19]/10 font-sans text-xs uppercase tracking-widest text-[#773c2b] dark:text-[#d7e4ca]">
+<p class="text-[#5a6651] dark:text-[#a1a19a]">© 2024 오늘의 조각. Analog Archive System.</p>
+<div class="flex gap-8">
+<a class="text-[#5a6651] dark:text-[#a1a19a] hover:text-[#773c2b] underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-[#5a6651] dark:text-[#a1a19a] hover:text-[#773c2b] underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="text-[#5a6651] dark:text-[#a1a19a] hover:text-[#773c2b] underline-offset-4 transition-opacity opacity-80 hover:opacity-100" href="#">Security Whitepaper</a>
+</div>
+</footer>
+</body></html>

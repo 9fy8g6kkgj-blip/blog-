@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-tertiary-container": "#f4dfcb",
+                    "background": "#fcf9f4",
+                    "on-background": "#1c1c19",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "tertiary": "#584a3c",
+                    "primary": "#773c2b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffdbd1",
+                    "on-secondary-container": "#5a6651",
+                    "surface-container-low": "#f6f3ee",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary": "#56624d",
+                    "outline-variant": "#d8c2bc",
+                    "on-primary-fixed": "#380c02",
+                    "surface-variant": "#e5e2dd",
+                    "on-surface": "#1c1c19",
+                    "tertiary-container": "#716252",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-primary-container": "#ffdad1",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#8d4d3b",
+                    "surface-dim": "#dcdad5",
+                    "surface": "#fcf9f4",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#d7e4ca",
+                    "inverse-primary": "#ffb5a1",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "outline": "#86736e",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#241a0e",
+                    "primary-container": "#945341",
+                    "on-primary-fixed-variant": "#703626",
+                    "secondary-fixed": "#dae7cd",
+                    "on-secondary-fixed": "#141e0e",
+                    "surface-container-high": "#ebe8e3",
+                    "surface-container": "#f0ede8",
+                    "on-surface-variant": "#53433f",
+                    "surface-bright": "#fcf9f4",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#31302d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .tonal-transition {
+            transition: background-color 0.3s ease;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #773c2b 0%, #945341 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopNavBar (As specified in JSON) -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl flex justify-between items-center px-8 h-20 max-w-full no-border tonal-transition">
+<div class="text-2xl font-serif font-bold text-[#773c2b] dark:text-[#fcf9f4] tracking-tighter">오늘의 조각</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">Archive</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">Chapters</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">Essays</a>
+<a class="text-stone-500 dark:text-stone-400 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#773c2b] dark:text-[#945341] cursor-pointer hover:opacity-80 transition-all duration-300">account_circle</span>
+</div>
+</nav>
+<!-- SideNavBar (Suppressed for focused task-focused screen) -->
+<main class="pt-32 pb-20 px-6 max-w-5xl mx-auto">
+<!-- Context Header: The Original Post -->
+<header class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-outline-variant/15 pb-8">
+<div class="max-w-2xl">
+<span class="text-xs font-label uppercase tracking-widest text-primary font-medium mb-3 block">Conversations on Pieces</span>
+<h1 class="text-4xl md:text-5xl font-headline font-semibold text-on-surface tracking-tight leading-tight">
+                    In response to: "The Quiet Echo of Late Library Nights"
+                </h1>
+<p class="mt-4 text-on-surface-variant font-body leading-relaxed">
+                    A reflection on the architectural silence of the central library after 2 AM. Originally published in Chapter 4: Collegiate Melancholy.
+                </p>
+</div>
+<div class="flex items-center gap-3 text-sm text-on-surface-variant font-label">
+<span class="material-symbols-outlined scale-75">calendar_today</span>
+<span>March 14, 2024</span>
+</div>
+</header>
+<!-- The Comment Thread Layout (Asymmetric/Bento-inspired) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: The Original Comment -->
+<section class="lg:col-span-7 space-y-8">
+<div class="bg-surface-container-low p-8 rounded-xl relative overflow-hidden">
+<!-- Subtle watermark-like icon -->
+<span class="material-symbols-outlined absolute -right-4 -top-4 text-8xl opacity-5 text-on-surface rotate-12">format_quote</span>
+<div class="flex items-start gap-5 mb-6">
+<img alt="Reader Profile" class="w-14 h-14 rounded-full object-cover" data-alt="Close-up portrait of a thoughtful man in a wool sweater with soft natural window lighting and blurred interior background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFF_ZrO71AdstNGCPyZOfhZ3nTI1dWYog0nTpErVCCbhh_mlrJ_sFFMynAkW56sCrWIHhUgc05Wriw7SG4Cx54kjn-8gTIylbhycaOJVUl5KjxRqCqds2h8QvMArsDzFhaf2jMVmz_IYJdOscRefaLQPk9Yi542q_Rl6iLX0T8sgG1q-V6iywJD07AaIOUoWF6KQEgEHCPJdDHnJ2ONE6AJa-93S4184Z-7smMuq1IG9NFoYrvs4NG7198rzJBICRbCQCLHMMooLU"/>
+<div>
+<h3 class="font-headline text-xl text-on-surface">Min-su Kang</h3>
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-wider">Loyal Reader since 2022</p>
+</div>
+</div>
+<div class="font-body text-lg leading-relaxed text-on-surface space-y-4">
+<p>
+                            "This piece resonated with me more than I expected. I remember those nights at the SNU library—the way the fluorescent lights seemed to hum louder as the building emptied. Your description of the 'weight of unread books' is something I feel every time I step into that space now."
+                        </p>
+<p>
+                            How do you reconcile that feeling of being overwhelmed with the actual joy of learning? Is there a point where the archive becomes too heavy to carry?
+                        </p>
+</div>
+<div class="mt-8 flex items-center gap-6">
+<button class="flex items-center gap-2 text-primary font-label text-sm hover:opacity-80 transition-all">
+<span class="material-symbols-outlined text-base" data-weight="fill" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span>24 Likes</span>
+</button>
+<span class="text-stone-300">/</span>
+<time class="text-on-surface-variant font-label text-sm italic">Posted 4 hours ago</time>
+</div>
+</div>
+<!-- Previous Context (Small snippet) -->
+<div class="ml-12 border-l-2 border-primary/20 pl-8 py-2">
+<p class="text-sm font-body italic text-on-surface-variant">
+                        "The archive is not a tomb, but a seedbed. We carry the weight so that the next generation might find shade under the trees we plant with our notes."
+                    </p>
+<span class="text-xs font-label uppercase tracking-widest text-primary/60 mt-2 block">— Original Excerpt</span>
+</div>
+</section>
+<!-- Right Column: The Reply Interface -->
+<section class="lg:col-span-5 sticky top-28">
+<div class="bg-surface-container-lowest p-8 rounded-xl border border-outline-variant/10 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<h2 class="font-headline text-2xl text-on-surface">Compose Reply</h2>
+</div>
+<form class="space-y-6">
+<div>
+<label class="block text-xs font-label uppercase tracking-widest text-on-surface-variant mb-3">Your Thoughtful Response</label>
+<textarea class="w-full min-h-[300px] bg-surface p-6 rounded-lg border-none focus:ring-2 focus:ring-primary/20 font-body text-base leading-relaxed text-on-surface placeholder:text-stone-300 transition-all" placeholder="Start writing your reflection here..."></textarea>
+</div>
+<div class="flex items-center justify-between pt-4">
+<div class="flex gap-2">
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">format_italic</span>
+</button>
+<button class="p-2 hover:bg-surface-container-low rounded-full transition-colors text-on-surface-variant" type="button">
+<span class="material-symbols-outlined">link</span>
+</button>
+</div>
+<button class="signature-gradient text-on-primary font-label text-sm py-3 px-8 rounded-full shadow-md hover:opacity-90 transition-all active:scale-95 flex items-center gap-2" type="submit">
+<span>Publish Reply</span>
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</form>
+<div class="mt-10 p-4 rounded-lg bg-secondary-container/30">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-on-secondary-container text-lg">info</span>
+<p class="text-xs font-body text-on-secondary-container leading-normal">
+                                Your reply will be highlighted as the "Editor's Pick" and pinned to the top of the comment thread for this piece.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Footnote / Detail Area -->
+<footer class="mt-24 max-w-2xl">
+<h4 class="font-headline text-xl text-on-surface mb-4">A Note on Dialogue</h4>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed mb-6">
+                Conversations in "오늘의 조각" are intended to be slow and meaningful. We encourage readers to write with the same intentionality as the pieces they are responding to. Replies from the author are hand-written and curated to ensure the archive remains a living, breathing space.
+            </p>
+<a class="inline-flex items-center gap-2 text-primary font-label text-xs uppercase tracking-widest font-bold border-b border-primary/30 pb-1 hover:border-primary transition-all" href="#">
+                View Community Guidelines
+                <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</a>
+</footer>
+</main>
+<!-- Footer Component (As specified in JSON) -->
+<footer class="w-full py-12 px-8 bg-[#fcf9f4] dark:bg-stone-950 flex flex-col md:flex-row justify-between items-center border-t border-stone-200/10 tonal-shift top-gap-16">
+<div class="font-sans text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 mb-6 md:mb-0">
+            © 2024 오늘의 조각. Curated Ephemera.
+        </div>
+<div class="flex gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 hover:text-[#773c2b] transition-colors" href="#">Privacy</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 hover:text-[#773c2b] transition-colors" href="#">Archive Access</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-400 dark:text-stone-600 hover:text-[#773c2b] transition-colors" href="#">Contact</a>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>오늘의 조각 - Profile Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#716252",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#ffdad1",
+                    "tertiary-fixed": "#f4dfcb",
+                    "surface-container": "#f0ede8",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdbd1",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-background": "#1c1c19",
+                    "primary": "#773c2b",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#becbb2",
+                    "primary-container": "#945341",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "secondary-fixed": "#dae7cd",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1c19",
+                    "surface-variant": "#e5e2dd",
+                    "surface-bright": "#fcf9f4",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-surface": "#31302d",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "surface-container-low": "#f6f3ee",
+                    "secondary-container": "#d7e4ca",
+                    "on-tertiary-fixed": "#241a0e",
+                    "tertiary": "#584a3c",
+                    "outline": "#86736e",
+                    "on-tertiary-container": "#f4dfcb",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface-container-highest": "#e5e2dd",
+                    "background": "#fcf9f4",
+                    "surface-tint": "#8d4d3b",
+                    "secondary": "#56624d",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#d8c2bc",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#141e0e",
+                    "surface": "#fcf9f4",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-fixed": "#380c02",
+                    "on-surface-variant": "#53433f",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb5a1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3 { font-family: 'Newsreader', serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-xl shadow-stone-900/5 dark:shadow-none">
+<nav class="flex justify-between items-center px-8 py-6 max-w-full mx-auto">
+<div class="text-2xl font-serif tracking-tight text-[#773c2b] dark:text-[#945341]">오늘의 조각</div>
+<div class="hidden md:flex items-center gap-10 font-serif text-stone-900 dark:text-stone-100">
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#773c2b] transition-colors duration-300" href="#">Dashboard</a>
+<a class="text-stone-500 dark:text-stone-400 font-medium hover:text-[#773c2b] transition-colors duration-300" href="#">Comments</a>
+<a class="text-[#773c2b] dark:text-[#945341] font-bold relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full" href="#">Settings</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors">account_circle</button>
+</div>
+</nav>
+</header>
+<div class="flex pt-24 min-h-screen">
+<!-- SideNavBar -->
+<aside class="hidden md:flex h-[calc(100vh-6rem)] w-64 flex-col gap-4 p-6 bg-[#f6f3ee] dark:bg-stone-900 font-sans text-sm tracking-wide">
+<div class="mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-10 h-10 rounded-full bg-surface-container overflow-hidden">
+<img alt="Editorial Admin" class="w-full h-full object-cover" data-alt="close-up portrait of a thoughtful man in a library with soft natural light and warm brown tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbuZaFZhBMdCVQ2pC84OHJdfQhNt4NZiyoZSNeqh47aVRgdrLyMzteyxmH63nALRjs2LQInRJX1qNOjpeQ2lnRRalXbvJLqrt827-plhOJ49VeG_2o4Eqh6yTckxJL-4P07kgkE9KQgtwaNKiEUFWnQP_ITVX6C3JKtqTPFpLWB6kRej_tQXYlXh5u0LMl6Ik-P0ThyJjilJvAqgsayhozXdqNG54SDQPx0xzSVbXALGvGR6tegqtReO2fVgrW0moT5MyVtl7ihTI"/>
+</div>
+<div>
+<p class="font-bold text-on-surface">Admin Archive</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-widest">University Life Pieces</p>
+</div>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">edit_note</span>
+<span>Posts</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">forum</span>
+<span>Comments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-stone-500 dark:text-stone-400 hover:bg-stone-200/50 dark:hover:bg-stone-800/50 hover:translate-x-1 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined">perm_media</span>
+<span>Media</span>
+</a>
+</nav>
+<button class="mt-auto bg-gradient-to-r from-[#773c2b] to-[#945341] text-white py-3 px-6 rounded-full font-bold shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity">
+                New Piece
+            </button>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 px-8 md:px-16 py-12 max-w-5xl">
+<header class="mb-16">
+<h1 class="text-5xl font-headline tracking-tight mb-2 text-on-surface">Account Settings</h1>
+<p class="text-on-surface-variant font-body">Manage your editorial identity and security for <span class="font-bold text-primary">alstjd</span>.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Profile Section -->
+<section class="lg:col-span-8 space-y-12">
+<!-- Basic Info -->
+<div class="bg-surface-container-lowest p-8 rounded-xl">
+<h2 class="text-2xl font-headline mb-8 border-b border-outline-variant/15 pb-4">Identity Details</h2>
+<div class="space-y-8">
+<div class="flex flex-col md:flex-row gap-8 items-start">
+<div class="relative group">
+<div class="w-32 h-32 rounded-full overflow-hidden bg-surface-container shadow-inner">
+<img alt="Admin profile avatar" class="w-full h-full object-cover" data-alt="high-quality profile photo of a person with warm lighting and a soft-focus archive background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaw1DSSThotKCaiOWRz9Zi0-KwGtJXpWpw5bcAq8OTeJd88-XCFUJV7fUGEYEdIlpyzuMmXhwmoOEZfUY9ekuy0hEycxzCWDWm9u_vocHNM5eCmhenaEhBew0IAipCyWfF1V9pxqpfwWaonyCdTlTujuzWRR6i-HC5mtQ9DqR6SNBIvgbKN19iz3bniHl-5UlHKOL0wdQNH01KhpVjeT5DyfRGkwb8clTDNw6jRoK-S53MFCBK3CXFAdmkmYhTfTqzAOAiNn4z9GU"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<div class="flex-1 w-full space-y-4">
+<div>
+<label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Display Name</label>
+<input class="w-full bg-surface border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 text-on-surface font-body" type="text" value="alstjd"/>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Short Bio</label>
+<textarea class="w-full bg-surface border-none rounded-lg p-4 focus:ring-2 focus:ring-primary/20 text-on-surface font-body resize-none" rows="3">Capturing the fragments of university life, one digital scrap at a time. Editorial student and archive enthusiast.</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Presence -->
+<div class="bg-surface-container-lowest p-8 rounded-xl">
+<h2 class="text-2xl font-headline mb-8 border-b border-outline-variant/15 pb-4">Digital Connections</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Instagram</label>
+<div class="flex items-center bg-surface rounded-lg p-4 gap-3">
+<span class="text-on-surface-variant text-sm">@</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-on-surface w-full" placeholder="username" type="text"/>
+</div>
+</div>
+<div>
+<label class="block text-xs uppercase tracking-widest text-on-surface-variant mb-2 font-bold">Contact Email</label>
+<div class="flex items-center bg-surface rounded-lg p-4 gap-3">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">mail</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-on-surface w-full" type="email" value="alstjd@university.edu"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sidebar Section -->
+<aside class="lg:col-span-4 space-y-8">
+<!-- Security Card -->
+<div class="bg-surface-container-low p-8 rounded-xl">
+<h3 class="text-xl font-headline mb-6">Security</h3>
+<div class="space-y-4">
+<button class="w-full flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:translate-x-1 transition-transform">
+<span class="font-medium text-sm">Change Password</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg group hover:translate-x-1 transition-transform">
+<span class="font-medium text-sm">Two-Factor Auth</span>
+<span class="material-symbols-outlined text-on-surface-variant">lock</span>
+</button>
+</div>
+</div>
+<!-- Tip Card -->
+<div class="bg-secondary-container p-8 rounded-xl text-on-secondary-container">
+<span class="material-symbols-outlined mb-4" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+<h4 class="font-headline text-lg mb-2">Editorial Tip</h4>
+<p class="text-sm opacity-80 leading-relaxed">Your "Short Bio" appears at the end of every piece you publish. Keep it concise and evocative to maintain the analog archive aesthetic.</p>
+</div>
+<div class="pt-8">
+<button class="w-full bg-primary text-white py-4 px-8 rounded-full font-bold shadow-lg shadow-primary/30 hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span>Save Changes</span>
+</button>
+<button class="w-full mt-4 text-error font-bold text-xs uppercase tracking-widest py-2 hover:underline">
+                            Deactivate Account
+                        </button>
+</div>
+</aside>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#fcf9f4] dark:bg-stone-950 mt-16">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-stone-200/15 dark:border-stone-800/15 pt-8">
+<div class="font-sans text-xs uppercase tracking-widest text-stone-400 mb-4 md:mb-0">
+                © 2024 오늘의 조각. Analog Archive Editorial System.
+            </div>
+<div class="flex gap-8">
+<a class="font-sans text-xs uppercase tracking-widest text-stone-400 no-underline hover:text-stone-900 dark:hover:text-stone-100 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-400 no-underline hover:text-stone-900 dark:hover:text-stone-100 transition-colors opacity-80 hover:opacity-100" href="#">System Status</a>
+<a class="font-sans text-xs uppercase tracking-widest text-stone-400 no-underline hover:text-stone-900 dark:hover:text-stone-100 transition-colors opacity-80 hover:opacity-100" href="#">Log Out</a>
+</div>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation Shell -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/80 backdrop-blur-xl flex justify-around p-4 shadow-2xl border-t border-outline-variant/10">
+<button class="material-symbols-outlined text-on-surface-variant">dashboard</button>
+<button class="material-symbols-outlined text-on-surface-variant">edit_note</button>
+<button class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">settings</button>
+<button class="material-symbols-outlined text-on-surface-variant">account_circle</button>
+</div>
+</body></html>

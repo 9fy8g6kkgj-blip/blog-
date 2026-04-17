@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "surface": "#fcf9f4",
+                    "on-tertiary-container": "#f4dfcb",
+                    "on-background": "#1c1c19",
+                    "surface-tint": "#8d4d3b",
+                    "outline": "#86736e",
+                    "on-primary-fixed": "#380c02",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0ede8",
+                    "on-primary-fixed-variant": "#703626",
+                    "tertiary-container": "#716252",
+                    "on-surface-variant": "#53433f",
+                    "on-primary-container": "#ffdad1",
+                    "primary": "#773c2b",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-fixed": "#dae7cd",
+                    "background": "#fcf9f4",
+                    "error": "#ba1a1a",
+                    "tertiary": "#584a3c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-secondary-container": "#5a6651",
+                    "secondary-container": "#d7e4ca",
+                    "primary-fixed": "#ffdbd1",
+                    "on-secondary-fixed": "#141e0e",
+                    "tertiary-fixed": "#f4dfcb",
+                    "inverse-on-surface": "#f3f0eb",
+                    "on-primary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed-dim": "#becbb2",
+                    "surface-bright": "#fcf9f4",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-variant": "#e5e2dd",
+                    "inverse-surface": "#31302d",
+                    "secondary": "#56624d",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-tertiary-fixed": "#241a0e",
+                    "outline-variant": "#d8c2bc",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "primary-container": "#945341",
+                    "on-error": "#ffffff",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-high": "#ebe8e3",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .serif-text { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-transition-surface-container-low {
+            background-color: rgba(246, 243, 238, 0.8);
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar Anchor -->
+<aside class="hidden md:flex flex-col h-screen w-72 bg-[#f6f3ee] dark:bg-[#141412] p-6 space-y-8 fixed left-0 top-0 z-40">
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young university curator in a soft-lit library setting, academic and thoughtful mood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLa3A_c0cN7lfOE-q2c7GYbPMihvmBzWt32me4PJuiw9_hyrFZq9FnWXMxMNIg3PLgYAGBNR2ZuOp4X0JCQp2c6qWFxZdDajy7jzBoAnuOtWs-e5nquM4eHgVyN4dNZDkfx2gmbqh4k1jrGBg33nYEiaFFNAEDvjN6zEv_DX6IKEn2pEqyEfo9lvJCk57i0mGGZAx2p45RaVi4L6g8oJ15HiE1q9G0F8GKRArR1OC92hKaovLTeS640XnGVpzZzHNUiDn9-5D7IJo"/>
+</div>
+<div>
+<h2 class="text-lg font-serif italic text-[#1c1c19] dark:text-[#fcf9f4]">The Archive</h2>
+<p class="font-sans text-[10px] uppercase tracking-widest text-[#1c1c19]/40 dark:text-[#fcf9f4]/40">University Years</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-sans text-sm tracking-wide">Curation</span>
+</a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="perm_media">perm_media</span>
+<span class="font-sans text-sm tracking-wide">Media</span>
+</a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="font-sans text-sm tracking-wide">Reflections</span>
+</a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-3 hover:bg-[#ffffff]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="local_library">local_library</span>
+<span class="font-sans text-sm tracking-wide">Library</span>
+</a>
+<a class="text-[#773c2b] dark:text-[#d7e4ca] font-medium flex items-center gap-4 bg-[#ffffff]/50 dark:bg-[#ffffff]/5 rounded-lg px-4 py-3" href="#">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span class="font-sans text-sm tracking-wide">Settings</span>
+</a>
+</nav>
+<button class="w-full bg-primary text-on-primary rounded-full py-3 px-6 text-sm font-medium transition-transform active:scale-[0.98] shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+            New Entry
+        </button>
+<div class="pt-6 space-y-1">
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-2 hover:bg-[#ffffff]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="terminal">terminal</span>
+<span class="font-sans text-[11px] uppercase tracking-wider">System</span>
+</a>
+<a class="text-[#1c1c19]/40 dark:text-[#fcf9f4]/40 flex items-center gap-4 px-4 py-2 hover:bg-[#ffffff]/30 transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-sans text-[11px] uppercase tracking-wider">Feedback</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-72 flex flex-col min-h-screen">
+<!-- TopNavBar Anchor -->
+<header class="fixed top-0 right-0 left-0 md:left-72 z-30 bg-[#fcf9f4]/80 backdrop-blur-xl flex justify-between items-center px-8 py-6">
+<div class="flex items-center gap-6">
+<h1 class="text-2xl font-serif font-bold text-[#1c1c19] tracking-tighter">Echoes of Today</h1>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-[#1c1c19]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Archive</a>
+<a class="text-[#1c1c19]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Fragments</a>
+<a class="text-[#1c1c19]/60 font-sans uppercase tracking-widest text-[10px] hover:text-[#773c2b] transition-colors duration-300" href="#">Journal</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<input class="bg-surface-container-low border-none rounded-full px-6 py-2 text-sm w-64 focus:ring-1 focus:ring-primary/20 placeholder:text-on-surface-variant/40" placeholder="Search the archive..." type="text"/>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant/40 text-lg" data-icon="search">search</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="settings">settings</span></button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors"><span class="material-symbols-outlined" data-icon="account_circle">account_circle</span></button>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<section class="mt-24 px-8 py-12 flex-1">
+<div class="max-w-6xl mx-auto space-y-12">
+<!-- Header & Controls -->
+<div class="space-y-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="space-y-2">
+<span class="text-[10px] uppercase tracking-[0.3em] text-primary/60 font-bold">Community Management</span>
+<h2 class="text-4xl serif-text italic tracking-tight text-on-surface">Subscriber List</h2>
+<p class="text-on-surface-variant/60 max-w-md font-body text-sm leading-relaxed">A curated collection of individuals following the daily fragments and reflections of this digital archive.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="bg-surface-container-highest text-on-surface-variant px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="file_download">file_download</span>
+                                Export CSV
+                            </button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2 shadow-sm hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="person_add">person_add</span>
+                                Add Subscriber
+                            </button>
+</div>
+</div>
+<!-- Filters Bar -->
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-wrap items-center gap-2">
+<div class="flex items-center bg-surface-container-lowest px-3 py-1.5 rounded-lg text-xs border border-outline-variant/15 text-on-surface-variant">
+<span class="material-symbols-outlined text-base mr-2" data-icon="filter_list">filter_list</span>
+<span class="mr-3">Status:</span>
+<select class="bg-transparent border-none p-0 text-xs font-bold focus:ring-0 cursor-pointer">
+<option>All Active</option>
+<option>Unsubscribed</option>
+<option>Pending</option>
+</select>
+</div>
+<div class="flex items-center bg-surface-container-lowest px-3 py-1.5 rounded-lg text-xs border border-outline-variant/15 text-on-surface-variant">
+<span class="material-symbols-outlined text-base mr-2" data-icon="calendar_month">calendar_month</span>
+<span class="mr-3">Joined:</span>
+<select class="bg-transparent border-none p-0 text-xs font-bold focus:ring-0 cursor-pointer">
+<option>Anytime</option>
+<option>Last 30 Days</option>
+<option>Last 6 Months</option>
+</select>
+</div>
+<button class="text-xs font-bold text-primary px-3 py-1.5 hover:underline">Clear all</button>
+</div>
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant/40 font-bold">
+                            Total: 1,428 Subscribers
+                        </div>
+</div>
+</div>
+<!-- Bento Style Table Container -->
+<div class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-[0_20px_40px_rgba(28,28,25,0.04)]">
+<div class="overflow-x-auto hide-scrollbar">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-8 py-5 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">
+<div class="flex items-center gap-2">
+                                            Subscriber
+                                            <span class="material-symbols-outlined text-sm" data-icon="unfold_more">unfold_more</span>
+</div>
+</th>
+<th class="px-6 py-5 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Frequency</th>
+<th class="px-6 py-5 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Join Date</th>
+<th class="px-6 py-5 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Last Active</th>
+<th class="px-6 py-5 text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Status</th>
+<th class="px-8 py-5"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-serif italic text-lg">EM</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Eleanor Miller</div>
+<div class="text-xs text-on-surface-variant/60">e.miller@university.edu</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="bg-secondary-container/30 text-on-secondary-container px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Weekly Fragments</span>
+</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">Oct 12, 2023</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">2 hours ago</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-1.5 text-secondary font-bold text-[10px] uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                            Active
+                                        </div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-surface-container-highest rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Portrait of a young man with a creative, artistic aesthetic against an urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC32mNbQrm605yOdlovrE7xLEJqq_sAGjWzb3gBABZdSkzUIGAuVDCmiq73r6V32WJ2VTb_MVPBfoyUGyCS3Lk9HPNxHqddpqcns0HlvfqWNEVG4k9vRUvXhtL51pGKm2VkMZos8r_YoELWGLMUBCgoQWKf4961Yq38d9SMfcNtDnzDoCSU-pyWDYgyk1an-D-Kgbt2VxsPDXjnJAunw0CJZQ9gy7gFnoBfluHnhAS34KqDdccdfcEgjWyp3bchNnhnyRYHXd2FQSM"/>
+</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Julian Thorne</div>
+<div class="text-xs text-on-surface-variant/60">j.thorne@studio.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="bg-tertiary-container/10 text-tertiary-container px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Daily Reflections</span>
+</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">Jan 04, 2024</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">1 day ago</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-1.5 text-secondary font-bold text-[10px] uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                            Active
+                                        </div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-surface-container-highest rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-serif italic text-lg">SH</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Sarah Han</div>
+<div class="text-xs text-on-surface-variant/60">sarah@archive-collective.org</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="bg-secondary-container/30 text-on-secondary-container px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Weekly Fragments</span>
+</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">Dec 15, 2023</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">3 days ago</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-1.5 text-on-surface-variant/40 font-bold text-[10px] uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-on-surface-variant/40"></span>
+                                            Inactive
+                                        </div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-surface-container-highest rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Close-up of a contemplative woman's face with natural, soft window lighting, sophisticated editorial portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6kkCmHkjupySA0-SWqWfkieoum5os8t2VWVV_TD5HG7zAgz_47gib4W6ydKEoasHXlwDa_Iv-E1YjluGfST13XzrzK9x4xWEafJELzxMJUSin56YsZawAHUJUxc-irqy1Vtl0MTvuIDw2as-FiU7eMQIXRmwh5JFukrgu9MCGWvDmmyCpNAn4kOln5B9Eiffkh_D5M_dn2SZXc3eTo-9Ehh7edBk91sz-JTuEg32vYfHHWWP2miMbEFPnPnsLsgu1pGbE0qLm63o"/>
+</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Elena Rossi</div>
+<div class="text-xs text-on-surface-variant/60">elena.rossi@design.it</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="bg-tertiary-container/10 text-tertiary-container px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Daily Reflections</span>
+</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">Feb 11, 2024</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">Just now</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-1.5 text-secondary font-bold text-[10px] uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                            Active
+                                        </div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-surface-container-highest rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/20 transition-colors group">
+<td class="px-8 py-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant font-serif italic text-lg">MW</div>
+<div>
+<div class="text-sm font-bold text-on-surface">Marcus Wu</div>
+<div class="text-xs text-on-surface-variant/60">marcus@creative-lab.co</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="bg-secondary-container/30 text-on-secondary-container px-2.5 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Weekly Fragments</span>
+</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">Mar 02, 2024</td>
+<td class="px-6 py-6 text-xs text-on-surface-variant/80">1 week ago</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-1.5 text-secondary font-bold text-[10px] uppercase tracking-widest">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                            Active
+                                        </div>
+</td>
+<td class="px-8 py-6 text-right">
+<button class="opacity-0 group-hover:opacity-100 p-2 hover:bg-surface-container-highest rounded-full transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="more_vert">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-8 py-6 bg-surface-container-low/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="text-[10px] uppercase tracking-widest text-on-surface-variant/40 font-bold">
+                            Showing 1-10 of 1,428 subscribers
+                        </div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-highest text-on-surface-variant/40 disabled:opacity-30">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-on-primary text-[10px] font-bold">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-highest text-on-surface-variant text-[10px] font-bold">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-highest text-on-surface-variant text-[10px] font-bold">3</button>
+<span class="px-2 text-on-surface-variant/40 text-[10px]">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-highest text-on-surface-variant text-[10px] font-bold">143</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-highest text-on-surface-variant">
+<span class="material-symbols-outlined text-lg" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Subtle Insight Section -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-12">
+<div class="p-8 bg-surface-container-low rounded-2xl space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary/40 text-3xl" data-icon="insights">insights</span>
+<span class="text-secondary font-bold text-[10px] tracking-widest uppercase">+12% this month</span>
+</div>
+<div class="space-y-1">
+<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Growth Rate</h4>
+<p class="text-3xl serif-text font-bold italic">Healthy</p>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-2xl space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary/40 text-3xl" data-icon="mail">mail</span>
+<span class="text-primary font-bold text-[10px] tracking-widest uppercase">High Engagement</span>
+</div>
+<div class="space-y-1">
+<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Avg Open Rate</h4>
+<p class="text-3xl serif-text font-bold italic">68.4%</p>
+</div>
+</div>
+<div class="p-8 bg-surface-container-low rounded-2xl space-y-4">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-primary/40 text-3xl" data-icon="public">public</span>
+<span class="text-tertiary-container font-bold text-[10px] tracking-widest uppercase">Global Reach</span>
+</div>
+<div class="space-y-1">
+<h4 class="text-[10px] uppercase tracking-[0.2em] font-bold text-on-surface-variant/50">Top Region</h4>
+<p class="text-3xl serif-text font-bold italic">Western Europe</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer Anchor -->
+<footer class="w-full py-12 px-8 bg-[#fcf9f4] mt-20">
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center border-t border-[#1c1c19]/5 pt-8">
+<p class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30">© 2024 Echoes of Today. A Digital Ephemera Project.</p>
+<div class="flex items-center gap-8 mt-6 md:mt-0">
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 hover:text-[#1c1c19] transition-colors" href="#">Colophon</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 hover:text-[#1c1c19] transition-colors" href="#">Manifesto</a>
+<a class="font-sans text-[11px] uppercase tracking-[0.2em] text-[#1c1c19]/30 hover:text-[#1c1c19] transition-colors" href="#">Privacy</a>
+</div>
+</div>
+</footer>
+</main>
+<!-- Mobile Navigation (BottomNavBar Anchor Equivalent) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-[#fcf9f4]/80 backdrop-blur-xl border-t border-[#1c1c19]/5 z-50 flex justify-around items-center py-4 px-6">
+<a class="flex flex-col items-center gap-1 text-[#1c1c19]/40" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="text-[8px] uppercase tracking-tighter">Archive</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#1c1c19]/40" href="#">
+<span class="material-symbols-outlined" data-icon="auto_stories">auto_stories</span>
+<span class="text-[8px] uppercase tracking-tighter">Journal</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#773c2b] relative after:content-[''] after:absolute after:-bottom-1 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="text-[8px] uppercase tracking-tighter">Subscribers</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-[#1c1c19]/40" href="#">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+<span class="text-[8px] uppercase tracking-tighter">Settings</span>
+</a>
+</nav>
+</body></html>

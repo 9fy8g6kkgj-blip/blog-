@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#716252",
+                    "on-secondary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#ffdad1",
+                    "tertiary-fixed": "#f4dfcb",
+                    "surface-container": "#f0ede8",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#ffdbd1",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-background": "#1c1c19",
+                    "primary": "#773c2b",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#becbb2",
+                    "primary-container": "#945341",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "secondary-fixed": "#dae7cd",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#1c1c19",
+                    "surface-variant": "#e5e2dd",
+                    "surface-bright": "#fcf9f4",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-surface": "#31302d",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "surface-container-low": "#f6f3ee",
+                    "secondary-container": "#d7e4ca",
+                    "on-tertiary-fixed": "#241a0e",
+                    "tertiary": "#584a3c",
+                    "outline": "#86736e",
+                    "on-tertiary-container": "#f4dfcb",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface-container-highest": "#e5e2dd",
+                    "background": "#fcf9f4",
+                    "surface-tint": "#8d4d3b",
+                    "secondary": "#56624d",
+                    "surface-dim": "#dcdad5",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#d8c2bc",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#141e0e",
+                    "surface": "#fcf9f4",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-fixed": "#380c02",
+                    "on-surface-variant": "#53433f",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#ffb5a1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col items-center justify-center p-6 selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Suppressed Navigation Shell as per "Destination Rule" (Login is Transactional) -->
+<main class="w-full max-w-md flex flex-col items-center">
+<!-- Logo Section -->
+<header class="mb-16 text-center">
+<h1 class="font-serif text-5xl tracking-tight text-primary mb-2">Echoes of Today</h1>
+<p class="font-label text-on-surface-variant uppercase tracking-[0.2em] text-[10px]">Analog Archive Editorial System</p>
+</header>
+<!-- Login Card -->
+<div class="w-full bg-surface-container-lowest p-10 md:p-12 rounded-xl shadow-xl shadow-on-surface/5 flex flex-col gap-8">
+<div class="space-y-1">
+<h2 class="font-serif text-3xl text-on-surface">Sign In</h2>
+<p class="font-body text-sm text-on-surface-variant">Welcome back to your curated space.</p>
+</div>
+<form class="flex flex-col gap-6">
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant/80 ml-1" for="email">Email Address</label>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 text-on-surface placeholder:text-outline-variant/60 focus:ring-1 focus:ring-primary/30 transition-all duration-300" id="email" name="email" placeholder="archive@university.edu" required="" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end px-1">
+<label class="font-label text-xs uppercase tracking-widest text-on-surface-variant/80" for="password">Password</label>
+<a class="font-label text-[10px] uppercase tracking-widest text-primary hover:text-primary-container transition-colors duration-200" href="#">Forgot Password</a>
+</div>
+<input class="w-full bg-surface-container-low border-none rounded-lg p-4 text-on-surface placeholder:text-outline-variant/60 focus:ring-1 focus:ring-primary/30 transition-all duration-300" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+</div>
+<!-- Action Button -->
+<button class="mt-4 w-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label uppercase tracking-[0.15em] text-xs py-5 rounded-full shadow-lg shadow-primary/20 hover:shadow-primary/30 active:scale-[0.98] transition-all duration-300" type="submit">
+                    Enter Archive
+                </button>
+</form>
+<div class="relative py-2">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/20"></div>
+</div>
+<div class="relative flex justify-center text-xs uppercase tracking-widest">
+<span class="bg-surface-container-lowest px-4 text-outline-variant">OR</span>
+</div>
+</div>
+<!-- Return Link -->
+<a class="flex items-center justify-center gap-2 group text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="/">
+<span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+<span class="font-label text-xs uppercase tracking-widest">Return to Blog</span>
+</a>
+</div>
+<!-- Decorative Footer Quote -->
+<footer class="mt-16 text-center max-w-xs">
+<p class="font-serif italic text-lg text-on-surface-variant opacity-60">"Every piece of time is a fragment worth preserving."</p>
+</footer>
+</main>
+<!-- Side Decorative Image (Editorial Asymmetry) -->
+<div class="fixed top-12 right-12 hidden xl:block w-64 opacity-40">
+<div class="aspect-[3/4] rounded-lg overflow-hidden grayscale contrast-125">
+<img alt="Vintage typewriter detail" class="w-full h-full object-cover" data-alt="close-up of an old vintage typewriter keys with a focus on metallic letters and warm analog lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATp_mvlofb98YjyKHOH5X2hFwNLdem7p1YitNU-wLPgsOWmpYU-K3mkwy-JmPN9rxxb263K3XldoaqdgLzBgxcUWXmzYHqMvMvLH2Ci9Ed0MdhxUkDHVqApEcdRFZdHpFvucB_3BrIKEAqUtSl-ENLGGXetZM0utMJ5KSbyDzWmAfhvAkh6N04c8lOaNoonR5i_JNFFONSsrkOfmWw5Fc1tZA8LfRX5q6NpKZbUdqrPGfzXNKZcGFc4Pqzzq6u9VQeKGGLkvQ_6tA"/>
+</div>
+<p class="mt-4 font-serif italic text-sm text-on-surface-variant text-right">No. 24 Archival Series</p>
+</div>
+<!-- Background Elements -->
+<div class="fixed -bottom-20 -left-20 w-96 h-96 bg-secondary-container/10 rounded-full blur-[100px] -z-10"></div>
+<div class="fixed -top-20 right-0 w-80 h-80 bg-primary-container/5 rounded-full blur-[80px] -z-10"></div>
+</body></html>

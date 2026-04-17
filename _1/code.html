@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#8d4d3b",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#141e0e",
+                    "secondary-container": "#d7e4ca",
+                    "inverse-surface": "#31302d",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e5e2dd",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-background": "#1c1c19",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-primary-fixed": "#380c02",
+                    "secondary-fixed": "#dae7cd",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-highest": "#e5e2dd",
+                    "on-tertiary-container": "#f4dfcb",
+                    "on-secondary": "#ffffff",
+                    "background": "#fcf9f4",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-container": "#ffdad1",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-container-low": "#f6f3ee",
+                    "primary-container": "#945341",
+                    "tertiary": "#584a3c",
+                    "primary-fixed": "#ffdbd1",
+                    "secondary-fixed-dim": "#becbb2",
+                    "inverse-on-surface": "#f3f0eb",
+                    "surface-container": "#f0ede8",
+                    "on-surface": "#1c1c19",
+                    "outline-variant": "#d8c2bc",
+                    "surface": "#fcf9f4",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dcdad5",
+                    "on-surface-variant": "#53433f",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-container-high": "#ebe8e3",
+                    "primary": "#773c2b",
+                    "secondary": "#56624d",
+                    "outline": "#86736e",
+                    "inverse-primary": "#ffb5a1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; color: #1c1c19; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-md z-50 tonal-transition">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-2xl font-serif italic text-stone-900 dark:text-stone-50">오늘의 조각</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-sm font-medium tracking-wide text-stone-900 dark:text-stone-50 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-800 after:rounded-full transition-colors duration-300" href="#">Home</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">About</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">Archive</a>
+<a class="text-sm font-medium tracking-wide text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-50 transition-colors duration-300" href="#">Contact</a>
+</div>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-8">
+<!-- Hero Section -->
+<header class="pt-32 pb-24 md:pt-48 md:pb-40">
+<div class="max-w-3xl">
+<h1 class="text-6xl md:text-8xl font-serif italic tracking-tight leading-[1.1] mb-8 text-on-surface">
+                    나의 평범한,<br/>대학 생활 조각들
+                </h1>
+<p class="text-lg md:text-xl font-body text-on-surface-variant leading-relaxed max-w-2xl opacity-80">
+                    스쳐 지나가는 순간들을 기록으로 남깁니다. 대학생의 시선으로 바라본 일상의 파편들, 운동의 활기, 그리고 내일을 준비하는 건강한 마음가짐을 이곳에 담았습니다.
+                </p>
+</div>
+</header>
+<!-- Bento Grid / Editorial Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 mb-32">
+<!-- Featured Piece: 1 -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low mb-8 aspect-[16/10]">
+<img alt="College friends lunch" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="A group of university students laughing around a crowded cafeteria table with trays of food and soft natural light from large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaaGTCT2hWApkcueY397xdLAWzX87dcbDYe4Lw9ZUCEC7uEZyJjLdJZeuyNsw2fhxukH1psxRwzb54aJyvC1eLbDx96dlE8WWurjsWmZubKp1FE6OVmU1gXUQ7GRfiKyI4s53drUtJSE-9VmiiDl-CsBhwGkjFgim7EKDty0RwRTd7pMvSotk1hKEg-N7OmhshOlT1vcJRvMVFXZM79UVL9-Li5OssznK4WiM2yg0ztODLXF9nSvvp_mKDdbNOdGnfDtutrk6ZJuk"/>
+</div>
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-6 px-2">
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-4">
+<span class="bg-secondary-container text-on-secondary-container text-xs font-medium px-3 py-1 rounded-md uppercase tracking-wider">일상</span>
+<span class="text-on-surface-variant text-sm font-body">2024.03.26</span>
+</div>
+<h2 class="text-3xl md:text-4xl font-serif text-on-surface leading-snug group-hover:text-primary transition-colors">대학교 친구들과 함께한 왁자지껄 점심시간</h2>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-4xl text-outline-variant group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+</article>
+<!-- Piece 2: Sidebar Editorial Style -->
+<article class="md:col-span-4 flex flex-col justify-end group cursor-pointer border-l border-outline-variant/15 pl-8 md:pl-12">
+<div class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-secondary-container text-on-secondary-container text-xs font-medium px-3 py-1 rounded-md uppercase tracking-wider">운동</span>
+<span class="text-on-surface-variant text-sm font-body">2024.03.27</span>
+</div>
+<h2 class="text-2xl md:text-3xl font-serif text-on-surface leading-tight mb-6 group-hover:text-primary transition-colors">운동장에서 쏟아낸 땀방울, 오늘의 축구 기록</h2>
+<p class="text-on-surface-variant font-body line-clamp-3 mb-8 leading-relaxed">
+                        강의가 끝나고 달려간 운동장은 이미 열기로 가득했습니다. 친구들과 발을 맞추며 땀을 흘리니 하루의 스트레스가 모두 날아가는 기분이었죠. 오늘의 승부는 비록 아쉬웠지만...
+                    </p>
+</div>
+<div class="aspect-square rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Football field" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-90" data-alt="Empty green soccer field at twilight with stadium lights glowing in the distance and a soft misty atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsZxJZpNnC8MeJ8YqqY0vxCARGkqDLVRcN3C1rGqv9KUXxqo3AF4hrc3d-hSXVXCkcnRmUO_q7QTVG-Y6CTJ3R9UcAyzuvCmPwF4y1-NzZND9WCTom1lx5qpe5ngmcri_nUFemZDDJdYjfvenMeY_ogz5HkFIEuk1aOf0mPQpPRIp-c19lyv-z3Se-oJE5OrjsOhVM8eCNvR-IHv7CeWmiwEV3sMFdwPml1BpnDoGmiVQ4HuhCLbz6IUNUEtfR-lBhvtR2Yotmk0U"/>
+</div>
+</article>
+<!-- Piece 3: Large Asymmetric Section -->
+<div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-center pt-12">
+<div class="relative order-2 md:order-1">
+<div class="bg-surface-container-low rounded-xl aspect-[4/5] overflow-hidden">
+<img alt="Gym atmosphere" class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-700 hover:scale-105" data-alt="Moody interior of a modern gym with warm industrial lighting, shadows, and clean metal weights in focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMTqphKIBRJ5MhLNil5ybLYv0lLGBAwN3pTjr0CkcSCoETn_vcU5yFM-md7l-Zr-vO8tXtCptqibQz2zdtWZzHcw-M49ePE4QB2LnFJ5XYxM4MMJPK4TqXM_YvkxvqJyMfPPseUU3UnGnilsoKSaqyls6qCUhZttQ4Ftlnaht8LaZiCTdudJq6j_yW7aADN6c8ozHiKv0cXMzJRWJ5Aufn1oebOgcuVDU_piV4yVMbBcov403K1pkMgcZNhAeWjzg66dqvaSYASCs"/>
+</div>
+<!-- Overlapping tag -->
+<div class="absolute -bottom-6 -right-6 md:right-12 bg-surface p-8 shadow-xl max-w-xs hidden md:block">
+<p class="font-serif italic text-xl text-primary">"어제보다 한 걸음 더 멀리, 기록은 나를 증명한다."</p>
+</div>
+</div>
+<article class="order-1 md:order-2 group cursor-pointer md:pl-12">
+<div class="flex items-center gap-3 mb-8">
+<span class="bg-secondary-container text-on-secondary-container text-xs font-medium px-3 py-1 rounded-md uppercase tracking-wider">건강</span>
+<span class="text-on-surface-variant text-sm font-body">2024.03.28</span>
+</div>
+<h2 class="text-4xl md:text-5xl font-serif text-on-surface leading-tight mb-8 group-hover:text-primary transition-colors">저녁 헬스 오운완!<br/>어제보다 더 강해진 나</h2>
+<p class="text-lg text-on-surface-variant font-body leading-relaxed mb-10">
+                        무거운 바벨을 들어올릴 때마다 느끼는 근육의 자극은 살아있음을 느끼게 해줍니다. 단순한 운동을 넘어, 나 자신과의 약속을 지켰다는 성취감이 하루를 완벽하게 마무리하게 하네요.
+                    </p>
+<a class="inline-flex items-center gap-4 text-primary font-medium group/link" href="#">
+<span class="border-b border-primary/30 group-hover/link:border-primary transition-all pb-1">더 읽어보기</span>
+<span class="material-symbols-outlined text-lg">east</span>
+</a>
+</article>
+</div>
+</section>
+<!-- Minimal Newsletter/CTA -->
+<section class="py-24 bg-surface-container-low rounded-3xl flex flex-col items-center text-center px-8 mb-32">
+<h3 class="text-3xl md:text-4xl font-serif italic mb-6">매일의 조각을 배달해 드립니다</h3>
+<p class="font-body text-on-surface-variant max-w-lg mb-10 leading-relaxed">기록의 소중함을 아는 당신을 위해, 새로운 이야기가 업데이트될 때마다 소식을 전합니다.</p>
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+<input class="flex-1 bg-surface-container-lowest border-none rounded-full px-6 py-4 focus:ring-2 focus:ring-primary/20 font-body text-sm" placeholder="Email address" type="email"/>
+<button class="bg-primary text-on-primary rounded-full px-8 py-4 font-medium hover:bg-primary-container transition-colors shadow-lg shadow-primary/10">구독하기</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 mt-24 bg-stone-100 dark:bg-stone-900 tonal-shift-bg">
+<div class="flex flex-col items-center justify-center px-8">
+<div class="font-serif italic text-lg text-center mb-8 text-stone-700 dark:text-stone-300">
+                © 오늘의 조각 by alstjd. All pieces archived.
+            </div>
+<div class="flex gap-12">
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4 transition-colors" href="#">Instagram</a>
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4 transition-colors" href="#">Email</a>
+<a class="text-stone-500 dark:text-stone-400 hover:underline decoration-orange-800 underline-offset-4 transition-colors" href="#">Feed</a>
+</div>
+</div>
+</footer>
+</body></html>

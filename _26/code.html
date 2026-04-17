@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-tertiary-container": "#f4dfcb",
+                    "background": "#fcf9f4",
+                    "on-background": "#1c1c19",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "tertiary": "#584a3c",
+                    "primary": "#773c2b",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffdbd1",
+                    "on-secondary-container": "#5a6651",
+                    "surface-container-low": "#f6f3ee",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary": "#56624d",
+                    "outline-variant": "#d8c2bc",
+                    "on-primary-fixed": "#380c02",
+                    "surface-variant": "#e5e2dd",
+                    "on-surface": "#1c1c19",
+                    "tertiary-container": "#716252",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-primary-container": "#ffdad1",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#8d4d3b",
+                    "surface-dim": "#dcdad5",
+                    "surface": "#fcf9f4",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#d7e4ca",
+                    "inverse-primary": "#ffb5a1",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "outline": "#86736e",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#241a0e",
+                    "primary-container": "#945341",
+                    "on-primary-fixed-variant": "#703626",
+                    "secondary-fixed": "#dae7cd",
+                    "on-secondary-fixed": "#141e0e",
+                    "surface-container-high": "#ebe8e3",
+                    "surface-container": "#f0ede8",
+                    "on-surface-variant": "#53433f",
+                    "surface-bright": "#fcf9f4",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#31302d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; background-color: #fcf9f4; color: #1c1c19; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl flex justify-between items-center px-8 h-20 max-w-full">
+<div class="text-2xl font-serif font-bold text-[#773c2b] tracking-tighter">오늘의 조각</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-[#773c2b] font-medium relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full font-serif text-lg tracking-tight" href="#">Archive</a>
+<a class="text-stone-500 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">Chapters</a>
+<a class="text-stone-500 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">Essays</a>
+<a class="text-stone-500 hover:text-[#773c2b] transition-colors font-serif text-lg tracking-tight" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:opacity-80 transition-all duration-300">account_circle</span>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Search Header -->
+<header class="mb-20 text-center md:text-left">
+<div class="inline-flex items-center gap-2 mb-4 px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-md text-xs uppercase tracking-widest font-bold">
+<span class="material-symbols-outlined text-sm">tag</span>
+<span>Category Filter</span>
+</div>
+<h1 class="font-serif text-6xl md:text-8xl text-primary tracking-tighter italic">#CampusLife</h1>
+<p class="mt-6 text-on-surface-variant font-body text-lg max-w-xl leading-relaxed">
+                Reflections and fragments from the university grounds. A collection of fleeting moments between lecture halls and library stacks.
+            </p>
+</header>
+<!-- Magazine Grid Layout -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-x-12">
+<!-- Featured Post (Asymmetric Large) -->
+<article class="md:col-span-8 flex flex-col gap-6">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low group">
+<img alt="University library" class="w-full aspect-[16/9] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Cinematic wide shot of an old university library with high vaulted ceilings, sun rays streaming through tall windows onto dark wood tables" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBnaFLBVOeUJxi1XiwUk2x-JoXpl8WbgajA3LJPaiC2XsK0dAekvvE-LttCsp0Pj5J6j2hpALGyK6GzPeugzIU4B1vjSzOM_08uU2mk7HOzcJW7InG4rIJ_06aOEtewksyjgcSHdz1IaqWjRFbV92_yn4JqXj8XUBGiA4n16_InGq6LrUFmUm1bErho5WgMQq7hcswPEfWBOfii4VFLz6qN_xdPur24uPLMvf-yZDmozAo-oDDCM9jclj2nh0mGcxVLxQR5RjXU7Y"/>
+</div>
+<div class="max-w-2xl">
+<div class="flex items-center gap-4 mb-3 text-xs uppercase tracking-widest text-stone-500">
+<span>Nov 14, 2024</span>
+<span class="w-1 h-1 bg-primary rounded-full"></span>
+<span>12 min read</span>
+</div>
+<h2 class="font-serif text-4xl text-on-surface leading-tight mb-4 hover:text-primary transition-colors cursor-pointer">The silence between the library stacks</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg mb-6">
+                        There is a specific kind of silence that only exists at 2 AM in the third-floor humanities section. It's not the absence of sound, but the presence of collective focus—a shared weight of ambition and exhaustion.
+                    </p>
+<button class="flex items-center gap-2 text-primary font-bold group">
+                        Read Piece
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</article>
+<!-- Sidebar / Secondary Post -->
+<article class="md:col-span-4 flex flex-col gap-6 md:mt-32">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low group">
+<img alt="Student walking" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Soft focused shot of a student walking across a sun-drenched autumn campus with orange leaves scattered on the stone path" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK0Vi6lvfyIQy9pB0Nms-7B89q-EA8fuovvejZy2VpsrhXpNo9q2kXr1GdKI8md5V934x66MWOABHy_9FVHSas1RH11UWmpVVSEUSBPbaHj_7lLB2WQK8gHfW3uVh-QE5gcC-tYJ-rXU_ysow1i9XQq_lTGAAa0Tv6T0g_IVO5cc6ETggmLypnMitdAfv_YI3VtbAFhObD5Z5_kpyt7Z1mX0b-PdH7y7KKLeCXnw9bQp0QCGw47w_o39UXlD0GKEtaYLhWc0PrfME"/>
+</div>
+<div>
+<div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Nov 10, 2024</div>
+<h3 class="font-serif text-2xl text-on-surface leading-snug mb-3 hover:text-primary transition-colors cursor-pointer">Golden Hour on the Main Quad</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                        Capturing the ephemeral light that turns our concrete campus into something divine for exactly fifteen minutes every evening.
+                    </p>
+</div>
+</article>
+<!-- Medium Post (Left Aligned) -->
+<article class="md:col-span-5 flex flex-col gap-6">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-low group">
+<img alt="Old books" class="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Extreme close up of old weathered book spines on a shelf with warm vintage lighting and shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC320ScxEFyYzqC7c6AAlyatYSigECOparINaUF293yk72iKM4H5-7KUYWpACNc0SXpM0MrAr1TIpUhn_Opm6_pO5axSMmi4KWpUa_yU1cNzuyfN2K7m1YNzO0lrkjztLg4BYrTha2bNqamafs8BwIupJLVU6BEgYi-rMwa2FLogwRuILNjDRRN9lFGY4Ko3MVNfYua1OZ55v5kPw9JYnefEQ2EyG6u_YxcE9oYjmy8yxRUAjez7yf3UZ3Cp0nEWpt0cxwFleKXVU"/>
+</div>
+<div>
+<div class="text-xs uppercase tracking-widest text-stone-500 mb-2">Nov 08, 2024</div>
+<h3 class="font-serif text-2xl text-on-surface leading-snug mb-3 hover:text-primary transition-colors cursor-pointer">Lost in Translation: Foreign Lit 101</h3>
+<p class="text-on-surface-variant leading-relaxed text-sm">
+                        Notes on why some feelings are untranslatable, and why we keep trying anyway.
+                    </p>
+</div>
+</article>
+<!-- Text Only Post (Asymmetric Center) -->
+<article class="md:col-start-7 md:col-span-5 flex flex-col justify-center border-l border-stone-200/20 pl-8 md:pl-12 my-12">
+<div class="text-xs uppercase tracking-widest text-stone-500 mb-4">Nov 05, 2024</div>
+<h3 class="font-serif text-4xl text-on-surface leading-tight mb-6 italic hover:text-primary transition-colors cursor-pointer">"Coffee is the only currency that matters during finals week."</h3>
+<p class="text-on-surface-variant leading-relaxed text-base italic mb-8">
+                    An essay on the ritual of the morning brew and the late-night espresso. How we build our identities around ceramic mugs and cardboard sleeves.
+                </p>
+<div class="flex gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] uppercase tracking-tighter text-stone-600">Observation</span>
+<span class="px-3 py-1 bg-surface-container-high rounded text-[10px] uppercase tracking-tighter text-stone-600">Reflection</span>
+</div>
+</article>
+<!-- Bottom Row Bento-ish -->
+<article class="md:col-span-4 flex flex-col gap-4">
+<div class="h-64 rounded-xl bg-surface-container-low overflow-hidden group">
+<img alt="Cafe interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Cozy university cafe interior with warm hanging lights, students studying, and steam rising from a cup of coffee" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwFrZXg5O1U_ZP0Tf9UYihxKzlnCbMnELf4mrhJPwg_MVaj3ZcJeVpbx961RX9twgvegg_vsAhn07UfpC4OG1QcoYOntbRkuATCipQ9Sk4EPjljo1IiEhiXzKOJeb53yfrk3gkCufoh4rnJgA341A3Np5YcVoP8ImcUjppU7Btt0BlpI3vU_IY0b-TZJWCg3pn0wdUfFzRImug-BsePTICqE8g5RTg6P6ro_yqt2_6TTlW2Hg6f_IYFfY8Ya7SROKlc21lMJhP5G8"/>
+</div>
+<h4 class="font-serif text-xl text-on-surface">The Best Corner Tables</h4>
+</article>
+<article class="md:col-span-4 flex flex-col gap-4">
+<div class="h-64 rounded-xl bg-surface-container-low overflow-hidden group">
+<img alt="Lecture hall" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Empty modern lecture hall with rows of wooden desks and a large blank screen under bright cool lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCosB8S-YeaUXp8lWsxwVTqx9JFZg26fygPbKZlGobLHKfXSK1PpuHD3TyhTuDEpd6K-fiAdW_5NkpXO61WfvBNAqt7um-3s0b-VN7-TCrSV6kD5YLx2AvKrQQry0zXQOcz5NtOB5BX8AIHVj1p2-ysaprD7TdDn4g-QQl9jOpa-t-goa4BZF8_jHPnM9QQAXg2bPIff5F2ULEfo2T632bOnHqHffBjnSj8EhKIzcTV3ygLK0MeO9zmuKr-z8N7M16LaCtZubR2AWg"/>
+</div>
+<h4 class="font-serif text-xl text-on-surface">Echoes of Empty Halls</h4>
+</article>
+<article class="md:col-span-4 flex flex-col gap-4">
+<div class="h-64 rounded-xl bg-surface-container-low overflow-hidden group">
+<img alt="Students studying" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Overhead shot of a messy study desk with open notebooks, colorful highlighters, and a laptop in a bright airy room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCYiBd5HTGAO6R2vB8PMEUj75P9jukQskvWfo3dDw_KdakjI6NGEYjv1bHnOLpp5BOHSGeY_UanB_PLhQ0Ox_7zSqUzaknr_d7mF9GkGIPeMZeZ_2eyuq4_wInGbg_mEVRbpyOu5EA03xP4iG52vCSKRdehje9BQwiei3_IVwU108YTJ8IGWb3g9yX2w2fzBPPy2c6PoE00OoClCBPhtHdXuyOzZAFTHZVx9RiO-PNeLXR1GUijId2RROg_aumIQLyhJBYQOeD_RU"/>
+</div>
+<h4 class="font-serif text-xl text-on-surface">The Anatomy of a Desk</h4>
+</article>
+</section>
+<!-- Pagination -->
+<div class="mt-32 flex justify-center items-center gap-8 border-t border-stone-200/10 pt-16">
+<button class="text-stone-400 hover:text-primary transition-colors flex items-center gap-2 uppercase tracking-widest text-xs font-bold">
+<span class="material-symbols-outlined text-sm">west</span> Prev
+            </button>
+<div class="flex items-center gap-4 font-serif text-lg">
+<span class="text-primary">01</span>
+<span class="text-stone-300">/</span>
+<span class="text-stone-400">04</span>
+</div>
+<button class="text-on-surface hover:text-primary transition-colors flex items-center gap-2 uppercase tracking-widest text-xs font-bold">
+                Next <span class="material-symbols-outlined text-sm">east</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-[#fcf9f4] flex flex-col md:flex-row justify-between items-center border-t border-stone-200/10 mt-16">
+<div class="text-[#773c2b] font-sans text-xs uppercase tracking-widest mb-4 md:mb-0">
+            © 2024 오늘의 조각. Curated Ephemera.
+        </div>
+<div class="flex gap-8">
+<a class="text-stone-400 hover:text-[#773c2b] transition-colors font-sans text-xs uppercase tracking-widest" href="#">Privacy</a>
+<a class="text-stone-400 hover:text-[#773c2b] transition-colors font-sans text-xs uppercase tracking-widest" href="#">Archive Access</a>
+<a class="text-stone-400 hover:text-[#773c2b] transition-colors font-sans text-xs uppercase tracking-widest" href="#">Contact</a>
+</div>
+</footer>
+</body></html>

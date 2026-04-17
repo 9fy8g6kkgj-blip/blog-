@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>오늘의 조각 - Photo Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#d8c2bc",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-fixed": "#141e0e",
+                    "inverse-primary": "#ffb5a1",
+                    "outline": "#86736e",
+                    "on-background": "#1c1c19",
+                    "on-secondary-container": "#5a6651",
+                    "on-primary-fixed": "#380c02",
+                    "inverse-on-surface": "#f3f0eb",
+                    "primary": "#773c2b",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-container": "#f0ede8",
+                    "surface-dim": "#dcdad5",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#703626",
+                    "tertiary-container": "#716252",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#dae7cd",
+                    "surface": "#fcf9f4",
+                    "on-primary-container": "#ffdad1",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#31302d",
+                    "surface-bright": "#fcf9f4",
+                    "primary-fixed": "#ffdbd1",
+                    "surface-container-highest": "#e5e2dd",
+                    "secondary-container": "#d7e4ca",
+                    "on-error": "#ffffff",
+                    "background": "#fcf9f4",
+                    "on-surface-variant": "#53433f",
+                    "secondary-fixed-dim": "#becbb2",
+                    "on-tertiary-container": "#f4dfcb",
+                    "secondary": "#56624d",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-container-high": "#ebe8e3",
+                    "tertiary": "#584a3c",
+                    "surface-tint": "#8d4d3b",
+                    "surface-container-low": "#f6f3ee",
+                    "on-surface": "#1c1c19",
+                    "on-secondary": "#ffffff",
+                    "primary-container": "#945341",
+                    "surface-variant": "#e5e2dd",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        h1, h2, h3, .serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scrollbar to match the editorial feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fcf9f4; }
+        ::-webkit-scrollbar-thumb { background: #d8c2bc; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-xl">
+<nav class="flex justify-between items-center w-full px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-serif font-bold text-orange-900 dark:text-orange-100 italic tracking-tight">오늘의 조각</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Archives</a>
+<a class="font-serif italic tracking-tight text-orange-900 dark:text-orange-100 relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-orange-900 after:rounded-full" href="#">Categories</a>
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">Reflections</a>
+<a class="font-serif italic tracking-tight text-stone-500 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-orange-900 dark:text-orange-200 hover:opacity-80 transition-opacity duration-300" data-icon="search">search</button>
+<button class="md:hidden material-symbols-outlined text-orange-900 dark:text-orange-200" data-icon="menu">menu</button>
+</div>
+</nav>
+</header>
+<main class="max-w-screen-2xl mx-auto px-8 pt-16 pb-32">
+<!-- Header Section -->
+<header class="mb-24 flex flex-col items-start gap-4 max-w-3xl">
+<span class="font-sans text-sm tracking-widest uppercase text-on-surface-variant opacity-70">Visual Archive</span>
+<h1 class="text-6xl md:text-7xl font-headline italic tracking-tight text-on-surface leading-none">The Anatomy of a Semester</h1>
+<p class="text-lg md:text-xl font-body text-on-surface-variant leading-relaxed max-w-2xl mt-6">
+                A non-linear collection of quiet moments, frantic study sessions, and the golden hour light that filter through the campus library. These are the pieces that make a life.
+            </p>
+</header>
+<!-- Gallery Grid: Asymmetric Bento Style -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-20 gap-x-12">
+<!-- Large Focus Piece -->
+<div class="md:col-span-8 flex flex-col gap-6 group">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="University Library" class="w-full aspect-[16/10] object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="high-angle shot of a grand university library with long wooden tables, brass lamps, and dusty light beams hitting open books" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6hTmHoVbjl65arehTajhmNf6Ujz0Iwe47A28mstGHlCc50z4NmnjIc1MuxIhVqWbqGy7oxHzlq3mYBTwZGtmC2hs4CmK7xgxLTfgyu0lcJMUg899JvqbJYpBDKdBMfnoZC-g8wE7FdkytRBxKOswNX3NKzvj5UbJN5UbAjqZaPe-1UEE1EunWjgVTK54vYYr0Tk9JQp0luVFnP2tvj0TZVhuwZ1VQ_Njr2WZlmo67nUeWzdLL1WMh-2hq5pwktAa2N6T5x-8JETQ"/>
+</div>
+<div class="flex justify-between items-baseline px-1">
+<div class="flex flex-col">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">October 14, 2024</span>
+<h3 class="font-headline text-2xl italic text-on-surface">Silence in the Stacks</h3>
+</div>
+<span class="text-xs font-sans text-on-surface-variant">001 / ARCHIVE</span>
+</div>
+</div>
+<!-- Side Vertical Piece -->
+<div class="md:col-span-4 flex flex-col gap-6 group md:translate-y-20">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="Morning Coffee" class="w-full aspect-[4/5] object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="close-up of a steaming ceramic coffee mug next to a vintage notebook on a sun-drenched wooden cafe table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5PAThZsCaYvCLvOXpGh1wBpHTkOMzGLLd6LqNSnyw9ka1vX5rQlw2T158tCtaS5kqvwF9nIJsqI-ui6l0hH1QO9IW2RamaYISFLZXfacWCJhVSq_XwjbchS-N3IXCrMx_fHNMTCVL3ordfnfdcb8m65q_lJNdPVUipdMvOTgiMLP-s3BnExiN1AWQKwAkoIjBwvAsZTcE0EFakZvcua2zTBk7LsW92ttbPYk2VAs2kokD2NG3IdEtdYXJaqyqkNjYXh6LDu4jp6k"/>
+</div>
+<div class="flex flex-col px-1">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">September 28, 2024</span>
+<h3 class="font-headline text-2xl italic text-on-surface">The 8 AM Ritual</h3>
+</div>
+</div>
+<!-- Row 2: Smaller Pieces -->
+<div class="md:col-span-4 flex flex-col gap-6 group">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="Bicycle on Campus" class="w-full aspect-square object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="a vintage bicycle leaning against a red brick wall covered in green ivy during a soft overcast afternoon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjE9MYLQYHcmW5q4bGhZaWRsDGMMv-k2Uyuf4bjOVzm0LrV0CwN4lr4l_pNwGXXsopXo2gDddf2a450KZyzruJjjkZRL6yrprE4xbPAMM1u38Maj2WjRyrZ7ob3IZL3MLmNbl7v0J_RTdNGfkOOD9Tcd_RBkrit516iDW0t93bU_fXEzxZH79G6o88bB46CXj7x9KpeBUfMEXtPU5vd3qpZ96ZUi4rWBJbG4tY1OPTboxepx69qH4ZiGaUBXxA1pkGq8QkXOlIvvM"/>
+</div>
+<div class="flex flex-col px-1">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">October 02, 2024</span>
+<h3 class="font-headline text-xl italic text-on-surface">Waiting for the Rain</h3>
+</div>
+</div>
+<div class="md:col-span-8 flex flex-col gap-6 group">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="Late Night Lab" class="w-full aspect-[16/7] object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="moody low-light photo of a science laboratory with blue-tinted screens and silhouettes of students working late" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSTDo0UmeSfX0RFbsG-2u_oWuLr6dGTri_hB7AOA8ilbtKIm4zpQqnG9M4wVZioyWYXsvJVkMf1TUW1k0M1Y7tHXCX56Ou_Lg8bt9AO5tHjn602jdJwq_dPq5h7bbrnitNiFaHgROXex-Sb5cmW1KgJGgK-vTOMJgv_ZIz5lxdz930HuePrmCv7xI1HP1I8JqL4aAn6YP85NyROZV4ToLLqEJlmUQcdVjb6AQlel3v-GjrwEqc8eDQBTFG5g1fFS7Ci8YA3GkKPmk"/>
+</div>
+<div class="flex justify-between items-baseline px-1">
+<div class="flex flex-col">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">November 12, 2024</span>
+<h3 class="font-headline text-2xl italic text-on-surface">Blue Hours in the Lab</h3>
+</div>
+<span class="text-xs font-sans text-on-surface-variant">004 / SERIES</span>
+</div>
+</div>
+<!-- Row 3: Detail Shots -->
+<div class="md:col-span-3 flex flex-col gap-6 group md:-translate-y-12">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="Old Books" class="w-full aspect-[3/4] object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="macro shot of weathered book spines in an old university library with gold leaf lettering and dusty texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnve4rPS4l9n_2YGDUA_G1ix-etAYpAAPMDw468rkxJvWYQjjgGcy5VSv8raJ-WcoBN3qHW-LIxBmyaaQXr2-JUOpib2RZDdl7g4tgvl65GEt42wUiTSNyxmGg2ckqn-73iaGMI6JgBK4-KyW7MowOyFBRu57y7XpWqMhpOrfL5x2Do9ztsYyuPh4Mx_Ghu_uyDIqBZw5dVepR6QEDnLHSiv4Fw5FtE8bXdK9g-1oTZtelJrVyhx15c5di1MF8eizo3Y0Wmngf_wA"/>
+</div>
+<div class="flex flex-col px-1">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">October 20, 2024</span>
+<h3 class="font-headline text-lg italic text-on-surface">Generations of Dust</h3>
+</div>
+</div>
+<div class="md:col-span-3 flex flex-col gap-6 group">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="Campus Walkway" class="w-full aspect-[3/4] object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="long perspective shot of a stone campus walkway lined with orange ginkgo trees in peak autumn color" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_IbW20IRwaoSylPb05AKycJuvTus5cKol4zNpJQRFbPP5wVu0dHzw3s7W1Af4C7omLRtp_PUbiSpiKI8Cbqu_AfQIDZWw97AMPmc2e95roYyFx-5XDcrbOEdkYIDyineWqezcgyd_3DAbrdZnviN2SDyoA2sqUUMOwJnhrLF3ROT4EuVxakPmTPPKEIi2qVepsX4QsDUU6mNq-XNRhJBM10o4in5RWAmt8-el_j66wDfzO61img6qnXcmDY0W2DkGVwjIG8iOkC8"/>
+</div>
+<div class="flex flex-col px-1">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">November 05, 2024</span>
+<h3 class="font-headline text-lg italic text-on-surface">The Golden Walk</h3>
+</div>
+</div>
+<div class="md:col-span-6 flex flex-col gap-6 group md:translate-y-8">
+<div class="overflow-hidden rounded-lg bg-surface-container-low transition-all duration-700">
+<img alt="Group Study" class="w-full aspect-square object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" data-alt="candid polaroid style photo of friends laughing around a messy table covered in papers and snacks in a dorm room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNkNW5F4hQGaiARVs6M-rFa6ZCVE-Yc8etMGXubJ6ZZPN7XW_fvwEOfRmR7n55--OkLT-gybXZUvqJWjyQddgCnL44SSlWofXpM3YotK_weaqspajiNXVgUO9lY0X67S7lHiTeB80m_s7HosmszCAfowPY2ELdWF1hvciUduPWDqmh8flqapCnyUiKZFe_tXqlaTFIo-_os4OkUp7Orf5J8qlTBntlToPC4Ki_7PAJV4vDwiOjvuKGPsbjUeHK69i-MGZCMMBz3GU"/>
+</div>
+<div class="flex flex-col px-1">
+<span class="font-sans text-xs uppercase tracking-widest text-primary opacity-80 mb-1">December 01, 2024</span>
+<h3 class="font-headline text-2xl italic text-on-surface">Temporary Permanence</h3>
+</div>
+</div>
+</div>
+<!-- Pagination / Load More -->
+<div class="mt-32 flex flex-col items-center gap-8">
+<div class="h-px w-24 bg-outline-variant opacity-30"></div>
+<button class="group flex items-center gap-4 text-on-surface hover:text-primary transition-colors">
+<span class="font-headline text-3xl italic">Older Fragments</span>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-950 border-t border-stone-200/20 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-2 text-center md:text-left">
+<div class="font-serif text-lg text-stone-900 dark:text-stone-100">Echoes of Today</div>
+<div class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400">© 2024 Echoes of Today. Pieces of a university life.</div>
+</div>
+<div class="flex gap-8">
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Privacy</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Terms</a>
+<a class="font-sans text-sm tracking-wide uppercase text-stone-500 dark:text-stone-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

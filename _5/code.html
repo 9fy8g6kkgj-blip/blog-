@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e5e2dd",
+                    "on-primary-fixed-variant": "#703626",
+                    "on-tertiary-fixed-variant": "#524436",
+                    "surface-dim": "#dcdad5",
+                    "on-secondary-container": "#5a6651",
+                    "error": "#ba1a1a",
+                    "primary-container": "#945341",
+                    "on-primary-container": "#ffdad1",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "primary-fixed-dim": "#ffb5a1",
+                    "surface-container-low": "#f6f3ee",
+                    "on-tertiary-container": "#f4dfcb",
+                    "surface-container-high": "#ebe8e3",
+                    "inverse-primary": "#ffb5a1",
+                    "surface-tint": "#8d4d3b",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#f0ede8",
+                    "inverse-on-surface": "#f3f0eb",
+                    "secondary-fixed-dim": "#becbb2",
+                    "secondary": "#56624d",
+                    "secondary-container": "#d7e4ca",
+                    "outline-variant": "#d8c2bc",
+                    "on-secondary-fixed": "#141e0e",
+                    "inverse-surface": "#31302d",
+                    "surface-bright": "#fcf9f4",
+                    "tertiary-fixed-dim": "#d7c3b0",
+                    "tertiary-container": "#716252",
+                    "tertiary": "#584a3c",
+                    "surface": "#fcf9f4",
+                    "primary": "#773c2b",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#1c1c19",
+                    "background": "#fcf9f4",
+                    "on-primary-fixed": "#380c02",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary-fixed": "#241a0e",
+                    "surface-variant": "#e5e2dd",
+                    "on-surface-variant": "#53433f",
+                    "secondary-fixed": "#dae7cd",
+                    "on-error-container": "#93000a",
+                    "outline": "#86736e",
+                    "on-surface": "#1c1c19",
+                    "primary-fixed": "#ffdbd1",
+                    "tertiary-fixed": "#f4dfcb",
+                    "on-secondary-fixed-variant": "#3f4a37",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.5rem",
+                    "xl": "1rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Newsreader", "serif"],
+                    "body": ["Manrope", "sans-serif"],
+                    "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Newsreader', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#fcf9f4]/80 backdrop-blur-xl shadow-sm">
+<nav class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<a class="text-2xl font-serif italic text-[#1c1c19] tracking-tighter" href="#">Echoes of Today</a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-serif font-medium text-[#1c1c19]/60 hover:text-[#773c2b] transition-colors" href="#">Archives</a>
+<a class="font-serif font-medium text-[#773c2b] relative after:content-[''] after:absolute after:-bottom-2 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-[#773c2b] after:rounded-full" href="#">Categories</a>
+<a class="font-serif font-medium text-[#1c1c19]/60 hover:text-[#773c2b] transition-colors" href="#">Reflections</a>
+<a class="font-serif font-medium text-[#1c1c19]/60 hover:text-[#773c2b] transition-colors" href="#">About</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-opacity">menu</button>
+</div>
+</nav>
+</header>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Category Header -->
+<header class="mb-20">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+<span class="text-sm font-label tracking-[0.2em] uppercase text-on-surface-variant">Collections</span>
+</div>
+<h1 class="text-7xl md:text-8xl font-serif italic tracking-tight text-on-surface mb-6">일상 <span class="text-3xl md:text-4xl align-middle font-normal not-italic ml-4 text-on-surface-variant/40">— Daily Life</span></h1>
+<p class="max-w-2xl text-lg text-on-surface-variant leading-relaxed">
+                The quiet rhythm of campus mornings, the smell of old library books, and the fleeting beauty of seasonal shifts. A curated archive of ordinary moments that define the university experience.
+            </p>
+</header>
+<!-- Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-y-24 md:gap-x-12">
+<!-- Post 1: Large Featured -->
+<article class="md:col-span-8 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg mb-8 aspect-[16/9] bg-surface-container-low">
+<img alt="Morning light in study room" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Soft morning sunlight streaming through large windows of a university library, illuminating wooden desks and dust motes in the air" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVwx_O0Qj6qWDW7PN8T5HFM6YaHN43SJLqb4TGIdxWYpn6G9jbUKEn9Ah-laZOGRVgwFUwRDltP2obv9gpc5JwZnD7t9z4JddulxC3nFrXv1ycDS7VOfgGZOcObv0l4l8W-dxL-gKID8q3d9y8x4wsd6lvcHRm2epag_RWcBB7_jznuzQK3jTct5kwoxbV7Wbo_DFw9k5rW9MRN83uyhCvOyClGLqagycLBypTdFM6wT-MrIgh-BAzFeKohjE73GZCRrj3AtJFwLI"/>
+</div>
+<div class="flex flex-col md:flex-row md:items-baseline justify-between mb-4 border-b border-outline-variant/15 pb-4">
+<h2 class="text-4xl font-serif text-on-surface leading-tight group-hover:text-primary transition-colors">오전 8시의 도서관, 그리고 정적</h2>
+<time class="text-sm font-label text-on-surface-variant tracking-wider mt-2 md:mt-0">OCTOBER 24, 2023</time>
+</div>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl">
+                    모두가 잠든 시간, 도서관의 묵직한 공기는 나에게 안도감을 준다. 책장을 넘기는 소리조차 사치스럽게 느껴지는 그 짧은 정적 속에서 나는 오늘의 첫 문장을 시작한다.
+                </p>
+</article>
+<!-- Post 2: Side Narrative -->
+<article class="md:col-span-4 md:mt-32 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg mb-6 aspect-[4/5] bg-surface-container-low">
+<img alt="Coffee on a table" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A warm cup of coffee sitting on a weathered wooden table next to an open notebook and a small vase with a single wildflower" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcO4QYqhWFyOs6EJTRsHaA8wOCe3in1Le3x4vyUnq9uqD6wU8dfXp_QXYM4a9O-slbz18ywYaspsbq-8OH4FDEHKF2fq9Dm02dPhdYEJfXYS2Cj0UAAyQS_MEEsjKyJCDceqiA73cQ0X5gC45UFm8U9we-EyM6csdAtOO1XVl9HPE5tKXFg9bczWzzJvsBE_ky14DkdUBOJsoNgjWpxsD70WoJCvu-XtpLLBho9fOZJyHsxXa36u6Hfp14JdQzqrThdCN2_rQwDXU"/>
+</div>
+<span class="inline-block px-3 py-1 bg-secondary-container text-on-secondary-container text-xs rounded-md mb-4">ESSAY</span>
+<h2 class="text-2xl font-serif text-on-surface leading-snug mb-3 group-hover:text-primary transition-colors">따뜻한 온기를 빌려 쓰는 계절</h2>
+<p class="text-sm text-on-surface-variant leading-relaxed mb-4">
+                    식어가는 커피잔을 쥐고 있으면, 차가워진 손끝부터 서서히 온기가 번져나간다. 가을의 끝자락에서 우리가 나누는 대화들은 대개 이런 사소한 온기로부터 시작된다.
+                </p>
+<time class="text-xs font-label text-on-surface-variant/60 tracking-widest">OCTOBER 18, 2023</time>
+</article>
+<!-- Post 3: Full Width Quote or Text-Focus -->
+<div class="md:col-span-12 py-16 px-8 bg-surface-container-low rounded-lg text-center my-12">
+<span class="material-symbols-outlined text-primary mb-6 scale-125">format_quote</span>
+<blockquote class="text-3xl md:text-5xl font-serif italic text-on-surface max-w-4xl mx-auto leading-tight">
+                    "가장 평범한 하루가 훗날 가장 그리운 조각이 된다는 것을, 우리는 너무 늦게 깨닫곤 한다."
+                </blockquote>
+</div>
+<!-- Post 4: Vertical Layout -->
+<article class="md:col-span-5 group cursor-pointer">
+<div class="relative overflow-hidden rounded-lg mb-6 aspect-square bg-surface-container-low">
+<img alt="People walking on campus" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Candid shot of university students walking across a stone courtyard lined with golden gingko trees in autumn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb-zUgcUySQxMIwONtA4JrJNJg3ELSKnvfXOWvIXaQNoQ_gipx94YPYRYz1rGyD1CROcZBneHL3UQwhgF10csKVYeZyM84tgWNWT5Rgv9I4s9bMrBEKJBXIo9klY4L6DGWtoccwY_DZy1rRalNtWRCHigZubSOl7PQ7xTzObOWpYnc8u3id-xNCinJizS8KhAJBnkmdi3APBOPmsxRImr0GcWOmbqRWylnfaqOf-8PvB1Qbe-6EIQ-jLqi54FqJgvRGLWjR5lWxXw"/>
+</div>
+<h2 class="text-3xl font-serif text-on-surface mb-3 group-hover:text-primary transition-colors">캠퍼스, 가을의 조각들</h2>
+<p class="text-on-surface-variant leading-relaxed mb-6">
+                    노랗게 물든 은행나무 잎들이 바닥에 흩뿌려져 있다. 매일 걷는 이 길도 계절의 색을 입으면 전혀 다른 서사가 된다.
+                </p>
+<div class="flex items-center gap-4">
+<time class="text-sm font-label text-on-surface-variant tracking-wider">OCTOBER 12, 2023</time>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-sm text-primary font-medium">Read Article</span>
+</div>
+</article>
+<!-- Post 5: Shifted Card -->
+<article class="md:col-span-6 md:col-start-7 group cursor-pointer md:-mt-12">
+<div class="relative overflow-hidden rounded-lg mb-8 aspect-[16/10] bg-surface-container-low">
+<img alt="Old books stack" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of stacked vintage books with gold embossed spines in a dimly lit library with a moody atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChVS1Yp3_zwBItBLFMUXxkWRI49iNvhrtFmUz6ImiT1-y63CibGsQo71QNI-0ND73kaiDFn-ERDfWaI8UVe-BeTi-nfEjUhiAGeflrH9GICi8I3VraWebWkHQjxm8rNyNSt3LaSJjxSMX10cYkkOJ-dPwVCKnLT3ZZGVsJ-G3R8IybYwNe7PA_FZ2IjgsxEjP5GXiEm-CXhxTZ1jQaLZPC5d_20i6Am2n0ZA09O8hBg3ZBvs-Tm-VCEcQRVsZDqmbqJNOCxg8FY0w"/>
+</div>
+<h2 class="text-3xl font-serif text-on-surface mb-3 group-hover:text-primary transition-colors">낡은 종이의 향기</h2>
+<time class="block text-sm font-label text-on-surface-variant tracking-wider mb-4">OCTOBER 05, 2023</time>
+<p class="text-on-surface-variant leading-relaxed">
+                    오래된 책을 펼치면 특유의 쿰쿰한 향기가 올라온다. 수많은 이들의 손때가 묻은 그 문장들 사이를 여행하며, 나는 현재의 고민을 잠시 잊는다.
+                </p>
+</article>
+</div>
+<!-- Pagination -->
+<footer class="mt-32 flex justify-between items-center border-t border-outline-variant/30 pt-12">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest group">
+<span class="material-symbols-outlined transition-transform group-hover:-translate-x-1">arrow_back</span>
+                Newer
+            </button>
+<div class="flex gap-4">
+<span class="text-primary font-bold">1</span>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">2</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">3</a>
+<span class="text-on-surface-variant/30">...</span>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">12</a>
+</div>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest group">
+                Older
+                <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</footer>
+</main>
+<!-- Global Footer -->
+<footer class="bg-[#f6f3ee] w-full py-12 px-8 mt-20">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="text-lg font-serif italic text-[#1c1c19]">Echoes of Today</div>
+<div class="flex gap-8">
+<a class="text-sm tracking-wide font-sans text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Privacy</a>
+<a class="text-sm tracking-wide font-sans text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Terms</a>
+<a class="text-sm tracking-wide font-sans text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Contact</a>
+<a class="text-sm tracking-wide font-sans text-[#1c1c19]/50 hover:text-[#773c2b] transition-all" href="#">Instagram</a>
+</div>
+<div class="text-sm tracking-wide font-sans text-[#1c1c19]/50">
+                © 2024 Echoes of Today. A digital archive of university ephemera.
+            </div>
+</div>
+</footer>
+</body></html>
